@@ -11,7 +11,7 @@ public class Tank : MonoBehaviour
 
     private AudioSource _audioSource;
 
-    private bool _fired;
+    private bool _fired = true;
 
     public void Awake()
     {

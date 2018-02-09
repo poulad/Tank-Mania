@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1205826301374182}
   m_IsPrefabParent: 1
+--- !u!1 &1043895626458794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4410862978203246}
+  m_Layer: 0
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1205826301374182
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +46,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4410862978203246
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043895626458794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.095, y: 0.318, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4424966563340368}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4424966563340368
 Transform:
   m_ObjectHideFlags: 1
@@ -38,9 +66,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1205826301374182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.206, y: 0.374, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0}
-  m_Children: []
+  m_LocalPosition: {x: 0, y: 1.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4410862978203246}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,8 +105,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14, y: -0.33}
-  m_Size: {x: 1.67, y: 0.4490512}
+  m_Offset: {x: -0.053183753, y: -0.08792554}
+  m_Size: {x: 0.54097205, y: 0.19231097}
   m_Direction: 1
 --- !u!82 &82428886790949000
 AudioSource:
@@ -170,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453a6763808293747a71e9ed9e14734f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shell: {fileID: 50993383169730988, guid: 9e6dabb6ee4180046a97b28b1996294a, type: 2}
 --- !u!212 &212068728536871372
 SpriteRenderer:
   m_ObjectHideFlags: 1
