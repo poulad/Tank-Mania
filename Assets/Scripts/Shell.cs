@@ -23,8 +23,6 @@ public class Shell : MonoBehaviour
         {
             var tileMap = other.GetComponent<Tilemap>();
             if (tileMap == null) return;
-
-
         }
 
 
