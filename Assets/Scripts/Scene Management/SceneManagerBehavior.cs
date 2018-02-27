@@ -14,6 +14,8 @@ namespace TankMania
 
         private GameObject _currentTank;
 
+        private TankBehavior _currentTankBehavior;
+
         private CinemachineVirtualCamera _virtualCamera;
 
         public void Start()
@@ -36,10 +38,17 @@ namespace TankMania
         private void AssignTurnToTank(GameObject tank)
         {
             _virtualCamera.Follow = tank.transform;
-            var tankBehavior = tank.GetComponent<TankBehavior>();
-            tankBehavior.Fired += OnCurrentTankFired;
-            tankBehavior.TakeCurrentTurn();
+            _currentTankBehavior = tank.GetComponent<TankBehavior>();
+
+            _currentTankBehavior.Fired += OnCurrentTankFired;
+            _currentTankBehavior.TakeCurrentTurn();
             _currentTank = tank;
+        }
+
+        private void RemoveTurnFromCurrentTank()
+        {
+            _currentTankBehavior.Fired -= OnCurrentTankFired;
+            _currentTankBehavior.StopTurn();
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
@@ -49,8 +58,15 @@ namespace TankMania
 
         private void ChangeTanksTurn()
         {
-            DestroyObject(_currentTank.gameObject);
-            AssignTurnToTank(Tanks[1]);
+            int currentTankIndex = -1;
+            for (int i = 0; i < Tanks.Length; i++)
+                if (Tanks[i] == _currentTank)
+                    currentTankIndex = i;
+
+            int nextTankIndex = (currentTankIndex + 1) % Tanks.Length;
+
+            RemoveTurnFromCurrentTank();
+            AssignTurnToTank(Tanks[nextTankIndex]);
         }
     }
 }
