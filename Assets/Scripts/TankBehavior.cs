@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +16,8 @@ namespace TankMania
 
         public event EventHandler<EventArgs> Fired;
 
+        private GameObject _muzzle;
+
         private Rigidbody2D _rigidbody;
 
         private SpriteRenderer _spriteRenderer;
@@ -28,6 +31,10 @@ namespace TankMania
             _rigidbody = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _audioSource = GetComponent<AudioSource>();
+
+            _muzzle = GetComponentsInChildren<Transform>()
+                .Single(t => t.gameObject.name == "Muzzle")
+                .gameObject;
         }
 
         public void FixedUpdate()
@@ -56,20 +63,35 @@ namespace TankMania
             if (0 < Mathf.Abs(moveH))
             {
                 _rigidbody.velocity = new Vector2(moveH, _rigidbody.velocity.y);
-                bool spriteIsInRightDirection = (moveH > 0 && !_spriteRenderer.flipX) ||
-                                                (moveH < 0 && _spriteRenderer.flipX);
-                if (!spriteIsInRightDirection)
+                bool isSpriteInCorrectDirection = (moveH > 0 && !_spriteRenderer.flipX) || (moveH < 0 && _spriteRenderer.flipX);
+
+                if (!isSpriteInCorrectDirection)
+                {
                     _spriteRenderer.flipX = !_spriteRenderer.flipX;
+                    _muzzle.transform.localPosition = new Vector3(-
+                        _muzzle.transform.localPosition.x,
+                        _muzzle.transform.localPosition.y
+                    );
+                }
             }
 
             if (!_alreadyFired && Input.GetKey(FireKey))
             {
-                _alreadyFired = true;
-                if (Fired != null) Fired(this, EventArgs.Empty);
-
-                var shellInstance = Instantiate(Shell, transform.position, Quaternion.identity);
-                shellInstance.velocity = 2.5f * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);
+                Fire();
             }
+        }
+
+        private void Fire()
+        {
+            _alreadyFired = true;
+
+            var shell = Instantiate(Shell, _muzzle.transform.position, Quaternion.identity);
+            var shellSpriteRenderer = shell.GetComponent<SpriteRenderer>();
+            shellSpriteRenderer.flipX = _spriteRenderer.flipX;
+            shell.velocity = 2.5f * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);
+
+            if (Fired != null)
+                Fired(this, EventArgs.Empty);
         }
     }
 }
