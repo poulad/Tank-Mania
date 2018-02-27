@@ -8,7 +8,7 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 1122.5197 793.70077"
+   viewBox="0 0 800.00001 599.99999"
    version="1.1"
    id="svg404"
    sodipodi:docname="level1.svg"
@@ -16,8 +16,8 @@
    inkscape:export-filename="C:\Poulad\Workspace\Unity\Tank Mania\Assets\Artworks\tank.png"
    inkscape:export-xdpi="60.869999"
    inkscape:export-ydpi="60.869999"
-   width="297mm"
-   height="210mm">
+   width="800"
+   height="600">
   <metadata
      id="metadata410">
     <rdf:RDF>
@@ -279,6 +279,83 @@
          offset="1"
          id="stop140-6" />
     </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#e-2"
+       id="radialGradient422-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.68348,-4.5287e-8,1.0919e-7,1.6479,234.89,29.34)"
+       cx="742.09003"
+       cy="-41.415001"
+       r="31.594" />
+    <radialGradient
+       id="e-2"
+       cx="742.09003"
+       cy="-41.415001"
+       r="31.594"
+       gradientTransform="matrix(0.68348,-4.5287e-8,1.0919e-7,1.6479,234.89,29.34)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#808080"
+         offset="0"
+         id="stop207-32" />
+      <stop
+         stop-color="#666"
+         offset="1"
+         id="stop209-64" />
+    </radialGradient>
+    <linearGradient
+       id="h-9"
+       x1="731.28998"
+       x2="801.52002"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#j"
+       spreadMethod="reflect" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#f-4"
+       id="linearGradient426-1"
+       gradientUnits="userSpaceOnUse"
+       x1="724.28998"
+       x2="791.10999"
+       spreadMethod="reflect" />
+    <linearGradient
+       id="f-4"
+       x1="724.28998"
+       x2="791.10999"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect">
+      <stop
+         stop-color="#f1e6d2"
+         offset="0"
+         id="stop136-9" />
+      <stop
+         stop-color="#c8ab37"
+         offset=".43134"
+         id="stop138-79" />
+      <stop
+         stop-color="#d1ad83"
+         offset="1"
+         id="stop140-9" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#d"
+       id="linearGradient1184"
+       gradientUnits="userSpaceOnUse"
+       x1="756.53998"
+       y1="-0.57034999"
+       x2="643.40002"
+       y2="19.025" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#g"
+       id="linearGradient1186"
+       gradientUnits="userSpaceOnUse"
+       x1="741.76001"
+       y1="134.42999"
+       x2="741.29999"
+       y2="117.01" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -293,35 +370,37 @@
      inkscape:window-height="1057"
      id="namedview406"
      showgrid="false"
-     inkscape:zoom="0.70710682"
-     inkscape:cx="436.01226"
-     inkscape:cy="473.03417"
+     inkscape:zoom="0.91"
+     inkscape:cx="524.11338"
+     inkscape:cy="179.95535"
      inkscape:window-x="54"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg404"
      showguides="false"
-     units="mm">
+     units="px"
+     width="800mm">
     <inkscape:grid
        type="xygrid"
        id="grid369" />
   </sodipodi:namedview>
   <path
      inkscape:connector-curvature="0"
-     style="opacity:0.2;fill:#d5f6ff;stroke-width:2.52036786"
-     d="M -0.47061857,-0.37530824 H 1049.817 V 794.44786 H -0.47061857 Z"
+     style="opacity:0.2;fill:#d5f6ff;stroke-width:1.91115177"
+     d="M -1.8355961e-7,-3.3678032e-6 H 800 V 600 H -1.8355961e-7 Z"
      id="path2-7" />
   <path
      inkscape:connector-curvature="0"
-     style="opacity:0.2;fill:#80e5ff;stroke-width:2.52036786"
-     d="M -0.47061857,414.66197 C 350.71742,405.68795 732.12467,421.1877 1049.817,414.66197 V 794.43098 H -0.47061857 Z"
+     style="opacity:0.2;fill:#80e5ff;stroke-width:1.91115177"
+     d="M -1.8355961e-7,313.30536 C 267.49856,306.53104 558.01499,318.23152 800,313.30536 V 599.98724 H -1.8355961e-7 Z"
      id="path6-4"
      inkscape:export-xdpi="60.869999"
      inkscape:export-ydpi="60.869999" />
   <g
      inkscape:export-xdpi="60.869999"
      inkscape:export-ydpi="60.869999"
-     id="g4530">
+     id="g4530"
+     transform="matrix(0.76169613,0,0,0.75488485,0.35846816,0.28330486)">
     <path
        id="path8-5"
        d="m 597.80723,248.45395 c -8.41722,34.40964 -11.52697,67.75793 -14.98941,101.17575 l -8.74355,1.2491 c 8.01599,-35.96262 13.55842,-73.16226 17.48663,-111.16828 l 6.24536,8.74355 z"
@@ -365,51 +444,51 @@
   </g>
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:2.52036786"
-     d="m 205.60775,178.30692 8.86313,-8.34166 8.34166,6.25631 -8.34166,-2.08543 c 0,0 -5.73485,10.42701 -7.82045,10.42701 -2.08561,0 -8.34166,-7.29898 -8.34166,-7.29898 l -7.29899,3.12803 6.77752,-7.82045 7.82045,5.73484 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.91115177"
+     d="m 156.96909,134.88456 6.75102,-6.29702 6.35381,4.72278 -6.35381,-1.57423 c 0,0 -4.36822,7.87118 -5.95681,7.87118 -1.5886,0 -6.35381,-5.5099 -6.35381,-5.5099 l -5.55961,2.36128 5.16241,-5.90351 5.9568,4.32912 z"
      id="path24-1" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:2.52036786"
-     d="m 240.5955,162.93772 11.27587,-6.94588 7.51775,8.49767 -8.43264,-4.0525 c 0,0 -8.39963,9.85464 -10.62209,9.39719 -2.22246,-0.45745 -7.28891,-9.6089 -7.28891,-9.6089 l -8.46515,1.73257 8.93898,-6.84758 7.07644,7.82776 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.91115177"
+     d="m 183.61913,123.28258 8.58878,-5.24335 5.72624,6.41478 -6.4231,-3.05917 c 0,0 -6.39797,7.43909 -8.09081,7.09373 -1.69284,-0.34528 -5.55193,-7.25361 -5.55193,-7.25361 l -6.44787,1.30791 6.80878,-5.16915 5.3901,5.90909 z"
      id="path26-4" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:2.52036786"
-     d="m 212.0725,153.49642 8.78675,-3.72762 4.4361,6.86926 -5.56951,-3.80097 c 0,0 -7.05249,6.11189 -8.58638,5.54506 -1.5339,-0.56683 -4.15256,-7.63621 -4.15256,-7.63621 l -6.21926,0.31749 7.11096,-3.91085 4.19415,6.34402 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.91115177"
+     d="m 161.89327,116.15549 6.69283,-2.81399 3.37896,5.18553 -4.24227,-2.86931 c 0,0 -5.37186,4.61378 -6.54021,4.18591 -1.16837,-0.42787 -3.16299,-5.76445 -3.16299,-5.76445 l -4.73719,0.23967 5.41639,-2.95228 3.19467,4.78899 z"
      id="path28-4" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:2.52036786"
-     d="m 249.36386,141.31044 4.30503,-6.03527 5.72603,2.7477 -5.23102,-0.25601 c 0,0 -2.18894,6.90984 -3.43476,7.15734 -1.24582,0.2475 -5.84977,-3.37074 -5.84977,-3.37074 l -3.98949,2.73485 3.12122,-5.47626 5.35251,2.49817 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.91115177"
+     d="m 190.29796,106.95646 3.27912,-4.55596 4.36149,2.0742 -3.98444,-0.19325 c 0,0 -1.66731,5.21611 -2.61625,5.40294 -0.94893,0.18683 -4.45574,-2.54449 -4.45574,-2.54449 l -3.03878,2.06453 2.37742,-4.13397 4.07698,1.88585 z"
      id="path30-8" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:2.52036786"
-     d="m 436.93214,117.18296 -11.27587,-6.94588 -7.51775,8.49767 8.43264,-4.0525 c 0,0 8.39963,9.85464 10.62209,9.39719 2.22246,-0.45744 7.28891,-9.6089 7.28891,-9.6089 l 8.46516,1.73258 -8.93899,-6.84759 -7.07644,7.82776 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.91115177"
+     d="m 333.16798,88.742978 -8.58877,-5.243356 -5.72624,6.414786 6.4231,-3.059173 c 0,0 6.39796,7.439091 8.0908,7.093806 1.69284,-0.34536 5.55193,-7.253614 5.55193,-7.253614 l 6.44789,1.307915 -6.80879,-5.169151 -5.39011,5.909013 z"
      id="path32-6" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:2.52036786"
-     d="m 424.83438,86.711716 -4.30504,-6.035273 -5.72603,2.747705 5.23103,-0.256019 c 0,0 2.18894,6.90984 3.43475,7.15734 1.24582,0.2475 5.84978,-3.370739 5.84978,-3.370739 l 3.98949,2.734851 -3.12123,-5.476255 -5.3525,2.498188 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.91115177"
+     d="m 323.95317,65.740731 -3.27912,-4.555957 -4.3615,2.074197 3.98444,-0.193251 c 0,0 1.66733,5.216103 2.61625,5.402938 0.94892,0.186834 4.45574,-2.544492 4.45574,-2.544492 l 3.03878,2.064459 -2.37742,-4.133901 -4.07698,1.885855 z"
      id="path34-9" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.21994042"
-     d="m 670.49242,115.89483 5.45789,-3.36203 3.63884,4.11315 -4.08167,-1.96154 c 0,0 -4.0657,4.76996 -5.14144,4.54854 -1.07575,-0.22141 -3.52807,-4.65102 -3.52807,-4.65102 l -4.09741,0.83862 4.32676,-3.31445 3.42522,3.78889 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:0.92505991"
+     d="m 511.06996,87.77061 4.15723,-2.537998 2.7717,3.104992 -3.10898,-1.480707 c 0,0 -3.09684,3.600727 -3.91622,3.433594 -0.81941,-0.167132 -2.68734,-3.510968 -2.68734,-3.510968 l -3.12096,0.633045 3.29568,-2.502066 2.60897,2.860182 z"
      id="path36-6" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.21994042"
-     d="m 696.08677,107.22471 -4.48462,-1.90249 -2.26409,3.50586 2.84258,-1.93995 c 0,0 3.59944,3.11939 4.3824,2.83002 0.78296,-0.28937 2.1194,-3.89734 2.1194,-3.89734 l 3.17428,0.16204 -3.62932,-1.99607 -2.14063,3.23785 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:0.92505991"
+     d="m 530.56507,81.225683 -3.41592,-1.436167 -1.72456,2.646475 2.16519,-1.464402 c 0,0 2.74167,2.354788 3.33806,2.136325 0.59638,-0.218466 1.61434,-2.942015 1.61434,-2.942015 l 2.41784,0.122292 -2.76445,-1.506826 -1.6305,2.444243 z"
      id="path38-2" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#00222b;fill-rule:evenodd;stroke-width:1.21994042"
-     d="m 673.62767,105.02272 2.08378,-2.92127 2.77158,1.32998 -2.53199,-0.12392 c 0,0 -1.05952,3.34459 -1.66253,3.46439 -0.60302,0.11979 -2.83148,-1.63155 -2.83148,-1.63155 l -1.93105,1.32376 1.51078,-2.65069 2.59079,1.2092 z"
+     style="fill:#00222b;fill-rule:evenodd;stroke-width:0.92505991"
+     d="m 513.45806,79.563428 1.58721,-2.205248 2.11109,1.003998 -1.92861,-0.09353 c 0,0 -0.80703,2.524712 -1.26633,2.615148 -0.45933,0.09044 -2.15674,-1.231595 -2.15674,-1.231595 l -1.47085,0.999318 1.15073,-2.000974 1.97339,0.912807 z"
      id="path40-5" />
   <g
-     transform="matrix(2.5203677,0,0,2.5203677,17.593361,15.108067)"
+     transform="matrix(2.6313421,0,0,1.9025874,-118.61217,11.688181)"
      id="g66"
      inkscape:export-xdpi="96"
      inkscape:export-ydpi="96">
@@ -436,7 +515,7 @@
   </g>
   <g
      id="g4139"
-     transform="matrix(0.32099271,0,0,0.32099271,1002.711,142.38338)"
+     transform="matrix(0.32099271,0,0,0.32099271,939.1405,494.27502)"
      inkscape:export-xdpi="60.869999"
      inkscape:export-ydpi="60.869999">
     <g
@@ -730,7 +809,7 @@
       </g>
       <g
          id="g130"
-         transform="rotate(0.05140977,-604887.54,-30084.477)">
+         transform="rotate(0.05140977,-604887.54,-30083.083)">
         <path
            style="fill:#888a85"
            inkscape:connector-curvature="0"
@@ -1407,7 +1486,7 @@
   </g>
   <g
      id="g366"
-     transform="matrix(-2.5509257e-5,0.0954418,-0.04989515,-4.8795312e-5,1136.1508,291.97574)"
+     transform="matrix(-2.5509257e-5,0.0954418,-0.04989515,-4.8795312e-5,1072.5803,643.8674)"
      inkscape:export-xdpi="60.869999"
      inkscape:export-ydpi="60.869999">
     <path
@@ -1434,6 +1513,1240 @@
        inkscape:connector-curvature="0"
        style="fill:url(#linearGradient426)"
        id="path364-0"
+       d="m 707.29,124.05 h 70.821 v 13.856 H 707.29 Z" />
+  </g>
+  <g
+     id="g1388"
+     transform="translate(362.10183,531.43372)">
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 738.01983,-70.271494 c -3.33337,-2.777728 -0.93402,-13.3674 -6.85181,-27.086628 l 122.9734,0.184007 c -8.64165,5.642788 -15.77919,19.212644 -30.61219,24.937663 l -33.70215,0.339286 c -18.53084,0.187562 -36.69892,0.40683 -40.39365,0.471226 l -11.41309,1.154008 z"
+       id="path2-2"
+       inkscape:connector-curvature="0"
+       style="fill:#2e5b04;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 839.29848,-71.344946 c -3.30368,7.229804 -11.84285,10.41281 -19.07293,7.109 -7.23007,-3.303814 -10.41281,-11.842846 -7.10899,-19.072927 3.30381,-7.230074 11.84284,-10.41281 19.07292,-7.108995 7.23008,3.303809 10.41281,11.842842 7.109,19.072922 z"
+       id="path4-3"
+       inkscape:connector-curvature="0"
+       style="fill:#444643;stroke-width:0.76036537" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 819.83466,-69.908794 c -0.51841,0.193224 -2.30134,-0.10699 -2.72788,-0.45937 -0.42653,-0.352386 -1.058,-2.046486 -0.96612,-2.592055 0.0919,-0.545573 1.24333,-1.939501 1.76172,-2.132751 0.51841,-0.193257 2.30134,0.106984 2.72787,0.45937 0.42654,0.35238 1.05802,2.046481 0.96613,2.592049 -0.0919,0.545573 -1.24332,1.939501 -1.76172,2.132757 z"
+       id="path6-7"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045709" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 835.82828,-78.620712 c -0.51841,0.193225 -2.30134,-0.10699 -2.72787,-0.45937 -0.42653,-0.352385 -1.058,-2.046486 -0.96612,-2.592054 0.0919,-0.545574 1.24331,-1.939502 1.76172,-2.132752 0.5184,-0.193256 2.30134,0.106985 2.72787,0.45937 0.42653,0.35238 1.058,2.046481 0.96612,2.59205 -0.0919,0.545573 -1.24332,1.939501 -1.76172,2.132756 z"
+       id="path8-1"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045709" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 819.59525,-80.031669 c -0.51841,0.193225 -2.30133,-0.10699 -2.72788,-0.45937 -0.42653,-0.352385 -1.058,-2.046486 -0.96612,-2.592055 0.0919,-0.545573 1.24333,-1.939501 1.76172,-2.132751 0.51841,-0.193256 2.30134,0.106985 2.72788,0.45937 0.42653,0.35238 1.05801,2.046481 0.96612,2.592049 -0.0919,0.545574 -1.24332,1.939502 -1.76172,2.132757 z"
+       id="path10-8"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045709" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 828.28167,-84.644473 c -0.51842,0.193225 -2.30134,-0.10699 -2.72788,-0.45937 -0.42653,-0.352386 -1.058,-2.046486 -0.96612,-2.592054 0.0919,-0.545574 1.24332,-1.939501 1.76172,-2.132752 0.5184,-0.193256 2.30134,0.106984 2.72787,0.45937 0.42653,0.35238 1.05801,2.046481 0.96612,2.592049 -0.0919,0.545574 -1.24332,1.939501 -1.76171,2.132757 z"
+       id="path12-5"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045709" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 828.14635,-65.248628 c -0.51842,0.193224 -2.30134,-0.10699 -2.72787,-0.459371 -0.42654,-0.352385 -1.05801,-2.046486 -0.96613,-2.592054 0.0919,-0.545573 1.24332,-1.939501 1.76173,-2.132752 0.51839,-0.193256 2.30133,0.106985 2.72786,0.45937 0.42654,0.352381 1.05801,2.046481 0.96612,2.59205 -0.0919,0.545573 -1.24332,1.939501 -1.76171,2.132757 z"
+       id="path14-8"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045709" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 835.00596,-70.556762 c -0.51841,0.193225 -2.30134,-0.10699 -2.72787,-0.45937 -0.42654,-0.352386 -1.05801,-2.046486 -0.96613,-2.592055 0.0919,-0.545573 1.24333,-1.939501 1.76173,-2.132752 0.51839,-0.193255 2.30134,0.106986 2.72787,0.459371 0.42653,0.35238 1.058,2.046481 0.96612,2.592049 -0.0919,0.545574 -1.24332,1.939502 -1.76172,2.132757 z"
+       id="path16-4"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045709" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 823.60886,-91.370793 c -5.52673,0.913297 -9.79291,4.861322 -11.37718,9.858483 l 25.32177,-4.184312 c -3.10812,-4.221941 -8.41734,-6.587936 -13.94407,-5.674535 z"
+       id="path18-3"
+       inkscape:connector-curvature="0"
+       style="opacity:0.68980001;fill:#2e3436;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 808.85895,-74.197499 c 0,7.949079 -6.44397,14.393359 -14.39336,14.393359 -7.94939,0 -14.39336,-6.443973 -14.39336,-14.393359 0,-7.949387 6.44397,-14.393359 14.39336,-14.393359 7.94939,0 14.39336,6.443972 14.39336,14.393359 z"
+       id="path20-0"
+       inkscape:connector-curvature="0"
+       style="fill:#444643;stroke-width:0.76038665" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 791.74652,-64.806704 c -0.3912,0.391206 -2.13762,0.859169 -2.67202,0.71594 -0.5344,-0.14323 -1.81285,-1.421626 -1.95603,-1.956031 -0.14318,-0.534404 0.32475,-2.280795 0.71594,-2.672023 0.39118,-0.391226 2.13762,-0.859169 2.67202,-0.715939 0.53441,0.14323 1.81285,1.421626 1.95603,1.956031 0.14318,0.534404 -0.32475,2.280795 -0.71594,2.672022 z"
+       id="path22-9"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 802.67611,-79.37948 c -0.39121,0.391207 -2.13762,0.85917 -2.67203,0.71594 -0.5344,-0.14323 -1.81285,-1.421626 -1.95603,-1.956031 -0.14318,-0.534405 0.32475,-2.280796 0.71594,-2.672023 0.39118,-0.391226 2.13762,-0.859169 2.67203,-0.71594 0.5344,0.14323 1.81285,1.421627 1.95603,1.956032 0.14317,0.534404 -0.32476,2.280795 -0.71594,2.672022 z"
+       id="path24-3"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 787.32264,-73.914689 c -0.3912,0.391207 -2.13762,0.85917 -2.67202,0.71594 -0.5344,-0.143229 -1.81285,-1.421626 -1.95603,-1.956031 -0.14318,-0.534404 0.32476,-2.280796 0.71594,-2.672022 0.39119,-0.391227 2.13762,-0.85917 2.67202,-0.71594 0.53441,0.143229 1.81285,1.421626 1.95604,1.956031 0.14317,0.534404 -0.32476,2.280796 -0.71595,2.672022 z"
+       id="path26-3"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 793.30789,-81.721533 c -0.3912,0.391206 -2.13762,0.859169 -2.67202,0.71594 -0.5344,-0.143229 -1.81285,-1.421627 -1.95603,-1.956031 -0.14318,-0.534405 0.32475,-2.280796 0.71594,-2.672022 0.39118,-0.391228 2.13761,-0.85917 2.67202,-0.71594 0.53441,0.143229 1.81285,1.421626 1.95603,1.956031 0.14318,0.534404 -0.32475,2.280795 -0.71594,2.672022 z"
+       id="path28-5"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 801.24485,-64.026019 c -0.39121,0.391206 -2.13762,0.859169 -2.67202,0.715939 -0.53441,-0.143229 -1.81286,-1.421626 -1.95603,-1.95603 -0.14318,-0.534405 0.32475,-2.280796 0.71594,-2.672023 0.39118,-0.391227 2.13761,-0.859169 2.67202,-0.71594 0.53441,0.14323 1.81286,1.421627 1.95603,1.956031 0.14317,0.534405 -0.32475,2.280795 -0.71594,2.672023 z"
+       id="path30-5"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 805.27839,-71.70275 c -0.39121,0.391207 -2.13762,0.85917 -2.67203,0.71594 -0.5344,-0.14323 -1.81285,-1.421626 -1.95603,-1.956031 -0.14317,-0.534404 0.32476,-2.280795 0.71594,-2.672023 0.39119,-0.391226 2.13762,-0.859168 2.67203,-0.715939 0.5344,0.14323 1.81285,1.421627 1.95603,1.956031 0.14317,0.534404 -0.32475,2.280795 -0.71594,2.672022 z"
+       id="path32-9"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 791.86103,-88.248055 c -5.52673,0.913297 -9.79291,4.861322 -11.37718,9.858483 l 25.32176,-4.184313 c -3.10811,-4.221941 -8.41734,-6.587935 -13.94407,-5.674534 z"
+       id="path34-2"
+       inkscape:connector-curvature="0"
+       style="opacity:0.68980001;fill:#2e3436;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 777.63511,-74.931343 c 0,7.94908 -6.44397,14.393359 -14.39335,14.393359 -7.94939,0 -14.39336,-6.443972 -14.39336,-14.393359 0,-7.949386 6.44397,-14.393359 14.39336,-14.393359 7.94938,0 14.39335,6.443973 14.39335,14.393359 z"
+       id="path36-0"
+       inkscape:connector-curvature="0"
+       style="fill:#444643;stroke-width:0.76038665" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 760.5228,-65.545751 c -0.39121,0.391206 -2.13762,0.859168 -2.67203,0.715939 -0.5344,-0.143229 -1.81285,-1.421626 -1.95603,-1.95603 -0.14317,-0.534405 0.32475,-2.280796 0.71594,-2.672023 0.39118,-0.391228 2.13762,-0.85917 2.67203,-0.71594 0.5344,0.14323 1.81285,1.421626 1.95602,1.956031 0.14318,0.534405 -0.32475,2.280795 -0.71593,2.672023 z"
+       id="path38-6"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 771.45238,-80.118528 c -0.39121,0.391206 -2.13762,0.85917 -2.67202,0.71594 -0.53441,-0.14323 -1.81286,-1.421626 -1.95604,-1.956031 -0.14317,-0.534404 0.32476,-2.280795 0.71595,-2.672023 0.39118,-0.391226 2.13761,-0.859168 2.67202,-0.715939 0.5344,0.14323 1.81285,1.421627 1.95602,1.956031 0.14319,0.534404 -0.32475,2.280795 -0.71593,2.672022 z"
+       id="path40-4"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 756.09908,-74.653737 c -0.39122,0.391206 -2.13762,0.85917 -2.67203,0.71594 -0.5344,-0.14323 -1.81286,-1.421626 -1.95603,-1.956031 -0.14318,-0.534405 0.32475,-2.280795 0.71594,-2.672023 0.39118,-0.391226 2.13761,-0.859168 2.67202,-0.715939 0.53441,0.143229 1.81286,1.421627 1.95603,1.95603 0.14318,0.534405 -0.32475,2.280796 -0.71593,2.672023 z"
+       id="path42-68"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 762.08417,-82.460581 c -0.39122,0.391206 -2.13762,0.85917 -2.67203,0.71594 -0.53441,-0.14323 -1.81286,-1.421626 -1.95603,-1.956031 -0.14317,-0.534405 0.32475,-2.280796 0.71594,-2.672023 0.39118,-0.391226 2.13762,-0.859169 2.67202,-0.71594 0.53441,0.14323 1.81286,1.421627 1.95603,1.956031 0.14318,0.534405 -0.32475,2.280796 -0.71593,2.672023 z"
+       id="path44-4"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 770.02112,-64.765067 c -0.39121,0.391206 -2.13761,0.859169 -2.67202,0.71594 -0.53441,-0.14323 -1.81285,-1.421627 -1.95603,-1.956031 -0.14318,-0.534405 0.32475,-2.280796 0.71594,-2.672023 0.39119,-0.391227 2.13762,-0.859169 2.67202,-0.71594 0.5344,0.14323 1.81285,1.421627 1.95603,1.956031 0.14318,0.534405 -0.32475,2.280796 -0.71594,2.672023 z"
+       id="path46-48"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 774.05466,-72.441797 c -0.39121,0.391206 -2.13762,0.859169 -2.67202,0.715939 -0.53441,-0.143229 -1.81285,-1.421626 -1.95604,-1.95603 -0.14317,-0.534405 0.32476,-2.280796 0.71595,-2.672023 0.39118,-0.391227 2.13762,-0.859169 2.67202,-0.71594 0.5344,0.14323 1.81285,1.421627 1.95602,1.956031 0.14319,0.534405 -0.32475,2.280795 -0.71593,2.672023 z"
+       id="path48-0"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 752.06174,-118.50426 h 59.85247 v 6.76593 h -59.85247 z"
+       id="path50-3"
+       inkscape:connector-curvature="0"
+       style="fill:#2e5b04;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 781.47792,-151.47829 c -5.65372,0 -6.90072,0.15582 -10.02763,1.26289 -4.87907,1.72739 -9.38174,3.707 -12.57214,7.37018 -6.3428,7.2817 -11.08311,26.76602 -11.08311,26.76602 l 4.91961,0.16964 c 2.7045,0.0898 17.86102,0.20671 33.6834,0.26389 l 28.76406,0.1131 -0.30158,-4.59917 c -0.15219,-2.31681 -0.46954,-4.41399 -0.98018,-6.42763 l 57.69778,1.65796 4.21008,4.04161 10.24727,-3.62618 v -15.15465 l -9.6248,-3.94708 -5.44137,4.37776 -62.08523,1.77465 c -3.9918,-5.71617 -10.04168,-10.1822 -17.37908,-12.7798 -3.1269,-1.10706 -4.37412,-1.26289 -10.02763,-1.26289 z"
+       id="path52-2"
+       inkscape:connector-curvature="0"
+       style="fill:#4e9a06;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 741.92325,-114.5311 c -3.33336,2.77773 -6.13878,6.8617 -12.05637,20.580926 l 124.35782,-2.862509 c -8.64166,-5.642787 -16.64368,-11.069587 -31.47668,-16.794607 l -33.70214,-0.33928 c -18.53085,-0.18756 -36.69894,-0.40683 -40.39365,-0.47123 l -6.72898,-0.1131 z"
+       id="path54-3"
+       inkscape:connector-curvature="0"
+       style="fill:#4e9a06;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 763.12143,-89.039148 c -5.60167,0 -10.4544,3.199712 -12.83237,7.871901 h 25.66474 c -2.37817,-4.672189 -7.2307,-7.871901 -12.83237,-7.871901 z"
+       id="path56-6"
+       inkscape:connector-curvature="0"
+       style="opacity:0.68980001;fill:#2e3436;stroke-width:0.52045631" />
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.52045628,0,0,0.52045628,667.64893,-263.88644)"
+       id="g84-5"
+       style="fill:#444643">
+      <path
+         transform="matrix(0.8983,0,0,0.8983,-18.459,-61.462)"
+         d="m 187.86,462.01 c 0,10.454 -8.4746,18.929 -18.929,18.929 -10.4544,0 -18.929,-8.4746 -18.929,-18.929 0,-10.4544 8.4746,-18.929 18.929,-18.929 10.4544,0 18.929,8.4746 18.929,18.929 z"
+         id="path58-1"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="matrix(0.58491,0,0,0.58491,-10.847,61.865)"
+         id="g64-8">
+        <path
+           d="m 246.43,461.22 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,461.22"
+           id="path60-2"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 246.43,512.13 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,512.13"
+           id="path62-2"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="matrix(0.41359,-0.41359,0.41359,0.41359,-174.89,249.22)"
+         id="g70-0">
+        <path
+           d="m 246.43,461.22 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,461.22"
+           id="path66-9"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 246.43,512.13 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,512.13"
+           id="path68-4"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="matrix(0,-0.58491,0.58491,0,-158.4,497.69)"
+         id="g76-6">
+        <path
+           d="m 246.43,461.22 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,461.22"
+           id="path72-6"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 246.43,512.13 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,512.13"
+           id="path74-0"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="matrix(-0.41359,-0.41359,0.41359,-0.41359,28.953,661.73)"
+         id="g82-9">
+        <path
+           d="m 246.43,461.22 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,461.22"
+           id="path78-1"
+           inkscape:connector-curvature="0" />
+        <path
+           d="m 246.43,512.13 a 6.0104,6.0104 0 0 1 6.0104,6.0104 v 12.021 a 6.0104,6.0104 0 0 1 -6.0104,6.0104 6.0104,6.0104 0 0 1 -6.0104,-6.0104 v -12.021 A 6.0104,6.0104 0 0 1 246.43,512.13"
+           id="path80-8"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 846.83162,-95.185737 c -0.78246,0 -1.41502,0.632562 -1.41502,1.415017 v 0.715627 c -0.83132,0.176601 -1.62018,0.494454 -2.30953,0.943327 l -0.50419,-0.504192 c -0.55324,-0.553245 -1.44723,-0.553245 -2.00053,0 -0.5533,0.553245 -0.55324,1.447233 0,2.00053 l 0.52046,0.520456 c -0.45402,0.695902 -0.79979,1.468936 -0.97586,2.309525 h -0.69938 c -0.78246,0 -1.41502,0.616324 -1.41502,1.398726 0,0.782402 0.63256,1.415016 1.41502,1.415016 h 0.69938 c 0.17548,0.837415 0.50813,1.615601 0.95962,2.309525 l -0.50419,0.504192 c -0.55325,0.553245 -0.55325,1.447233 0,2.00053 0.55324,0.553297 1.44724,0.553245 2.00053,0 l 0.50419,-0.504192 c 0.69117,0.451236 1.47534,0.782402 2.30953,0.959618 v 0.715627 c 0,0.782454 0.63256,1.415016 1.41501,1.415016 0.78246,0 1.41502,-0.632562 1.41502,-1.415016 v -0.715627 c 0.84423,-0.177424 1.62783,-0.501887 2.32581,-0.959618 l 0.48793,0.504192 c 0.55324,0.553245 1.44724,0.553245 2.00053,0 0.5533,-0.553244 0.55324,-1.447232 0,-2.00053 l -0.50419,-0.487927 c 0.45714,-0.697568 0.7823,-1.482208 0.95962,-2.325816 h 0.71563 c 0.78245,0 1.41501,-0.632562 1.41501,-1.415016 0,-0.782454 -0.63256,-1.398726 -1.41501,-1.398726 h -0.71563 c -0.17724,-0.84392 -0.5023,-1.627987 -0.95962,-2.325815 l 0.50419,-0.504192 c 0.55324,-0.553245 0.55324,-1.447233 0,-2.00053 -0.55325,-0.553297 -1.44723,-0.553245 -2.00053,0 l -0.50419,0.504192 c -0.69335,-0.451475 -1.47273,-0.767465 -2.30952,-0.943328 v -0.715627 c 0,-0.782453 -0.63257,-1.415016 -1.41502,-1.415016 z"
+       id="path86-5"
+       inkscape:connector-curvature="0"
+       style="fill:#444643;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 751.86865,-118.54954 11.59264,0.36802 c 0,0 6.18822,-27.34218 15.08855,-29.62541 -17.6648,-5.52048 -26.68119,29.25744 -26.68119,29.25744 z"
+       id="path88-5"
+       inkscape:connector-curvature="0"
+       style="fill:#73d216;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 870.92353,-138.06041 -56.51634,1.46378 c 0.36435,0.35903 0.79672,0.8039 1.25232,1.33368 l 54.89253,0.89455 0.37407,-3.69201 z"
+       id="path90-0"
+       inkscape:connector-curvature="0"
+       style="fill:#73d216;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 808.81749,-137.50248 c 0,0 5.52048,9.38435 4.96828,10.85672 l 5.79632,0.18401 c -0.18401,-6.25641 -6.25641,-11.13256 -6.25641,-11.13256 l -4.50824,0.092 z"
+       id="path92-9"
+       inkscape:connector-curvature="0"
+       style="opacity:0.40613002;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 871.37634,-138.08643 -0.065,3.12274 5.5949,-1.17103 -0.52046,-5.5949 z"
+       id="path94-8"
+       inkscape:connector-curvature="0"
+       style="fill:#73d216;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 886.01156,-138.86763 -0.52045,2.73239 -7.80685,0.065 -0.32528,-6.05031 z"
+       id="path96-7"
+       inkscape:connector-curvature="0"
+       style="fill:#73d216;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 877.73111,-135.75426 -1.74812,14.35262 0.73604,-14.44475 1.01202,0.092 z"
+       id="path98-1"
+       inkscape:connector-curvature="0"
+       style="fill:#73d216;stroke-width:0.52045631" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 789.10702,-121.12081 -5.65107,-3.25867 -5.88808,2.80794 1.35284,-6.38146 -4.48996,-4.7323 6.48719,-0.68538 3.11319,-5.73282 2.65649,5.95824 6.41396,1.18929 -4.84571,4.36777 0.85096,6.46771 z"
+       id="path100-8"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke-width:0.39676809" />
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51790605,-0.05143669,0.05143669,0.51790605,676.95209,-172.45788)"
+       id="g110-7">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path102-5"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path104-0"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path106-0"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path108-6"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.49927371,-0.14696645,0.14696645,0.49927371,674.23791,-149.67231)"
+       id="g120-3">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path112-3"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path114-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path116-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path118-9"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.52045608,4.6698962e-4,-4.6698962e-4,0.52045608,707.69914,-187.7072)"
+       id="g130-9">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path122-6"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path124-4"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path126-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path128-8"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51667777,-0.06261089,0.06261089,0.51667777,707.39358,-173.75902)"
+       id="g140-0">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path132-1"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path134-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path136-0"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path138-7"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51667777,-0.06261089,0.06261089,0.51667777,707.39358,-173.75902)"
+       id="g150-0">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path142-2"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path144-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path146-5"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path148-7"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51667777,-0.06261089,0.06261089,0.51667777,718.43401,-174.86239)"
+       id="g160-8">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path152-2"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path154-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path156-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path158-0"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.4823745,0.19541572,-0.19541572,0.4823745,782.75304,-223.10245)"
+       id="g170-4">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path162-1"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path164-5"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path166-5"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path168-6"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.02387333,0.51990981,-0.51990981,-0.02387333,956.22635,-194.93639)"
+       id="g180-5">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path172-4"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path174-3"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path176-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path178-8"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.34013832,0.39392922,-0.39392922,-0.34013832,998.84837,-99.232373)"
+       id="g190-5">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path182-2"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path184-5"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path186-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path188-9"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.36037955,0.37550401,-0.37550401,-0.36037955,992.15722,-84.560809)"
+       id="g200-1">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path192-5"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path194-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path196-2"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path198-8"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.50739086,0.11588911,-0.11588911,-0.50739086,966.19581,4.9467463)"
+       id="g210-5">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path202-2"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path204-6"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path206-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path208-7"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.52045628,0.00106693,-0.00106693,-0.52045628,933.29504,33.569942)"
+       id="g220-2">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path212-2"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path214-2"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path216-0"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path218-6"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.51709935,0.05901974,-0.05901974,-0.51709935,931.94707,20.480467)"
+       id="g230-2">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path222-0"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path224-2"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path226-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path228-3"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.52045628,0.00106693,-0.00106693,-0.52045628,911.69611,33.569942)"
+       id="g240-6">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path232-4"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path234-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path236-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path238-4"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.52045628,0.00106693,-0.00106693,-0.52045628,900.7665,33.569942)"
+       id="g250-0">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path242-6"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path244-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path246-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path248-9"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.51828599,-0.04749164,0.04749164,-0.51828599,880.47391,43.651181)"
+       id="g260-8">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path252-3"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path254-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path256-3"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path258-7"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.52045628,0.00106693,-0.00106693,-0.52045628,877.6062,33.569942)"
+       id="g270-4">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path262-7"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path264-0"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path266-4"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path268-0"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.51120257,-0.09770006,0.09770006,-0.51120257,846.59741,52.436483)"
+       id="g280-0">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path272-2"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path274-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path276-4"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path278-9"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.51120257,-0.09770006,0.09770006,-0.51120257,834.88714,49.834202)"
+       id="g290-9">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path282-9"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path284-7"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path286-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path288-8"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.41306534,-0.31662999,0.31662999,-0.41306534,764.24041,74.75885)"
+       id="g300-3">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path292-1"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path294-6"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path296-0"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path298-3"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(-0.04641429,-0.51838487,0.51838487,-0.04641429,642.56813,42.219926)"
+       id="g310-6">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path302-7"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path304-2"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path306-7"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path308-7"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.43086494,-0.29194475,0.29194475,0.43086494,584.11049,-102.19108)"
+       id="g320-5">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path312-5"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path314-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path316-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path318-5"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51451268,0.07844317,-0.07844317,0.51451268,644.63487,-200.61978)"
+       id="g330-4">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path322-5"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path324-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path326-5"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path328-0"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51996186,-0.02269189,0.02269189,0.51996186,635.78087,-178.11004)"
+       id="g340-4">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path332-1"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path334-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path336-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path338-1"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51996186,-0.02269189,0.02269189,0.51996186,646.45022,-179.15095)"
+       id="g350-2">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path342-4"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path344-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path346-3"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path348-3"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51243606,0.09100699,-0.09100699,0.51243606,678.50929,-201.24952)"
+       id="g360-6">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path352-6"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path354-8"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path356-7"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path358-9"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <g
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       transform="matrix(0.51645398,-0.06441688,0.06441688,0.51645398,661.79848,-167.87266)"
+       id="g370-5">
+      <path
+         d="m 206.44,176.34 h 22.624 a 4.25,4.25 0 0 1 4.25,4.25 4.25,4.25 0 0 1 -4.25,4.25 H 206.44 a 4.25,4.25 0 0 1 -4.25,-4.25 4.25,4.25 0 0 1 4.25,-4.25"
+         id="path362-3"
+         inkscape:connector-curvature="0"
+         style="fill:#888a85" />
+      <path
+         d="m 231.25,180.57 c 0,1.5878 -3.2872,2.875 -4.875,2.875 -1.5878,0 -2.875,-1.2872 -2.875,-2.875 0,-1.5878 3.2872,-2.875 4.875,-2.875 1.5878,0 2.875,1.2872 2.875,2.875 z"
+         id="path364-1"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 210.83,182.28 c -0.73886,1.4054 -4.2474,1.0152 -5.6529,0.27631 -1.4055,-0.73889 -1.9458,-2.4772 -1.207,-3.8826 0.7388,-1.4054 4.2474,-1.0152 5.6529,-0.27631 1.4055,0.73889 1.9458,2.4772 1.207,3.8826 z"
+         id="path366-9"
+         inkscape:connector-curvature="0"
+         style="fill:#382509;fill-rule:evenodd;stroke:#000000" />
+      <path
+         d="m 213.03,176.4 c 1.1923,1.1314 1.9062,2.6161 1.9062,4.25 0,1.6339 -0.71394,3.1186 -1.9062,4.25 h 9.8438 c -1.1995,-1.1314 -1.9375,-2.6161 -1.9375,-4.25 0,-1.6339 0.73802,-3.1186 1.9375,-4.25 z"
+         id="path368-7"
+         inkscape:connector-curvature="0"
+         style="fill:#555753" />
+    </g>
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 852.41244,-85.574799 c -0.42966,3.245738 -3.40916,5.528734 -6.65502,5.099051 -3.24587,-0.429678 -5.52874,-3.409165 -5.09906,-6.655033 0.42969,-3.245862 3.40917,-5.528729 6.65503,-5.09905 3.24587,0.429683 5.52874,3.409171 5.09905,6.655032 z"
+       id="path372-8"
+       inkscape:connector-curvature="0"
+       style="fill:#444643;stroke-width:0.31318676" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 844.91957,-82.664626 c -0.18089,0.138592 -0.9193,0.235283 -1.12977,0.147914 -0.21047,-0.08737 -0.6634,-0.678477 -0.69298,-0.904428 -0.0296,-0.225951 0.25589,-0.913765 0.43676,-1.052368 0.18088,-0.138608 0.9193,-0.235288 1.12976,-0.147919 0.21048,0.08737 0.66341,0.678477 0.69298,0.904428 0.0296,0.225951 -0.25587,0.913765 -0.43675,1.052373 z"
+       id="path374-2"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.21437162" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 850.17097,-88.020121 c -0.18089,0.138592 -0.91929,0.235283 -1.12976,0.147913 -0.21047,-0.08737 -0.6634,-0.678476 -0.69299,-0.904427 -0.0296,-0.225951 0.25588,-0.913765 0.43677,-1.052368 0.18087,-0.138608 0.91929,-0.235288 1.12976,-0.147919 0.21047,0.08737 0.6634,0.678477 0.69298,0.904428 0.0296,0.225951 -0.25589,0.913765 -0.43676,1.052373 z"
+       id="path376-7"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.21437162" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 843.60281,-86.620094 c -0.18088,0.138593 -0.91929,0.235283 -1.12976,0.147914 -0.21047,-0.08737 -0.66341,-0.678477 -0.69298,-0.904428 -0.0296,-0.225951 0.25588,-0.913765 0.43676,-1.052368 0.18087,-0.138608 0.9193,-0.235287 1.12976,-0.147919 0.21047,0.08737 0.66341,0.678477 0.69298,0.904429 0.0296,0.22595 -0.25588,0.913764 -0.43676,1.052372 z"
+       id="path378-5"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.21437162" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 846.47052,-89.482603 c -0.18088,0.138592 -0.91929,0.235282 -1.12976,0.147913 -0.21047,-0.08737 -0.6634,-0.678476 -0.69298,-0.904428 -0.0296,-0.225951 0.25588,-0.913765 0.43676,-1.052367 0.18088,-0.138608 0.9193,-0.235289 1.12977,-0.147919 0.21047,0.08737 0.6634,0.678477 0.69298,0.904427 0.0296,0.225952 -0.25589,0.913766 -0.43677,1.052374 z"
+       id="path380-1"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.21437162" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 848.75533,-81.831896 c -0.18089,0.138592 -0.91929,0.235283 -1.12976,0.147914 -0.21048,-0.08737 -0.6634,-0.678477 -0.69299,-0.904428 -0.0296,-0.225951 0.25589,-0.913765 0.43676,-1.052368 0.18088,-0.138608 0.9193,-0.235288 1.12977,-0.147919 0.21047,0.08737 0.6634,0.678477 0.69298,0.904429 0.0296,0.22595 -0.25589,0.913764 -0.43676,1.052372 z"
+       id="path382-4"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.21437162" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 850.81633,-84.746451 c -0.18088,0.138592 -0.91929,0.235283 -1.12975,0.147914 -0.21048,-0.08737 -0.66341,-0.678478 -0.69299,-0.904428 -0.0296,-0.225951 0.25588,-0.913766 0.43676,-1.052368 0.18088,-0.138608 0.9193,-0.235288 1.12976,-0.147919 0.21048,0.08737 0.66341,0.678477 0.69299,0.904428 0.0296,0.225951 -0.25589,0.913765 -0.43677,1.052373 z"
+       id="path384-1"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.21437162" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 745.66645,-78.029577 c -0.58304,4.404152 -4.62596,7.501924 -9.03027,6.918862 -4.40432,-0.583061 -7.50193,-4.625961 -6.91887,-9.030281 0.58307,-4.40432 4.62596,-7.501924 9.03028,-6.918863 4.40432,0.583068 7.50193,4.625962 6.91886,9.030282 z"
+       id="path386-0"
+       inkscape:connector-curvature="0"
+       style="fill:#444643;stroke-width:0.42496419" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 735.49986,-74.074292 c -0.24545,0.188062 -1.24742,0.319248 -1.533,0.200688 -0.2856,-0.118555 -0.90017,-0.920651 -0.94031,-1.227251 -0.0401,-0.306601 0.34723,-1.239899 0.59267,-1.427976 0.24545,-0.188073 1.24742,-0.319243 1.53301,-0.200689 0.28558,0.11856 0.90017,0.920657 0.9403,1.227257 0.0401,0.306596 -0.34723,1.239899 -0.59267,1.427971 z"
+       id="path388-3"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.29088515" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 742.62438,-81.350271 c -0.24545,0.188062 -1.24741,0.319248 -1.533,0.200688 -0.2856,-0.118555 -0.90017,-0.92065 -0.9403,-1.227252 -0.0401,-0.3066 0.34723,-1.239898 0.59267,-1.427975 0.24544,-0.188072 1.24741,-0.319243 1.53301,-0.200688 0.28558,0.11856 0.90016,0.920655 0.94029,1.227257 0.0401,0.306595 -0.34723,1.239898 -0.59267,1.42797 z"
+       id="path390-9"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.29088515" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 733.71677,-79.445401 c -0.24544,0.188062 -1.24741,0.319248 -1.533,0.200688 -0.28559,-0.118554 -0.90017,-0.92065 -0.9403,-1.227251 -0.0401,-0.306601 0.34723,-1.239899 0.59267,-1.427976 0.24544,-0.188072 1.24742,-0.319243 1.533,-0.200688 0.28559,0.11856 0.90017,0.920656 0.94031,1.227257 0.0401,0.306596 -0.34723,1.239898 -0.59268,1.42797 z"
+       id="path392-3"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.29088515" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 737.60562,-83.333209 c -0.24544,0.188061 -1.24741,0.319248 -1.533,0.200688 -0.28559,-0.118555 -0.90017,-0.920651 -0.9403,-1.227252 -0.0401,-0.3066 0.34723,-1.239898 0.59267,-1.427976 0.24544,-0.188071 1.24741,-0.319243 1.533,-0.200687 0.28559,0.11856 0.90018,0.920655 0.94031,1.227257 0.0401,0.306594 -0.34724,1.239898 -0.59268,1.42797 z"
+       id="path394-4"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.29088515" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 740.70546,-72.944901 c -0.24545,0.188061 -1.24741,0.319247 -1.533,0.200687 -0.2856,-0.118554 -0.90017,-0.920651 -0.9403,-1.227251 -0.0401,-0.306601 0.34723,-1.239899 0.59267,-1.427976 0.24544,-0.188072 1.24741,-0.319243 1.533,-0.200688 0.28559,0.11856 0.90017,0.920656 0.9403,1.227257 0.0401,0.306595 -0.34723,1.239898 -0.59267,1.427971 z"
+       id="path396-3"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.29088515" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 743.50343,-76.905574 c -0.24545,0.188061 -1.24741,0.319248 -1.53299,0.200688 -0.2856,-0.118555 -0.90018,-0.92065 -0.94031,-1.227252 -0.0401,-0.3066 0.34723,-1.239898 0.59267,-1.427976 0.24544,-0.188071 1.24741,-0.319242 1.53301,-0.200687 0.28558,0.11856 0.90017,0.920655 0.94029,1.227257 0.0401,0.306595 -0.34723,1.239898 -0.59267,1.42797 z"
+       id="path398-6"
+       inkscape:connector-curvature="0"
+       style="fill:#888a85;stroke-width:0.29088515" />
+    <path
+       inkscape:export-ydpi="60.869999"
+       inkscape:export-xdpi="60.869999"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\tank.png"
+       d="m 733.13274,-97.210312 8.20968,0.628243 c 0,0 1.24373,-12.769401 7.80216,-15.833321 -8.03636,-3.69868 -16.01184,15.20513 -16.01184,15.20513 z"
+       id="path400-4"
+       inkscape:connector-curvature="0"
+       style="fill:#73d216;stroke-width:0.52045631" />
+  </g>
+  <g
+     id="g366-0"
+     transform="matrix(-7.7565891e-5,0.15171596,-0.15171596,-7.7565891e-5,889.5713,158.50002)"
+     inkscape:export-xdpi="60.869999"
+     inkscape:export-ydpi="60.869999"
+     inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\shell.png">
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:0.5;fill:url(#linearGradient1184)"
+       id="path356-8-5"
+       d="m 739.12,-90.969 c -17.459,0 -31.625,27.226 -31.625,60.812 0,4.578 0.28283,9.0236 0.78125,13.312 v 142.91 h -4 v 13.844 h 70.844 v -13.844 h -3.625 v -158.88 h -0.8125 c -0.7245,-32.351 -14.568,-58.156 -31.562,-58.156 z" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#radialGradient422-9)"
+       id="path358-0-6"
+       d="m 742.12,-92.969 c -17.459,0 -31.625,27.226 -31.625,60.812 0,4.578 0.28283,9.0236 0.78125,13.312 v -15.969 h 62.406 c -0.7245,-32.351 -14.568,-58.156 -31.562,-58.156 z" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#h-9)"
+       id="path360-5"
+       d="m 711.29,-34.801 h 63.223 v 172.71 H 711.29 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#linearGradient1186)"
+       id="path362-4-4"
+       d="m 711.28,122.06 v 13.844 h 63.219 V 122.06 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#linearGradient426-1)"
+       id="path364-0-7"
        d="m 707.29,124.05 h 70.821 v 13.856 H 707.29 Z" />
   </g>
 </svg>

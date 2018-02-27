@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 212068728536871372}
   - component: {fileID: 50506922612524362}
   - component: {fileID: 70585574280085044}
-  - component: {fileID: 114962491870992016}
   - component: {fileID: 82428886790949000}
+  - component: {fileID: 114962491870992016}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Tank
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shell: {fileID: 50993383169730988, guid: 9e6dabb6ee4180046a97b28b1996294a, type: 2}
+  FireKey: 32
 --- !u!212 &212068728536871372
 SpriteRenderer:
   m_ObjectHideFlags: 1

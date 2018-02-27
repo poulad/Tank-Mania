@@ -6,13 +6,15 @@ namespace TankMania
     {
         public Rigidbody2D Shell;
 
+        public KeyCode FireKey = KeyCode.Space;
+
         private Rigidbody2D _rigidbody;
 
         private SpriteRenderer _spriteRenderer;
 
         private AudioSource _audioSource;
 
-        private bool _fired = true;
+        private bool _fired;
 
         public void Awake()
         {
@@ -35,9 +37,9 @@ namespace TankMania
                     _spriteRenderer.flipX = !_spriteRenderer.flipX;
             }
 
-            if (!_fired && Input.GetKey(KeyCode.F))
+            if (!_fired && Input.GetKey(FireKey))
             {
-                //_fired = true;
+                _fired = true;
                 var shellInstance = Instantiate(Shell, transform.position, Quaternion.identity);
                 shellInstance.velocity = 2.5f * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);
             }
