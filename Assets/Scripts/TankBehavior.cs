@@ -88,7 +88,7 @@ namespace TankMania
             var shell = Instantiate(Shell, _muzzle.transform.position, Quaternion.identity);
             var shellSpriteRenderer = shell.GetComponent<SpriteRenderer>();
             shellSpriteRenderer.flipX = _spriteRenderer.flipX;
-            shell.velocity = 2.5f * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);
+            shell.velocity = 5 * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);
 
             if (Fired != null)
                 Fired(this, EventArgs.Empty);
