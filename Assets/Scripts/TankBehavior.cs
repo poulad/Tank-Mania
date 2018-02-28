@@ -20,8 +20,6 @@ namespace TankMania
 
         private Rigidbody2D _rigidbody;
 
-        private SpriteRenderer _spriteRenderer;
-
         private AudioSource _audioSource;
 
         private bool _alreadyFired;
@@ -29,7 +27,6 @@ namespace TankMania
         public void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             _audioSource = GetComponent<AudioSource>();
 
             _muzzle = GetComponentsInChildren<Transform>()
@@ -63,16 +60,11 @@ namespace TankMania
             if (0 < Mathf.Abs(moveH))
             {
                 _rigidbody.velocity = new Vector2(moveH, _rigidbody.velocity.y);
-                bool isSpriteInCorrectDirection = (moveH > 0 && !_spriteRenderer.flipX) || (moveH < 0 && _spriteRenderer.flipX);
 
-                if (!isSpriteInCorrectDirection)
-                {
-                    _spriteRenderer.flipX = !_spriteRenderer.flipX;
-                    _muzzle.transform.localPosition = new Vector3(-
-                        _muzzle.transform.localPosition.x,
-                        _muzzle.transform.localPosition.y
-                    );
-                }
+                transform.localScale = new Vector3(
+                    transform.localScale.x * Mathf.Sign(moveH * transform.localScale.x),
+                    transform.localScale.y
+                );
             }
 
             if (!_alreadyFired && Input.GetKey(FireKey))
@@ -86,9 +78,11 @@ namespace TankMania
             _alreadyFired = true;
 
             var shell = Instantiate(ShellPrefab, _muzzle.transform.position, Quaternion.identity);
-            var shellSpriteRenderer = shell.GetComponent<SpriteRenderer>();
-            shellSpriteRenderer.flipX = _spriteRenderer.flipX;
-            shell.velocity = 5 * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);
+            shell.transform.localScale = new Vector3(
+                shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
+                shell.transform.localScale.y
+            );
+            shell.velocity = 8 * (transform.localScale.x > 0 ? Vector3.right : Vector3.left);
 
             if (Fired != null)
                 Fired(this, EventArgs.Empty);

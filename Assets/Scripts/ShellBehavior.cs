@@ -1,18 +1,18 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using TankMania.Helpers;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace TankMania
 {
     public class ShellBehavior : MonoBehaviour
     {
-        private AudioSource _audioSource;
+        public float ExplosionRadius = 50f;
 
-        public void Awake()
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
+        public float ExplosionForce = 500f;
+
+        public float MaxDamage = 100f;
+
+        public LayerMask DestructibleLayer;
 
         public void Start()
         {
@@ -21,38 +21,23 @@ namespace TankMania
 
         public void OnTriggerEnter2D(Collider2D other)
         {
-            {
-                var tileMap = other.GetComponent<Tilemap>();
-                if (tileMap == null) return;
-            }
-
-
-            return;
-            {
-                var tileMap = other.GetComponent<Tilemap>();
-                if (tileMap == null) return;
-                var bounds = new BoundsInt(-2, -2, -1, 4, 4, 4);
-                var tiles = tileMap.GetTilesBlock(bounds);
-                tiles = tiles.Where(_ => _ != null).ToArray();
-                foreach (var t in tiles)
+            var targets = Physics2D
+                .OverlapCircleAll(transform.position, ExplosionRadius, DestructibleLayer)
+                .Select(c => c.gameObject)
+                .Distinct()
+                .Select(gameObj => new
                 {
-                    var tt = (Tile)t;
-                    //tileMap.SetTile(tt.gameObject);
-                    try
-                    {
-                        //DestroyImmediate(tt, true);
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e);
-                    }
-                }
+                    GameObject = gameObj,
+                    Rigidbody2D = gameObj.GetComponent<Rigidbody2D>()
+                })
+                .ToArray();
 
-                return;
+            foreach (var target in targets)
+            {
+                target.Rigidbody2D.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, mode: ForceMode2D.Impulse);
             }
 
-            Destroy(other.gameObject, 2);
-            _audioSource.Play();
+            Destroy(gameObject);
         }
     }
 }

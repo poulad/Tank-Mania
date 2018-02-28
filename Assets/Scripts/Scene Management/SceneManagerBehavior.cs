@@ -26,7 +26,7 @@ namespace TankMania
                 Tanks = new[]
                 {
                     Instantiate(TanksPrefabs[0], new Vector3(-1, 2, 0), Quaternion.identity),
-                    Instantiate(TanksPrefabs[1], new Vector3(1, 2, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[1], new Vector3(0, 2, 0), Quaternion.identity),
                 };
 
                 Tanks[1].GetComponent<SpriteRenderer>().color = Color.red;
