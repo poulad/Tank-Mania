@@ -7,7 +7,7 @@ namespace TankMania
 {
     public class TankBehavior : MonoBehaviour
     {
-        public Rigidbody2D Shell;
+        public Rigidbody2D ShellPrefab;
 
         public KeyCode FireKey = KeyCode.Space;
 
@@ -85,7 +85,7 @@ namespace TankMania
         {
             _alreadyFired = true;
 
-            var shell = Instantiate(Shell, _muzzle.transform.position, Quaternion.identity);
+            var shell = Instantiate(ShellPrefab, _muzzle.transform.position, Quaternion.identity);
             var shellSpriteRenderer = shell.GetComponent<SpriteRenderer>();
             shellSpriteRenderer.flipX = _spriteRenderer.flipX;
             shell.velocity = 5 * (_spriteRenderer.flipX ? Vector3.left : Vector3.right);

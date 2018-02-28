@@ -36,8 +36,9 @@ GameObject:
   - component: {fileID: 4424966563340368}
   - component: {fileID: 212068728536871372}
   - component: {fileID: 50506922612524362}
-  - component: {fileID: 70585574280085044}
   - component: {fileID: 82428886790949000}
+  - component: {fileID: 60068500573213280}
+  - component: {fileID: 70845910831607798}
   - component: {fileID: 114962491870992016}
   m_Layer: 0
   m_Name: Tank
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1205826301374182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.332, y: 1.217, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4410862978203246}
@@ -93,7 +94,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &70585574280085044
+--- !u!60 &60068500573213280
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205826301374182}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.37}
+    newSize: {x: 2, y: 1.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.035891205, y: 0.18350768}
+      - {x: -0.1411032, y: 0.18834257}
+      - {x: -0.18761691, y: 0.15739417}
+      - {x: -0.23221573, y: 0.047482133}
+      - {x: -0.25956562, y: 0.045434356}
+      - {x: -0.2946325, y: -0.029209137}
+      - {x: -0.2929844, y: -0.034287214}
+      - {x: 0.18806237, y: -0.033540964}
+      - {x: 0.1965923, y: -0.026937604}
+      - {x: 0.0870267, y: 0.039031148}
+      - {x: 0.042983778, y: 0.043372154}
+      - {x: 0.045635432, y: 0.08487511}
+      - {x: 0.016336054, y: 0.14348555}
+--- !u!70 &70845910831607798
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,8 +143,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.053183753, y: -0.08792554}
-  m_Size: {x: 0.54097205, y: 0.19231097}
+  m_Offset: {x: -0.055454697, y: -0.11012862}
+  m_Size: {x: 0.52440554, y: 0.15106268}
   m_Direction: 1
 --- !u!82 &82428886790949000
 AudioSource:
@@ -199,7 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453a6763808293747a71e9ed9e14734f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shell: {fileID: 50993383169730988, guid: 9e6dabb6ee4180046a97b28b1996294a, type: 2}
+  ShellPrefab: {fileID: 50993383169730988, guid: 9e6dabb6ee4180046a97b28b1996294a,
+    type: 2}
   FireKey: 32
 --- !u!212 &212068728536871372
 SpriteRenderer:
