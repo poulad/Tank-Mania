@@ -17,6 +17,8 @@ namespace TankMania
 
         public event EventHandler<EventArgs> Fired;
 
+        public event EventHandler<EventArgs> Destroying;
+
         public void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -50,6 +52,10 @@ namespace TankMania
         public void TakeDamage(float damage)
         {
             _slider.value -= damage;
+            if (_slider.value <= 0)
+            {
+                if (Destroying != null) Destroying(this, EventArgs.Empty);
+            }
         }
     }
 }
