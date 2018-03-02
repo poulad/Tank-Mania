@@ -4,7 +4,7 @@
     {
         public static class Tags
         {
-            public const string Tank = "tank";
+            public const string Tank = "Tank";
         }
     }
 }

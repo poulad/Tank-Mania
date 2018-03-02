@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Linq;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 namespace TankMania
 {
-    public class TankBehavior : MonoBehaviour
+    public partial class TankBehavior
     {
-        public Rigidbody2D ShellPrefab;
-
-        public KeyCode FireKey = KeyCode.Space;
-
-        [HideInInspector]
-        public bool HasCurrentTurn { get; private set; }
-
-        public event EventHandler<EventArgs> Fired;
-
         private GameObject _muzzle;
 
         private Rigidbody2D _rigidbody;
@@ -24,35 +14,7 @@ namespace TankMania
 
         private bool _alreadyFired;
 
-        public void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _audioSource = GetComponent<AudioSource>();
-
-            _muzzle = GetComponentsInChildren<Transform>()
-                .Single(t => t.gameObject.name == "Muzzle")
-                .gameObject;
-        }
-
-        public void FixedUpdate()
-        {
-            _audioSource.pitch = Random.Range(.9f, 1.1f);
-            if (HasCurrentTurn)
-            {
-                ControlMovement();
-            }
-        }
-
-        public void TakeCurrentTurn()
-        {
-            HasCurrentTurn = true;
-            _alreadyFired = false;
-        }
-
-        public void StopTurn()
-        {
-            HasCurrentTurn = false;
-        }
+        private Slider _slider;
 
         private void ControlMovement()
         {

@@ -6,7 +6,7 @@ namespace TankMania
 {
     public class ShellBehavior : MonoBehaviour
     {
-        public float ExplosionRadius = 50f;
+        public float ExplosionRadius = .5f;
 
         public float ExplosionForce = 500f;
 
@@ -35,6 +35,11 @@ namespace TankMania
             foreach (var target in targets)
             {
                 target.Rigidbody2D.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, mode: ForceMode2D.Impulse);
+                if (target.GameObject.tag == Constants.Tags.Tank)
+                {
+                    var tankBehavior = target.GameObject.GetComponent<TankBehavior>();
+                    tankBehavior.TakeDamage(20);
+                }
             }
 
             Destroy(gameObject);
