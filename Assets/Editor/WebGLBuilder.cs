@@ -8,7 +8,7 @@ public class WebGLBuilder
             "Assets/Scenes/Playground.unity",
         };
 
-        string outputPath = "Build/";
+        string outputPath = "Build";
 
         BuildPipeline.BuildPlayer(scenes, outputPath, BuildTarget.WebGL, BuildOptions.None);
     }
