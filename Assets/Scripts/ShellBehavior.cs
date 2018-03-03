@@ -14,6 +14,8 @@ namespace TankMania
 
         public LayerMask DestructibleLayer;
 
+        public int BlockDestructionRadius = 3;
+
         public void Start()
         {
             Destroy(gameObject, 3);
@@ -30,6 +32,7 @@ namespace TankMania
                     GameObject = gameObj,
                     Rigidbody2D = gameObj.GetComponent<Rigidbody2D>()
                 })
+                .Where(gameObj => gameObj.Rigidbody2D)
                 .ToArray();
 
             foreach (var target in targets)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tank
   - SceneManager
+  - Shell
   layers:
   - Default
   - TransparentFX

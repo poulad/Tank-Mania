@@ -18,8 +18,8 @@ namespace TankMania
             {// ToDo Testing
                 Tanks = new[]
                 {
-                    Instantiate(TanksPrefabs[0], new Vector3(-2, 3, 0), Quaternion.identity),
-                    Instantiate(TanksPrefabs[1], new Vector3(1, 3, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[0], new Vector3(-2, 6, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[1], new Vector3(1, 6, 0), Quaternion.identity),
                 };
 
                 Tanks[1].GetComponent<SpriteRenderer>().color = Color.red;
