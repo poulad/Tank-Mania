@@ -10,6 +10,8 @@ namespace TankMania
 
         private Rigidbody2D _rigidbody;
 
+        private GameObject _healthBar;
+
         private AudioSource _audioSource;
 
         private bool _alreadyFired;
@@ -26,6 +28,11 @@ namespace TankMania
                 transform.localScale = new Vector3(
                     transform.localScale.x * Mathf.Sign(moveH * transform.localScale.x),
                     transform.localScale.y
+                );
+
+                _healthBar.transform.localScale = new Vector3(
+                    _healthBar.transform.localScale.x * Mathf.Sign(moveH * _healthBar.transform.localScale.x),
+                    _healthBar.transform.localScale.y
                 );
             }
 
