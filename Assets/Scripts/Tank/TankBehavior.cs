@@ -27,9 +27,6 @@ namespace TankMania
                 .Single(t => t.gameObject.name == "Muzzle")
                 .gameObject;
             _slider = GetComponentInChildren<Slider>();
-            _healthBar = GetComponentsInChildren<Transform>()
-                .Single(t => t.gameObject.name == "Health Bar")
-                .gameObject;
         }
 
         public void FixedUpdate()

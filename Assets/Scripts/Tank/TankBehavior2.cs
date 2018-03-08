@@ -10,8 +10,6 @@ namespace TankMania
 
         private Rigidbody2D _rigidbody;
 
-        private GameObject _healthBar;
-
         private AudioSource _audioSource;
 
         private bool _alreadyFired;
@@ -30,10 +28,8 @@ namespace TankMania
                     transform.localScale.y
                 );
 
-                _healthBar.transform.localScale = new Vector3(
-                    _healthBar.transform.localScale.x * Mathf.Sign(moveH * _healthBar.transform.localScale.x),
-                    _healthBar.transform.localScale.y
-                );
+                // Prevents the healthbar from mirroring when tank turns
+                _slider.SetDirection(transform.localScale.x > 0 ? Slider.Direction.RightToLeft : Slider.Direction.LeftToRight, true);
             }
 
             if (!_alreadyFired && Input.GetKey(FireKey))
