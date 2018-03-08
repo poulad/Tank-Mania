@@ -8,6 +8,8 @@ namespace TankMania
     {
         private GameObject _muzzle;
 
+        private GameObject _launchPoint;
+
         private Rigidbody2D _rigidbody;
 
         private AudioSource _audioSource;
@@ -29,6 +31,27 @@ namespace TankMania
                 );
             }
 
+            float moveV = Input.GetAxis("Vertical");
+            if (
+                0 < Mathf.Abs(moveV)
+            //-.2f <= _muzzle.transform.rotation.z &&
+            //_muzzle.transform.rotation.z < .6f
+            )
+            {
+                float zRotation = _muzzle.transform.rotation.z + (Mathf.Sign(moveV) * .6f);
+                zRotation = Mathf.Clamp(zRotation, -15, 70);
+                _muzzle.transform.rotation = Quaternion.Euler(0, 0, zRotation);
+
+                //_muzzle.transform.Rotate(new Vector3(0, 0, zRotation));
+                //if (_muzzle.transform.rotation.z < -.24f)
+                {
+
+                    //_muzzle.transform.rotation.Set(0, 0, -.2f, .1f);
+                }
+                Debug.LogWarning(_muzzle.transform.rotation.z);
+                //Debug.Log(_muzzle.transform.rotation);
+            }
+
             if (!_alreadyFired && Input.GetKey(FireKey))
             {
                 Fire();
@@ -39,7 +62,7 @@ namespace TankMania
         {
             _alreadyFired = true;
 
-            var shell = Instantiate(ShellPrefab, _muzzle.transform.position, Quaternion.identity);
+            var shell = Instantiate(ShellPrefab, _launchPoint.transform.position, Quaternion.identity);
             shell.transform.localScale = new Vector3(
                 shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
                 shell.transform.localScale.y

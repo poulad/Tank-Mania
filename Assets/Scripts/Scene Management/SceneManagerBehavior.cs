@@ -22,7 +22,10 @@ namespace TankMania
                     Instantiate(TanksPrefabs[1], new Vector3(1, 6, 0), Quaternion.identity),
                 };
 
-                Tanks[1].GetComponent<SpriteRenderer>().color = Color.red;
+                foreach (var sr in Tanks[1].GetComponentsInChildren<SpriteRenderer>())
+                {
+                    sr.color = Color.red;
+                }
             }
 
             foreach (var tank in Tanks)
