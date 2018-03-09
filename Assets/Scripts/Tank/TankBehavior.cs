@@ -36,6 +36,14 @@ namespace TankMania
             {
                 ControlMovement();
             }
+
+            { // Prevent the health bar from mirroring when tank turns
+                _slider.transform.localScale = new Vector3(
+                    Math.Abs(_slider.transform.localScale.x) * Math.Sign(this.transform.localScale.x),
+                    _slider.transform.localScale.y,
+                    _slider.transform.localScale.z
+                );
+            }
         }
 
         public void TakeCurrentTurn()
