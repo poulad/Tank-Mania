@@ -27,6 +27,9 @@ namespace TankMania
                     transform.localScale.x * Mathf.Sign(moveH * transform.localScale.x),
                     transform.localScale.y
                 );
+
+                // Prevents the healthbar from mirroring when tank turns
+                _slider.SetDirection(transform.localScale.x > 0 ? Slider.Direction.RightToLeft : Slider.Direction.LeftToRight, true);
             }
 
             if (!_alreadyFired && Input.GetKey(FireKey))
