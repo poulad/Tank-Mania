@@ -26,6 +26,9 @@ namespace TankMania
             _muzzle = GetComponentsInChildren<Transform>()
                 .Single(t => t.gameObject.name == "Muzzle")
                 .gameObject;
+            _launchPoint = GetComponentsInChildren<Transform>()
+                .Single(t => t.gameObject.name == "Launch Point")
+                .gameObject;
             _slider = GetComponentInChildren<Slider>();
         }
 
