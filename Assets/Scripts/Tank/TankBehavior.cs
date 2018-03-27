@@ -26,6 +26,9 @@ namespace TankMania
             _muzzle = GetComponentsInChildren<Transform>()
                 .Single(t => t.gameObject.name == "Muzzle")
                 .gameObject;
+            _launchPoint = GetComponentsInChildren<Transform>()
+                .Single(t => t.gameObject.name == "Launch Point")
+                .gameObject;
             _slider = GetComponentInChildren<Slider>();
         }
 
@@ -35,6 +38,14 @@ namespace TankMania
             if (HasCurrentTurn)
             {
                 ControlMovement();
+            }
+
+            { // Prevent the health bar from mirroring when tank turns
+                _slider.transform.localScale = new Vector3(
+                    Math.Abs(_slider.transform.localScale.x) * Math.Sign(this.transform.localScale.x),
+                    _slider.transform.localScale.y,
+                    _slider.transform.localScale.z
+                );
             }
         }
 
