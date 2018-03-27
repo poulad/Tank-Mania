@@ -18,8 +18,8 @@ namespace TankMania
             {// ToDo Testing
                 Tanks = new[]
                 {
-                    Instantiate(TanksPrefabs[0], new Vector3(-2, 2, 0), Quaternion.identity),
-                    Instantiate(TanksPrefabs[1], new Vector3(1, 2, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[0], new Vector3(-4, 2, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[1], new Vector3(0, 2, 0), Quaternion.identity),
                 };
 
                 foreach (var sr in Tanks[1].GetComponentsInChildren<SpriteRenderer>())

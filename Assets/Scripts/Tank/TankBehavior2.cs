@@ -39,16 +39,17 @@ namespace TankMania
             if (0 < Mathf.Abs(moveV))
             {
                 var rotationAxis = new Vector3(0, 0, Math.Sign(transform.localScale.x));
+                _muzzle.transform.Rotate(rotationAxis, Mathf.Sign(moveV));
 
-                _muzzle.transform.Rotate(rotationAxis, Mathf.Sign(moveV) * .6f);
+                //float angle = Math.Sign(transform.rotation.z * _muzzle.transform.localRotation.z) *
+                //    Quaternion.Angle(transform.rotation, _muzzle.transform.rotation);
 
-                float angle = Math.Sign(transform.localScale.x * _muzzle.transform.rotation.z) *
-                              Quaternion.Angle(transform.rotation, _muzzle.transform.rotation);
+                //Debug.Log(angle);
 
-                if (angle < MinMuzzleAngle)
-                    _muzzle.transform.rotation = Quaternion.AngleAxis(MinMuzzleAngle, rotationAxis);
-                else if (MaxMuzzleAngle < angle)
-                    _muzzle.transform.rotation = Quaternion.AngleAxis(MaxMuzzleAngle, rotationAxis);
+                //if (angle > MaxMuzzleAngle)
+                //    _muzzle.transform.localRotation = Quaternion.AngleAxis(MaxMuzzleAngle, new Vector3(0, 0, 1));
+                //else if (angle < MinMuzzleAngle)
+                //    _muzzle.transform.localRotation = Quaternion.AngleAxis(MinMuzzleAngle, new Vector3(0, 0, 1));
             }
 
             if (!_alreadyFired && Input.GetKey(FireKey))
