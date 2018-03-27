@@ -1,5 +1,7 @@
 Please use one of the following formats:
 
+--------------------------------------------------------------------------------
+
 # Feature Request
 
 Use this format and label the issue with `feature` + `priority:{priorityLevel}`.
@@ -12,6 +14,8 @@ List the scene(s) that should have this feature.
 
 ### Description
 More detailed description on the feature.
+
+--------------------------------------------------------------------------------
 
 # Bug Report
 
@@ -28,6 +32,8 @@ Describe expected behavior
 
 ### Actual
 Describe actual behavior
+
+--------------------------------------------------------------------------------
 
 # Asset Request
 

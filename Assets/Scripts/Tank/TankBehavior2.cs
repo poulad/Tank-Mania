@@ -6,7 +6,13 @@ namespace TankMania
 {
     public partial class TankBehavior
     {
+        private const float MaxMuzzleAngle = 50;
+
+        private const float MinMuzzleAngle = -12;
+
         private GameObject _muzzle;
+
+        private GameObject _launchPoint;
 
         private Rigidbody2D _rigidbody;
 
@@ -29,6 +35,23 @@ namespace TankMania
                 );
             }
 
+            float moveV = Input.GetAxis("Vertical");
+            if (0 < Mathf.Abs(moveV))
+            {
+                var rotationAxis = new Vector3(0, 0, Math.Sign(transform.localScale.x));
+                _muzzle.transform.Rotate(rotationAxis, Mathf.Sign(moveV));
+
+                //float angle = Math.Sign(transform.rotation.z * _muzzle.transform.localRotation.z) *
+                //    Quaternion.Angle(transform.rotation, _muzzle.transform.rotation);
+
+                //Debug.Log(angle);
+
+                //if (angle > MaxMuzzleAngle)
+                //    _muzzle.transform.localRotation = Quaternion.AngleAxis(MaxMuzzleAngle, new Vector3(0, 0, 1));
+                //else if (angle < MinMuzzleAngle)
+                //    _muzzle.transform.localRotation = Quaternion.AngleAxis(MinMuzzleAngle, new Vector3(0, 0, 1));
+            }
+
             if (!_alreadyFired && Input.GetKey(FireKey))
             {
                 Fire();
@@ -39,7 +62,7 @@ namespace TankMania
         {
             _alreadyFired = true;
 
-            var shell = Instantiate(ShellPrefab, _muzzle.transform.position, Quaternion.identity);
+            var shell = Instantiate(ShellPrefab, _launchPoint.transform.position, Quaternion.identity);
             shell.transform.localScale = new Vector3(
                 shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
                 shell.transform.localScale.y
