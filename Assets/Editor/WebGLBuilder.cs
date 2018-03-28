@@ -5,6 +5,7 @@ public class WebGLBuilder
     public static void Build()
     {
         string[] scenes = {
+            "Assets/Scenes/Menu.unity",
             "Assets/Scenes/Playground.unity",
         };
 
