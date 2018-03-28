@@ -9,12 +9,7 @@ public class MenuHandler : MonoBehaviour {
     {
         SceneManager.LoadScene("Playground", LoadSceneMode.Single);
     }
-
-    public void Help()
-    {
-
-    }
-
+    
     public void Quit()
     {
         Application.Quit();
