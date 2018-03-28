@@ -1,5 +1,6 @@
 ﻿using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TankMania
 {
@@ -10,6 +11,8 @@ namespace TankMania
         public GameObject[] TanksPrefabs;
 
         public GameObject VirtualCameraObject;
+
+        public Text TimeoutText;
 
         public void Start()
         {
@@ -34,6 +37,11 @@ namespace TankMania
                 tankBehavior.Destroying += OnTankDestroying;
             }
             AssignTurnToTank(Tanks[0]);
+        }
+
+        public void Update()
+        {
+            UpdateTimer();
         }
     }
 }
