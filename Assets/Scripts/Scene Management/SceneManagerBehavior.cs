@@ -1,4 +1,5 @@
-﻿using Cinemachine;
+﻿using System.Linq;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ namespace TankMania
         public GameObject VirtualCameraObject;
 
         public Text TimeoutText;
+
+        public Text CurrentPlayerText;
 
         public void Start()
         {
@@ -31,11 +34,13 @@ namespace TankMania
                 }
             }
 
-            foreach (var tank in Tanks)
+            for (int i = 0; i < Tanks.Length; i++)
             {
-                var tankBehavior = tank.GetComponent<TankBehavior>();
+                var tankBehavior = Tanks[i].GetComponent<TankBehavior>();
+                tankBehavior.PlayerName = "Player " + i;
                 tankBehavior.Destroying += OnTankDestroying;
             }
+
             AssignTurnToTank(Tanks[0]);
         }
 

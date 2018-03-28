@@ -25,12 +25,16 @@ namespace TankMania
             _currentTank = tank;
 
             TimeoutText.enabled = true;
+            CurrentPlayerText.enabled = true;
+
             _timeout = 12f;
+            CurrentPlayerText.text = _currentTankBehavior.PlayerName;
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
         {
             TimeoutText.enabled = false;
+            CurrentPlayerText.enabled = false;
             Invoke("ChangeTanksTurn", 2);
         }
 
