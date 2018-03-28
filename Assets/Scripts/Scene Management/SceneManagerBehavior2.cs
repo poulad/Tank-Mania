@@ -24,11 +24,13 @@ namespace TankMania
             _currentTankBehavior.TakeCurrentTurn();
             _currentTank = tank;
 
+            TimeoutText.enabled = true;
             _timeout = 12f;
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
         {
+            TimeoutText.enabled = false;
             Invoke("ChangeTanksTurn", 2);
         }
 
