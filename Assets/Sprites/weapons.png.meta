@@ -8,7 +8,7 @@ TextureImporter:
     21300002: weapons_1
     21300004: weapons_2
     21300006: weapons_3
-    21300008: weapons_4
+    21300008: bomb explosion2
     21300010: weapons_5
     21300012: weapons_6
     21300014: weapons_7
@@ -104,6 +104,10 @@ TextureImporter:
     21300194: weapons_97
     21300196: weapons_98
     21300198: weapons_99
+    21300200: Bomb explosion1
+    21300202: bomb explosion 2
+    21300204: bomb explosion3
+    21300206: bomb explosion4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -286,13 +290,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: weapons_4
+      name: bomb explosion2
       rect:
         serializedVersion: 2
-        x: 573
-        y: 765
-        width: 106
-        height: 61
+        x: 331
+        y: 677
+        width: 80
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,7 +388,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bombweapons_11
+      name: Bomb explosion1
       rect:
         serializedVersion: 2
         x: 246
@@ -398,13 +402,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bombweapons_12
+      name: bomb explosion 2
       rect:
         serializedVersion: 2
-        x: 332
+        x: 246
         y: 677
-        width: 77
-        height: 65
+        width: 80
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,13 +416,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bombweapons_13
+      name: bomb explosion3
       rect:
         serializedVersion: 2
         x: 418
         y: 677
-        width: 75
-        height: 64
+        width: 80
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,13 +430,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bombweapons_14
+      name: bomb explosion4
       rect:
         serializedVersion: 2
         x: 504
         y: 677
-        width: 70
-        height: 63
+        width: 80
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
