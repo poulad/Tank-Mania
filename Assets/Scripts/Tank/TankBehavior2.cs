@@ -67,7 +67,9 @@ namespace TankMania
                 shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
                 shell.transform.localScale.y
             );
-            shell.velocity = 8 * (transform.localScale.x > 0 ? Vector3.right : Vector3.left);
+
+            var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
+            shell.velocity = 8 * launchDirection;
 
             if (Fired != null)
                 Fired(this, EventArgs.Empty);
