@@ -1,5 +1,5 @@
 {
-"companyName": "Prodigy Studios",
+"companyName": "DefaultCompany",
 "productName": "Tank Mania",
 "dataUrl": "Build.data.unityweb",
 "asmCodeUrl": "Build.asm.code.unityweb",
@@ -8,7 +8,6 @@
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
-"backgroundUrl": "Build.jpg",
-"splashScreenStyle": "Light",
-"backgroundColor": "#FFFFFF"
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
 }
