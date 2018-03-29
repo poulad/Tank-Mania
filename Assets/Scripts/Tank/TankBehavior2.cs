@@ -6,7 +6,7 @@ namespace TankMania
 {
     public partial class TankBehavior
     {
-        private const float MaxMuzzleAngle = 50;
+        private const float MaxMuzzleAngle = 45;
 
         private const float MinMuzzleAngle = -12;
 
@@ -41,15 +41,15 @@ namespace TankMania
                 var rotationAxis = new Vector3(0, 0, Math.Sign(transform.localScale.x));
                 _muzzle.transform.Rotate(rotationAxis, Mathf.Sign(moveV));
 
-                //float angle = Math.Sign(transform.rotation.z * _muzzle.transform.localRotation.z) *
-                //    Quaternion.Angle(transform.rotation, _muzzle.transform.rotation);
+                float angle = _muzzle.transform.localEulerAngles.z < 180
+                    ? _muzzle.transform.localEulerAngles.z
+                    : _muzzle.transform.localEulerAngles.z - 360
+                ;
 
-                //Debug.Log(angle);
-
-                //if (angle > MaxMuzzleAngle)
-                //    _muzzle.transform.localRotation = Quaternion.AngleAxis(MaxMuzzleAngle, new Vector3(0, 0, 1));
-                //else if (angle < MinMuzzleAngle)
-                //    _muzzle.transform.localRotation = Quaternion.AngleAxis(MinMuzzleAngle, new Vector3(0, 0, 1));
+                if (angle > MaxMuzzleAngle)
+                    _muzzle.transform.localRotation = Quaternion.Euler(0, 0, MaxMuzzleAngle);
+                else if (angle < MinMuzzleAngle)
+                    _muzzle.transform.localRotation = Quaternion.Euler(0, 0, MinMuzzleAngle);
             }
 
             if (!_alreadyFired && Input.GetKey(FireKey))
