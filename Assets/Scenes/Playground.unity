@@ -653,9 +653,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 149.6
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 4.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1052,6 +1052,8 @@ MonoBehaviour:
   Tanks:
   - {fileID: 0}
   TanksPrefabs:
+  - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
+  - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
   - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
   - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
   VirtualCameraObject: {fileID: 682022149}

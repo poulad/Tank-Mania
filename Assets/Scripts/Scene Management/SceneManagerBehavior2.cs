@@ -2,6 +2,7 @@
 using System.Linq;
 using Cinemachine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TankMania
 {
@@ -135,6 +136,21 @@ namespace TankMania
             }
 
             ChargeMeterSlider.value = _fireCharge / MaxFireCharge;
+        }
+
+        private void CheckForRandomDestroy()
+        {
+            if (!_currentTank)
+                return;
+
+            if (!(Mathf.Abs(_currentTank.transform.position.x) <= 1.5f))
+                return;
+
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.K))
+            {
+                var ripTank = Tanks[Random.Range(0, Tanks.Length)];
+                ripTank.GetComponent<TankBehavior>().TakeDamage(float.MaxValue);
+            }
         }
     }
 }

@@ -30,12 +30,18 @@ namespace TankMania
                 {
                     Instantiate(TanksPrefabs[0], new Vector3(-4, 2, 0), Quaternion.identity),
                     Instantiate(TanksPrefabs[1], new Vector3(0, 2, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[2], new Vector3(3, 2, 0), Quaternion.identity),
+                    Instantiate(TanksPrefabs[3], new Vector3(6, 2, 0), Quaternion.identity),
                 };
 
                 foreach (var sr in Tanks[1].GetComponentsInChildren<SpriteRenderer>())
-                {
                     sr.color = Color.red;
-                }
+
+                foreach (var sr in Tanks[2].GetComponentsInChildren<SpriteRenderer>())
+                    sr.color = Color.blue;
+
+                foreach (var sr in Tanks[3].GetComponentsInChildren<SpriteRenderer>())
+                    sr.color = Color.gray;
             }
 
             for (int i = 0; i < Tanks.Length; i++)
@@ -52,6 +58,7 @@ namespace TankMania
         {
             UpdateTimer();
             WatchFireCharge();
+            CheckForRandomDestroy();
         }
     }
 }
