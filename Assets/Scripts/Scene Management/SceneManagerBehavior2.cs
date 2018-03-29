@@ -8,9 +8,17 @@ namespace TankMania
 {
     public partial class SceneManagerBehavior
     {
-        private GameObject _currentTank;
+        private Player[] AllPlayers
+        {
+            get { return GameState.Current.Players; }
+        }
 
-        private TankBehavior _currentTankBehavior;
+        private Player[] ActivePlayers
+        {
+            get { return AllPlayers.Where(p => p.TankBehavior && p.TankBehavior.enabled).ToArray(); }
+        }
+
+        private Player _currentPlayer;
 
         private float _timeout;
 
@@ -20,21 +28,20 @@ namespace TankMania
 
         private CinemachineVirtualCamera _virtualCamera;
 
-        private void AssignTurnToTank(GameObject tank)
+        private void AssignTurnToPlayer(Player player)
         {
-            _virtualCamera.Follow = tank.transform;
-            _currentTankBehavior = tank.GetComponent<TankBehavior>();
+            _virtualCamera.Follow = player.Tank.transform;
 
-            _currentTankBehavior.Fired += OnCurrentTankFired;
-            _currentTankBehavior.TakeCurrentTurn();
-            _currentTank = tank;
+            _currentPlayer = player;
+            _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
+            _currentPlayer.TankBehavior.TakeCurrentTurn();
 
             TimeoutText.enabled = true;
             CurrentPlayerText.enabled = true;
             ChargeMeterSlider.enabled = true;
 
             _timeout = 12f;
-            CurrentPlayerText.text = _currentTankBehavior.PlayerName;
+            CurrentPlayerText.text = _currentPlayer.Name;
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
@@ -51,19 +58,17 @@ namespace TankMania
             var tankBehavior = (TankBehavior)sender;
             var tank = tankBehavior.gameObject;
 
-            if (tank == _currentTank)
+            if (tank == _currentPlayer.Tank)
             {
-                int nextTankIndex = (GetIndexOfTank(tank) + 1);
+                int nextTankIndex = (GetIndexOfActiveTank(tank) + 1);
                 ChangeTanksTurnTo(nextTankIndex);
             }
 
-            Tanks = Tanks
-                .Except(new[] { tank })
-                .ToArray();
+            tankBehavior.enabled = false;
 
             Destroy(tank);
 
-            if (Tanks.Length == 1)
+            if (ActivePlayers.Length == 1)
             {
                 Debug.Log("GAME OVER!");
             }
@@ -71,34 +76,34 @@ namespace TankMania
 
         private void RemoveTurnFromCurrentTank()
         {
-            _currentTankBehavior.Fired -= OnCurrentTankFired;
-            _currentTankBehavior.StopTurn();
+            _currentPlayer.TankBehavior.Fired -= OnCurrentTankFired;
+            _currentPlayer.TankBehavior.StopTurn();
         }
 
         private void ChangeTanksTurn()
         {
-            int currentTankIndex = -1;
-            for (int i = 0; i < Tanks.Length; i++)
-                if (Tanks[i] == _currentTank)
-                    currentTankIndex = i;
+            int currentPlayerIndex = -1;
+            for (int i = 0; i < ActivePlayers.Length; i++)
+                if (ActivePlayers[i] == _currentPlayer)
+                    currentPlayerIndex = i;
 
-            int nextTankIndex = (currentTankIndex + 1) % Tanks.Length;
+            int nextPlayerIndex = (currentPlayerIndex + 1) % ActivePlayers.Length;
 
             RemoveTurnFromCurrentTank();
-            AssignTurnToTank(Tanks[nextTankIndex]);
+            AssignTurnToPlayer(ActivePlayers[nextPlayerIndex]);
         }
 
         private void ChangeTanksTurnTo(int index)
         {
             RemoveTurnFromCurrentTank();
-            AssignTurnToTank(Tanks[index]);
+            AssignTurnToPlayer(ActivePlayers[index]);
         }
 
-        private int GetIndexOfTank(GameObject tank)
+        private int GetIndexOfActiveTank(GameObject tank)
         {
             int tankIndex = -1;
-            for (int i = 0; i < Tanks.Length; i++)
-                if (Tanks[i] == tank)
+            for (int i = 0; i < ActivePlayers.Length; i++)
+                if (ActivePlayers[i].Tank == tank)
                     tankIndex = i;
             return tankIndex;
         }
@@ -124,14 +129,14 @@ namespace TankMania
 
             bool holdingFireKey = Input.GetKey(FireKey);
             if (_fireCharge > 0 && !holdingFireKey)
-                _currentTankBehavior.Fire(_fireCharge);
+                _currentPlayer.TankBehavior.Fire(_fireCharge);
             else if (holdingFireKey)
             {
                 _fireCharge += Time.deltaTime;
                 if (_fireCharge > MaxFireCharge)
                 {
                     _fireCharge = MaxFireCharge;
-                    _currentTankBehavior.Fire(_fireCharge);
+                    _currentPlayer.TankBehavior.Fire(_fireCharge);
                 }
             }
 
@@ -140,16 +145,18 @@ namespace TankMania
 
         private void CheckForRandomDestroy()
         {
-            if (!_currentTank)
+            if (_currentPlayer == null)
                 return;
 
-            if (!(Mathf.Abs(_currentTank.transform.position.x) <= 1.5f))
-                return;
-
-            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.K))
+            if (
+                Mathf.Abs(_currentPlayer.Tank.transform.position.x) <= 1.5f &&
+                Input.GetKey(KeyCode.LeftControl) &&
+                Input.GetKeyDown(KeyCode.K)
+            )
             {
-                var ripTank = Tanks[Random.Range(0, Tanks.Length)];
-                ripTank.GetComponent<TankBehavior>().TakeDamage(float.MaxValue);
+                ActivePlayers[Random.Range(0, ActivePlayers.Length)]
+                    .TankBehavior
+                    .TakeDamage(float.MaxValue);
             }
         }
     }

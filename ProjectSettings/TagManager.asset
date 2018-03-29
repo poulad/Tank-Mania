@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tank
-  - SceneManager
   - Shell
+  - Scene Manager
   layers:
   - Default
   - TransparentFX

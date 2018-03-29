@@ -7,10 +7,6 @@ namespace TankMania
 {
     public partial class SceneManagerBehavior : MonoBehaviour
     {
-        public GameObject[] Tanks;
-
-        public GameObject[] TanksPrefabs;
-
         public GameObject VirtualCameraObject;
 
         public Text TimeoutText;
@@ -25,33 +21,12 @@ namespace TankMania
         {
             _virtualCamera = VirtualCameraObject.GetComponent<CinemachineVirtualCamera>();
 
-            {// ToDo Testing
-                Tanks = new[]
-                {
-                    Instantiate(TanksPrefabs[0], new Vector3(-4, 2, 0), Quaternion.identity),
-                    Instantiate(TanksPrefabs[1], new Vector3(0, 2, 0), Quaternion.identity),
-                    Instantiate(TanksPrefabs[2], new Vector3(3, 2, 0), Quaternion.identity),
-                    Instantiate(TanksPrefabs[3], new Vector3(6, 2, 0), Quaternion.identity),
-                };
-
-                foreach (var sr in Tanks[1].GetComponentsInChildren<SpriteRenderer>())
-                    sr.color = Color.red;
-
-                foreach (var sr in Tanks[2].GetComponentsInChildren<SpriteRenderer>())
-                    sr.color = Color.blue;
-
-                foreach (var sr in Tanks[3].GetComponentsInChildren<SpriteRenderer>())
-                    sr.color = Color.gray;
-            }
-
-            for (int i = 0; i < Tanks.Length; i++)
+            foreach (var player in AllPlayers)
             {
-                var tankBehavior = Tanks[i].GetComponent<TankBehavior>();
-                tankBehavior.PlayerName = "Player " + i;
-                tankBehavior.Destroying += OnTankDestroying;
+                player.TankBehavior.Destroying += OnTankDestroying;
             }
 
-            AssignTurnToTank(Tanks[0]);
+            AssignTurnToPlayer(AllPlayers.First());
         }
 
         public void Update()

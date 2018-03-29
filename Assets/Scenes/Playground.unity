@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 1660335046}
   m_Layer: 0
   m_Name: Scene Manager
-  m_TagString: SceneManager
+  m_TagString: Scene Manager
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1049,13 +1049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eab78ae74f33084c8fd57af8a67c5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tanks:
-  - {fileID: 0}
-  TanksPrefabs:
-  - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
-  - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
-  - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
-  - {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
   VirtualCameraObject: {fileID: 682022149}
   TimeoutText: {fileID: 412146016}
   CurrentPlayerText: {fileID: 1677556005}

@@ -8,8 +8,6 @@ namespace TankMania
 {
     public partial class TankBehavior : MonoBehaviour
     {
-        public string PlayerName;
-
         public Rigidbody2D ShellPrefab;
 
         [HideInInspector]
