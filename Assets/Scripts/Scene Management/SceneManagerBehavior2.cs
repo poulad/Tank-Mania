@@ -11,6 +11,8 @@ namespace TankMania
 
         private TankBehavior _currentTankBehavior;
 
+        private float _timeout;
+
         private CinemachineVirtualCamera _virtualCamera;
 
         private void AssignTurnToTank(GameObject tank)
@@ -21,10 +23,18 @@ namespace TankMania
             _currentTankBehavior.Fired += OnCurrentTankFired;
             _currentTankBehavior.TakeCurrentTurn();
             _currentTank = tank;
+
+            TimeoutText.enabled = true;
+            CurrentPlayerText.enabled = true;
+
+            _timeout = 12f;
+            CurrentPlayerText.text = _currentTankBehavior.PlayerName;
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
         {
+            TimeoutText.enabled = false;
+            CurrentPlayerText.enabled = false;
             Invoke("ChangeTanksTurn", 2);
         }
 
@@ -57,7 +67,6 @@ namespace TankMania
             _currentTankBehavior.StopTurn();
         }
 
-        // ReSharper disable once UnusedMember.Local
         private void ChangeTanksTurn()
         {
             int currentTankIndex = -1;
@@ -84,6 +93,20 @@ namespace TankMania
                 if (Tanks[i] == tank)
                     tankIndex = i;
             return tankIndex;
+        }
+
+        private void UpdateTimer()
+        {
+            _timeout -= Time.deltaTime;
+            if (_timeout <= 0)
+            {
+                ChangeTanksTurn();
+            }
+            else
+            {
+                var secsLeft = (int)Math.Round(_timeout);
+                TimeoutText.text = secsLeft + "";
+            }
         }
     }
 }
