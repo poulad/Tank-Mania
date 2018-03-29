@@ -18,8 +18,6 @@ namespace TankMania
 
         private AudioSource _audioSource;
 
-        private bool _alreadyFired;
-
         private Slider _slider;
 
         private void ControlMovement()
@@ -51,28 +49,6 @@ namespace TankMania
                 else if (angle < MinMuzzleAngle)
                     _muzzle.transform.localRotation = Quaternion.Euler(0, 0, MinMuzzleAngle);
             }
-
-            if (!_alreadyFired && Input.GetKey(FireKey))
-            {
-                Fire();
-            }
-        }
-
-        private void Fire()
-        {
-            _alreadyFired = true;
-
-            var shell = Instantiate(ShellPrefab, _launchPoint.transform.position, Quaternion.identity);
-            shell.transform.localScale = new Vector3(
-                shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
-                shell.transform.localScale.y
-            );
-
-            var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
-            shell.velocity = 8 * launchDirection;
-
-            if (Fired != null)
-                Fired(this, EventArgs.Empty);
         }
     }
 }

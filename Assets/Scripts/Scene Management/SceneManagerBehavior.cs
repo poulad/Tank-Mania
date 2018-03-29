@@ -17,6 +17,10 @@ namespace TankMania
 
         public Text CurrentPlayerText;
 
+        public Slider ChargeMeterSlider;
+
+        public KeyCode FireKey = KeyCode.Space;
+
         public void Start()
         {
             _virtualCamera = VirtualCameraObject.GetComponent<CinemachineVirtualCamera>();
@@ -47,6 +51,7 @@ namespace TankMania
         public void Update()
         {
             UpdateTimer();
+            WatchFireCharge();
         }
     }
 }

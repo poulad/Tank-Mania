@@ -13,6 +13,10 @@ namespace TankMania
 
         private float _timeout;
 
+        private const float MaxFireCharge = 1.25f;
+
+        private float _fireCharge;
+
         private CinemachineVirtualCamera _virtualCamera;
 
         private void AssignTurnToTank(GameObject tank)
@@ -26,6 +30,7 @@ namespace TankMania
 
             TimeoutText.enabled = true;
             CurrentPlayerText.enabled = true;
+            ChargeMeterSlider.enabled = true;
 
             _timeout = 12f;
             CurrentPlayerText.text = _currentTankBehavior.PlayerName;
@@ -35,6 +40,8 @@ namespace TankMania
         {
             TimeoutText.enabled = false;
             CurrentPlayerText.enabled = false;
+            ChargeMeterSlider.enabled = false;
+            _fireCharge = 0;
             Invoke("ChangeTanksTurn", 2);
         }
 
@@ -107,6 +114,27 @@ namespace TankMania
                 var secsLeft = (int)Math.Round(_timeout);
                 TimeoutText.text = secsLeft + "";
             }
+        }
+
+        private void WatchFireCharge()
+        {
+            if (!ChargeMeterSlider.enabled)
+                return;
+
+            bool holdingFireKey = Input.GetKey(FireKey);
+            if (_fireCharge > 0 && !holdingFireKey)
+                _currentTankBehavior.Fire(_fireCharge);
+            else if (holdingFireKey)
+            {
+                _fireCharge += Time.deltaTime;
+                if (_fireCharge > MaxFireCharge)
+                {
+                    _fireCharge = MaxFireCharge;
+                    _currentTankBehavior.Fire(_fireCharge);
+                }
+            }
+
+            ChargeMeterSlider.value = _fireCharge / MaxFireCharge;
         }
     }
 }
