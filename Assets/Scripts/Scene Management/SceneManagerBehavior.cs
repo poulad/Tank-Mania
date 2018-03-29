@@ -1,5 +1,7 @@
-﻿using Cinemachine;
+﻿using System.Linq;
+using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TankMania
 {
@@ -10,6 +12,14 @@ namespace TankMania
         public GameObject[] TanksPrefabs;
 
         public GameObject VirtualCameraObject;
+
+        public Text TimeoutText;
+
+        public Text CurrentPlayerText;
+
+        public Slider ChargeMeterSlider;
+
+        public KeyCode FireKey = KeyCode.Space;
 
         public void Start()
         {
@@ -28,12 +38,20 @@ namespace TankMania
                 }
             }
 
-            foreach (var tank in Tanks)
+            for (int i = 0; i < Tanks.Length; i++)
             {
-                var tankBehavior = tank.GetComponent<TankBehavior>();
+                var tankBehavior = Tanks[i].GetComponent<TankBehavior>();
+                tankBehavior.PlayerName = "Player " + i;
                 tankBehavior.Destroying += OnTankDestroying;
             }
+
             AssignTurnToTank(Tanks[0]);
+        }
+
+        public void Update()
+        {
+            UpdateTimer();
+            WatchFireCharge();
         }
     }
 }
