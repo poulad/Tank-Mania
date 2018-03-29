@@ -7,6 +7,8 @@
             public const string MainMenu = "Main Menu";
 
             public const string Playground = "Playground";
+
+            public const string Scores = "Score Sheet";
         }
 
         public static class Tags

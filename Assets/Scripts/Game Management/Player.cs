@@ -1,31 +1,12 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TankMania
 {
-    public class GameState : MonoBehaviour
-    {
-        public static GameState Current;
-
-        public int CurrentLevel { get; set; }
-
-        public Player[] Players { get; set; }
-
-        public void Start()
-        {
-            DontDestroyOnLoad(this);
-            Current = this;
-            Current.Players = new Player[4];
-        }
-
-        private GameState()
-        {
-        }
-    }
-
     public class Player
     {
         public string Name { get; set; }
+
+        public int Score { get; set; }
 
         public GameObject Tank { get; set; }
 

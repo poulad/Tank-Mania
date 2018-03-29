@@ -6,16 +6,16 @@ using Random = UnityEngine.Random;
 
 namespace TankMania
 {
-    public partial class SceneManagerBehavior
+    public partial class LevelSceneManagerBehavior
     {
         private Player[] AllPlayers
         {
-            get { return GameState.Current.Players; }
+            get { return GameManager.Current.Players; }
         }
 
         private Player[] ActivePlayers
         {
-            get { return AllPlayers.Where(p => p.TankBehavior && p.TankBehavior.enabled).ToArray(); }
+            get { return AllPlayers.Where(p => p.Tank && p.TankBehavior.enabled).ToArray(); }
         }
 
         private Player _currentPlayer;
@@ -30,8 +30,6 @@ namespace TankMania
 
         private void AssignTurnToPlayer(Player player)
         {
-            _virtualCamera.Follow = player.Tank.transform;
-
             _currentPlayer = player;
             _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
             _currentPlayer.TankBehavior.TakeCurrentTurn();
@@ -42,6 +40,7 @@ namespace TankMania
 
             _timeout = 12f;
             CurrentPlayerText.text = _currentPlayer.Name;
+            _virtualCamera.Follow = _currentPlayer.Tank.transform;
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
@@ -60,17 +59,14 @@ namespace TankMania
 
             if (tank == _currentPlayer.Tank)
             {
-                int nextTankIndex = (GetIndexOfActiveTank(tank) + 1);
-                ChangeTanksTurnTo(nextTankIndex);
+                ChangeTanksTurn();
             }
-
-            tankBehavior.enabled = false;
 
             Destroy(tank);
 
             if (ActivePlayers.Length == 1)
             {
-                Debug.Log("GAME OVER!");
+                GameManager.Current.SwitchToScene(Constants.Scenes.Scores);
             }
         }
 
@@ -82,30 +78,16 @@ namespace TankMania
 
         private void ChangeTanksTurn()
         {
+            Player[] players = ActivePlayers;
             int currentPlayerIndex = -1;
-            for (int i = 0; i < ActivePlayers.Length; i++)
-                if (ActivePlayers[i] == _currentPlayer)
+            for (int i = 0; i < players.Length; i++)
+                if (players[i] == _currentPlayer)
                     currentPlayerIndex = i;
 
-            int nextPlayerIndex = (currentPlayerIndex + 1) % ActivePlayers.Length;
+            int nextPlayerIndex = (currentPlayerIndex + 1) % players.Length;
 
             RemoveTurnFromCurrentTank();
-            AssignTurnToPlayer(ActivePlayers[nextPlayerIndex]);
-        }
-
-        private void ChangeTanksTurnTo(int index)
-        {
-            RemoveTurnFromCurrentTank();
-            AssignTurnToPlayer(ActivePlayers[index]);
-        }
-
-        private int GetIndexOfActiveTank(GameObject tank)
-        {
-            int tankIndex = -1;
-            for (int i = 0; i < ActivePlayers.Length; i++)
-                if (ActivePlayers[i].Tank == tank)
-                    tankIndex = i;
-            return tankIndex;
+            AssignTurnToPlayer(players[nextPlayerIndex]);
         }
 
         private void UpdateTimer()
