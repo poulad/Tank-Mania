@@ -20,6 +20,8 @@ namespace TankMania
 
         private Slider _slider;
 
+        private bool _isPaused;
+
         private void ControlMovement()
         {
             float moveH = Input.GetAxis("Horizontal");
@@ -49,6 +51,16 @@ namespace TankMania
                 else if (angle < MinMuzzleAngle)
                     _muzzle.transform.localRotation = Quaternion.Euler(0, 0, MinMuzzleAngle);
             }
+        }
+
+        private void Pause(bool pause)
+        {
+            _isPaused = pause;
+
+            if (pause)
+                _audioSource.Pause();
+            else
+                _audioSource.UnPause();
         }
     }
 }

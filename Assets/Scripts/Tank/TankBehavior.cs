@@ -13,6 +13,13 @@ namespace TankMania
         [HideInInspector]
         public bool HasCurrentTurn { get; private set; }
 
+        [HideInInspector]
+        public bool IsPaused
+        {
+            get { return _isPaused; }
+            set { Pause(value); }
+        }
+
         public event EventHandler<EventArgs> Fired;
 
         public event EventHandler<EventArgs> Destroying;
@@ -30,8 +37,11 @@ namespace TankMania
             _slider = GetComponentInChildren<Slider>();
         }
 
-        public void FixedUpdate()
+        public void Update()
         {
+            if (IsPaused)
+                return;
+
             _audioSource.pitch = Random.Range(.9f, 1.1f);
             if (HasCurrentTurn)
             {

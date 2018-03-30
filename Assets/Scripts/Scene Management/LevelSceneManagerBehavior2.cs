@@ -21,6 +21,8 @@ namespace TankMania
 
         private Player _currentPlayer;
 
+        private bool _isPaused;
+
         private float _timeout;
 
         private const float MaxFireCharge = 1.25f;
@@ -28,8 +30,6 @@ namespace TankMania
         private float _fireCharge;
 
         private readonly IList<string> _losers = new List<string>();
-
-        private CinemachineVirtualCamera _virtualCamera;
 
         private void AssignTurnToPlayer(Player player)
         {
@@ -43,7 +43,7 @@ namespace TankMania
 
             _timeout = 12f;
             CurrentPlayerText.text = _currentPlayer.Name;
-            _virtualCamera.Follow = _currentPlayer.Tank.transform;
+            VirtualCamera.Follow = _currentPlayer.Tank.transform;
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
@@ -128,7 +128,7 @@ namespace TankMania
             }
         }
 
-        private void WatchFireCharge()
+        private void CheckFireCharge()
         {
             if (!ChargeMeterSlider.enabled)
                 return;
