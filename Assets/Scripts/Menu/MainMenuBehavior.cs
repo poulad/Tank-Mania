@@ -8,24 +8,20 @@ public class MainMenuBehavior : MonoBehaviour
 
     public void Play()
     {
-        GameManager.Current.Players[0] = new Player
+        GameManager.Current.Players[0] = new Player("First Player")
         {
-            Name = "First Player",
             TankPrefab = TankPrefab,
         };
-        GameManager.Current.Players[1] = new Player
+        GameManager.Current.Players[1] = new Player("Guy 2")
         {
-            Name = "Guy 2",
             TankPrefab = TankPrefab,
         };
-        GameManager.Current.Players[2] = new Player
+        GameManager.Current.Players[2] = new Player("Third")
         {
-            Name = "Third",
             TankPrefab = TankPrefab,
         };
-        GameManager.Current.Players[3] = new Player
+        GameManager.Current.Players[3] = new Player("Last Man")
         {
-            Name = "Last Man",
             TankPrefab = TankPrefab,
         };
         GameManager.Current.SwitchToScene(Constants.Scenes.Playground);

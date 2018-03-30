@@ -4,7 +4,7 @@ namespace TankMania
 {
     public class Player
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public int Score { get; set; }
 
@@ -24,6 +24,11 @@ namespace TankMania
         }
 
         public GameObject TankPrefab { get; set; }
+
+        public Player(string name)
+        {
+            Name = name;
+        }
 
         private TankBehavior _tankBehavior;
     }

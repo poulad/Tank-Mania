@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using UnityEngine;
@@ -25,6 +26,8 @@ namespace TankMania
         private const float MaxFireCharge = 1.25f;
 
         private float _fireCharge;
+
+        private readonly IList<string> _losers = new List<string>();
 
         private CinemachineVirtualCamera _virtualCamera;
 
@@ -54,20 +57,41 @@ namespace TankMania
 
         private void OnTankDestroying(object sender, EventArgs eventArgs)
         {
-            var tankBehavior = (TankBehavior)sender;
-            var tank = tankBehavior.gameObject;
+            var ripPlayer = ActivePlayers
+                .Single(p => p.TankBehavior == (TankBehavior)sender);
 
-            if (tank == _currentPlayer.Tank)
+            if (ripPlayer == _currentPlayer)
             {
                 ChangeTanksTurn();
             }
 
-            Destroy(tank);
+            _losers.Add(ripPlayer.Name);
+            Destroy(ripPlayer.Tank);
 
             if (ActivePlayers.Length == 1)
             {
-                GameManager.Current.SwitchToScene(Constants.Scenes.Scores);
+                GameOver();
             }
+        }
+
+        private void GameOver()
+        {
+            if (_losers.Count != 3)
+                throw new InvalidOperationException();
+
+            AllPlayers
+                .Single(p => !_losers.Contains(p.Name))
+                .Score += 3;
+
+            AllPlayers
+                .Single(p => p.Name == _losers[2])
+                .Score += 2;
+
+            AllPlayers
+                .Single(p => p.Name == _losers[1])
+                .Score += 1;
+
+            GameManager.Current.SwitchToScene(Constants.Scenes.Scores);
         }
 
         private void RemoveTurnFromCurrentTank()
