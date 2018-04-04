@@ -9,6 +9,8 @@
             public const string Playground = "Playground";
 
             public const string Scores = "Score Sheet";
+
+            public const string Level3 = "Level3";
         }
 
         public static class Tags
