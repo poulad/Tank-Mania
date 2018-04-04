@@ -26,7 +26,7 @@ public class MainMenuBehavior : MonoBehaviour
         {
             TankPrefab = TankPrefab,
         };
-        GameManager.Current.SwitchToScene(Constants.Scenes.Playground);
+        GameManager.Current.SwitchToLevelScene(1);
     }
 
     public void Quit()

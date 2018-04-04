@@ -8,6 +8,8 @@
 
             public const string Playground = "Playground";
 
+            public const string Level1 = "Level 1";
+
             public const string Scores = "Score Sheet";
         }
 
@@ -20,6 +22,15 @@
             public const string Tank = "Tank";
 
             public const string Shell = "Shell";
+
+            public const string WorldBoundary = "World Boundary";
+
+            public const string CameraBoundary = "Camera Boundary";
+        }
+
+        public static class Layers
+        {
+            public const int Destructible = 10;
         }
     }
 }

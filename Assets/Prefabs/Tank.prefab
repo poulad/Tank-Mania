@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 70505434793684100}
   - component: {fileID: 60004922501818594}
   - component: {fileID: 114962491870992016}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Tank
   m_TagString: Tank
   m_Icon: {fileID: 0}
@@ -482,7 +482,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShellPrefab: {fileID: 50993383169730988, guid: 9e6dabb6ee4180046a97b28b1996294a,
     type: 2}
-  FireKey: 32
 --- !u!114 &114991492062260872
 MonoBehaviour:
   m_ObjectHideFlags: 1

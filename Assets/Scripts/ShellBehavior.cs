@@ -12,7 +12,7 @@ namespace TankMania
 
         public float MaxDamage = 100f;
 
-        public LayerMask DestructibleLayer;
+        public int DestructibleLayer = Constants.Layers.Destructible;
 
         public int BlockDestructionRadius = 3;
 
@@ -23,6 +23,14 @@ namespace TankMania
 
         public void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.CompareTag(Constants.Tags.WorldBoundary))
+                Destroy(gameObject);
+
+            if (other.gameObject.layer != DestructibleLayer)
+                return;
+
+            var a = Physics2D.OverlapCircleAll(transform.position, ExplosionRadius, DestructibleLayer);
+
             var targets = Physics2D
                 .OverlapCircleAll(transform.position, ExplosionRadius, DestructibleLayer)
                 .Select(c => c.gameObject)
@@ -45,7 +53,8 @@ namespace TankMania
                 }
             }
 
-            Destroy(gameObject);
+            if (targets.Any())
+                Destroy(gameObject);
         }
     }
 }

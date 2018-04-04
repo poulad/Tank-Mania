@@ -50,7 +50,7 @@ namespace TankMania
 
             AssignTurnToPlayer(AllPlayers[Random.Range(0, AllPlayers.Length)]);
 
-            PauseMenuPanel.gameObject.SetActive(_isPaused);
+            PauseMenuPanel.gameObject.SetActive(false);
         }
 
         public void Update()
