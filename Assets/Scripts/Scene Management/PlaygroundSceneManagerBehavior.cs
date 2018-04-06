@@ -6,6 +6,7 @@ namespace TankMania
     {
         public GameObject TankPrefab;
 
+#if UNITY_EDITOR
         public new void Awake()
         {
             var player1 = new Player("Player 1")
@@ -21,6 +22,7 @@ namespace TankMania
 
             base.Awake();
         }
+#endif
 
         public new void Start()
         {
