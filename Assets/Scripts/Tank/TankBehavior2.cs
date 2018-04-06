@@ -14,7 +14,11 @@ namespace TankMania
 
         private AudioSource _audioSource;
 
+        private Animator _animator;
+
         private Slider _slider;
+
+        private bool _isDriving;
 
         private bool _isPaused;
 
@@ -29,6 +33,12 @@ namespace TankMania
                     transform.localScale.x * Mathf.Sign(moveH * transform.localScale.x),
                     transform.localScale.y
                 );
+
+                StartDriving();
+            }
+            else
+            {
+                StopDriving();
             }
 
             float moveV = Input.GetAxis("Vertical");
@@ -54,9 +64,26 @@ namespace TankMania
             _isPaused = pause;
 
             if (pause)
+            {
                 _audioSource.Pause();
+                StopDriving();
+            }
             else
+            {
                 _audioSource.UnPause();
+            }
+        }
+
+        private void StartDriving()
+        {
+            _isDriving = true;
+            _animator.SetBool("IsDriving", true);
+        }
+
+        private void StopDriving()
+        {
+            _isDriving = false;
+            _animator.SetBool("IsDriving", false);
         }
     }
 }
