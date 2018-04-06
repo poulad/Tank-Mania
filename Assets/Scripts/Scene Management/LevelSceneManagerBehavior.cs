@@ -22,6 +22,13 @@ namespace TankMania
 
         public KeyCode FireKey = KeyCode.Space;
 
+        protected Player[] AllPlayers
+        {
+            get { return GameManager.Current.Players; }
+        }
+
+        protected float TurnTimeout = 12f;
+
 #if UNITY_EDITOR
         public void Awake()
         {
@@ -30,6 +37,7 @@ namespace TankMania
             if (!GameManager.Current)
             {
                 gameObject.SetActive(false);
+                GameManager.ReturnToScene = SceneManager.GetActiveScene().name;
                 SceneManager.LoadScene(Constants.Scenes.MainMenu);
             }
         }

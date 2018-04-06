@@ -8,11 +8,6 @@ namespace TankMania
 {
     public partial class LevelSceneManagerBehavior
     {
-        protected Player[] AllPlayers
-        {
-            get { return GameManager.Current.Players; }
-        }
-
         private Player[] ActivePlayers
         {
             get { return AllPlayers.Where(p => p.Tank && p.TankBehavior.enabled).ToArray(); }
@@ -40,7 +35,7 @@ namespace TankMania
             CurrentPlayerText.enabled = true;
             ChargeMeterSlider.enabled = true;
 
-            _timeout = 12f;
+            _timeout = TurnTimeout;
             CurrentPlayerText.text = _currentPlayer.Name;
             VirtualCamera.Follow = _currentPlayer.Tank.transform;
         }
