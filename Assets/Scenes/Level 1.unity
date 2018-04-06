@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 69430753}
   - component: {fileID: 69430755}
   - component: {fileID: 69430754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_31 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 232884490}
   - component: {fileID: 232884492}
   - component: {fileID: 232884491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 334392538}
   - component: {fileID: 334392540}
   - component: {fileID: 334392539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1848,7 +1848,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -2721,7 +2721,7 @@ GameObject:
   - component: {fileID: 561048579}
   - component: {fileID: 561048581}
   - component: {fileID: 561048580}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2752,7 +2752,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -2823,7 +2823,7 @@ GameObject:
   - component: {fileID: 581877627}
   - component: {fileID: 581877629}
   - component: {fileID: 581877628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_31 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2854,7 +2854,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3363,7 +3363,7 @@ GameObject:
   - component: {fileID: 677786048}
   - component: {fileID: 677786050}
   - component: {fileID: 677786049}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3394,7 +3394,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3469,7 +3469,7 @@ GameObject:
   - component: {fileID: 709983952}
   - component: {fileID: 709983954}
   - component: {fileID: 709983953}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3500,7 +3500,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3571,7 +3571,7 @@ GameObject:
   - component: {fileID: 744963405}
   - component: {fileID: 744963407}
   - component: {fileID: 744963406}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3602,7 +3602,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3677,7 +3677,7 @@ GameObject:
   - component: {fileID: 761779530}
   - component: {fileID: 761779532}
   - component: {fileID: 761779531}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3708,7 +3708,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -3850,7 +3850,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 775337751}
-  m_Layer: 0
+  - component: {fileID: 775337753}
+  - component: {fileID: 775337752}
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3893,6 +3895,457 @@ Transform:
   m_Father: {fileID: 2141472075}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!66 &775337752
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775337750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 232884491}
+    m_ColliderPaths:
+    - - X: 26056018
+        Y: -25381468
+      - X: 25356018
+        Y: -25581468
+      - X: 18256018
+        Y: -27381468
+      - X: 14656018
+        Y: -28281470
+      - X: 14456018
+        Y: -28481470
+      - X: 14456018
+        Y: -28581470
+      - X: 27256016
+        Y: -28581470
+      - X: 27256016
+        Y: -25381468
+  - m_Collider: {fileID: 334392539}
+    m_ColliderPaths:
+    - - X: -71411584
+        Y: -22132030
+      - X: -70901584
+        Y: -22332030
+      - X: -63846548
+        Y: -24432030
+      - X: -61126532
+        Y: -25232028
+      - X: -61041536
+        Y: -25332028
+      - X: -61041536
+        Y: -28732028
+      - X: -71921584
+        Y: -28732028
+      - X: -71921584
+        Y: -22132030
+  - m_Collider: {fileID: 561048580}
+    m_ColliderPaths:
+    - - X: -22603154
+        Y: -28594938
+      - X: -22603154
+        Y: -41394936
+      - X: -9803156
+        Y: -41394936
+      - X: -9803156
+        Y: -28594938
+  - m_Collider: {fileID: 581877628}
+    m_ColliderPaths:
+    - - X: -28862532
+        Y: -28472580
+      - X: -28862532
+        Y: -41272580
+      - X: -39742588
+        Y: -41272580
+      - X: -39742588
+        Y: -28472580
+  - m_Collider: {fileID: 677786049}
+    m_ColliderPaths:
+    - - X: 63759076
+        Y: -15933150
+      - X: 63059072
+        Y: -16133150
+      - X: 55559072
+        Y: -18033150
+      - X: 52359076
+        Y: -18833150
+      - X: 52159076
+        Y: -18933150
+      - X: 52159076
+        Y: -28733148
+      - X: 64959072
+        Y: -28733148
+      - X: 64959072
+        Y: -15933150
+  - m_Collider: {fileID: 709983953}
+    m_ColliderPaths:
+    - - X: 64719444
+        Y: -15933150
+      - X: 64719444
+        Y: -28733148
+      - X: 77519440
+        Y: -28733148
+      - X: 77519440
+        Y: -15933150
+  - m_Collider: {fileID: 744963406}
+    m_ColliderPaths:
+    - - X: 39309780
+        Y: -22132030
+      - X: 38709780
+        Y: -22332030
+      - X: 30409780
+        Y: -24432030
+      - X: 27209778
+        Y: -25232028
+      - X: 27109780
+        Y: -25332028
+      - X: 27109780
+        Y: -28732028
+      - X: 39909776
+        Y: -28732028
+      - X: 39909776
+        Y: -22132030
+  - m_Collider: {fileID: 761779531}
+    m_ColliderPaths:
+    - - X: 1871327
+        Y: -28472580
+      - X: 1871327
+        Y: -41272580
+      - X: 14671327
+        Y: -41272580
+      - X: 14671327
+        Y: -28472580
+  - m_Collider: {fileID: 893545780}
+    m_ColliderPaths:
+    - - X: 89599440
+        Y: -12892133
+      - X: 89599440
+        Y: -25692134
+      - X: 103039440
+        Y: -25692134
+      - X: 103039440
+        Y: -12892133
+  - m_Collider: {fileID: 904260308}
+    m_ColliderPaths:
+    - - X: -92190584
+        Y: -15933150
+      - X: -91595576
+        Y: -16133150
+      - X: -85220544
+        Y: -18033150
+      - X: -82500536
+        Y: -18833150
+      - X: -82330536
+        Y: -18933150
+      - X: -82330536
+        Y: -28733148
+      - X: -93210584
+        Y: -28733148
+      - X: -93210584
+        Y: -15933150
+  - m_Collider: {fileID: 944413476}
+    m_ColliderPaths:
+    - - X: -81575584
+        Y: -19082590
+      - X: -80980576
+        Y: -19282588
+      - X: -75625552
+        Y: -20882590
+      - X: -74265544
+        Y: -21282590
+      - X: -73500544
+        Y: -21482590
+      - X: -72820536
+        Y: -21682590
+      - X: -71885536
+        Y: -21982588
+      - X: -71800536
+        Y: -22082588
+      - X: -71800536
+        Y: -28682590
+      - X: -82680584
+        Y: -28682590
+      - X: -82680584
+        Y: -19082590
+  - m_Collider: {fileID: 995701443}
+    m_ColliderPaths:
+    - - X: -60145588
+        Y: -25381468
+      - X: -59550584
+        Y: -25581468
+      - X: -53515552
+        Y: -27381468
+      - X: -50455536
+        Y: -28281470
+      - X: -50285540
+        Y: -28481470
+      - X: -50285540
+        Y: -28581470
+      - X: -61165592
+        Y: -28581470
+      - X: -61165592
+        Y: -25381468
+  - m_Collider: {fileID: 1159761528}
+    m_ColliderPaths:
+    - - X: 77419440
+        Y: -12892133
+      - X: 77419440
+        Y: -25692134
+      - X: 90219440
+        Y: -25692134
+      - X: 90219440
+        Y: -12892133
+  - m_Collider: {fileID: 1160843310}
+    m_ColliderPaths:
+    - - X: -50293532
+        Y: -28561502
+      - X: -50293532
+        Y: -41361500
+      - X: -61173584
+        Y: -41361500
+      - X: -61173584
+        Y: -28561502
+  - m_Collider: {fileID: 1168382145}
+    m_ColliderPaths:
+    - - X: 51263544
+        Y: -19082590
+      - X: 50563540
+        Y: -19282588
+      - X: 44263540
+        Y: -20882590
+      - X: 42663540
+        Y: -21282590
+      - X: 41763540
+        Y: -21482590
+      - X: 40963540
+        Y: -21682590
+      - X: 39863540
+        Y: -21982588
+      - X: 39763540
+        Y: -22082588
+      - X: 39763540
+        Y: -28682590
+      - X: 52563540
+        Y: -28682590
+      - X: 52563540
+        Y: -19082590
+  - m_Collider: {fileID: 1185341900}
+    m_ColliderPaths:
+    - - X: 142789408
+        Y: -12892133
+      - X: 142789408
+        Y: -25692134
+      - X: 128509472
+        Y: -25692134
+      - X: 128509472
+        Y: -12892133
+  - m_Collider: {fileID: 1226053586}
+    m_ColliderPaths:
+    - - X: 76581152
+        Y: -12868210
+      - X: 75881152
+        Y: -13068210
+      - X: 68781160
+        Y: -14868209
+      - X: 65181156
+        Y: -15768210
+      - X: 64981156
+        Y: -15968210
+      - X: 64981156
+        Y: -16068209
+      - X: 77781152
+        Y: -16068209
+      - X: 77781152
+        Y: -12868210
+  - m_Collider: {fileID: 1301278855}
+    m_ColliderPaths:
+    - - X: -10747410
+        Y: -28472580
+      - X: -10747410
+        Y: -41272580
+      - X: 2052589
+        Y: -41272580
+      - X: 2052589
+        Y: -28472580
+  - m_Collider: {fileID: 1504912990}
+    m_ColliderPaths:
+    - - X: 102805232
+        Y: -12892133
+      - X: 102805232
+        Y: -25692134
+      - X: 115605240
+        Y: -25692134
+      - X: 115605240
+        Y: -12892133
+  - m_Collider: {fileID: 1608131872}
+    m_ColliderPaths:
+    - - X: 14464868
+        Y: -28561502
+      - X: 14464868
+        Y: -41361500
+      - X: 27264866
+        Y: -41361500
+      - X: 27264866
+        Y: -28561502
+  - m_Collider: {fileID: 1659888831}
+    m_ColliderPaths:
+    - - X: -18785532
+        Y: -28594938
+      - X: -18785532
+        Y: -41394936
+      - X: -29665586
+        Y: -41394936
+      - X: -29665586
+        Y: -28594938
+  - m_Collider: {fileID: 1844440902}
+    m_ColliderPaths:
+    - - X: 128759400
+        Y: -12892133
+      - X: 128759400
+        Y: -25692134
+      - X: 115159472
+        Y: -25692134
+      - X: 115159472
+        Y: -12892133
+  - m_Collider: {fileID: 69430754}
+    m_ColliderPaths:
+    - - X: -39588536
+        Y: -28472580
+      - X: -39588536
+        Y: -41272580
+      - X: -50468588
+        Y: -41272580
+      - X: -50468588
+        Y: -28472580
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 1.4464868, y: -4.13615}
+      - {x: 2.7264867, y: -4.13615}
+      - {x: 2.7264867, y: -2.8732028}
+      - {x: 3.9909778, y: -2.8732028}
+      - {x: 3.9909778, y: -2.868259}
+      - {x: 5.2159076, y: -2.868259}
+      - {x: 5.2159076, y: -2.8733149}
+      - {x: 7.751944, y: -2.8733149}
+      - {x: 7.751944, y: -2.5692134}
+      - {x: 11.515947, y: -2.5692134}
+      - {x: 11.515947, y: -1.2892133}
+      - {x: 7.7781153, y: -1.2892133}
+      - {x: 7.7781153, y: -1.286821}
+      - {x: 7.6581154, y: -1.286821}
+      - {x: 7.588115, y: -1.306821}
+      - {x: 6.878116, y: -1.4868209}
+      - {x: 6.5181155, y: -1.576821}
+      - {x: 6.5016217, y: -1.593315}
+      - {x: 6.375908, y: -1.593315}
+      - {x: 6.3059072, y: -1.613315}
+      - {x: 5.5559072, y: -1.803315}
+      - {x: 5.2359076, y: -1.883315}
+      - {x: 5.2159076, y: -1.8933151}
+      - {x: 5.2159076, y: -1.908259}
+      - {x: 5.1263547, y: -1.908259}
+      - {x: 5.056354, y: -1.9282588}
+      - {x: 4.426354, y: -2.088259}
+      - {x: 4.266354, y: -2.128259}
+      - {x: 4.176354, y: -2.148259}
+      - {x: 4.096354, y: -2.1682591}
+      - {x: 3.986354, y: -2.1982589}
+      - {x: 3.9763541, y: -2.2082589}
+      - {x: 3.9763541, y: -2.213203}
+      - {x: 3.930978, y: -2.213203}
+      - {x: 3.870978, y: -2.233203}
+      - {x: 3.040978, y: -2.443203}
+      - {x: 2.7209778, y: -2.523203}
+      - {x: 2.710978, y: -2.533203}
+      - {x: 2.710978, y: -2.5381467}
+      - {x: 2.6056018, y: -2.5381467}
+      - {x: 2.5356019, y: -2.5581467}
+      - {x: 1.8256018, y: -2.7381468}
+      - {x: 1.4656018, y: -2.828147}
+      - {x: 1.4464908, y: -2.847258}
+      - {x: -1.074741, y: -2.847258}
+      - {x: -1.074741, y: -2.8594937}
+      - {x: -1.8785533, y: -2.8594937}
+      - {x: -1.8785533, y: -4.1394935}
+      - {x: -0.9803156, y: -4.1394935}
+      - {x: -0.9803156, y: -4.127258}
+      - {x: 1.4464868, y: -4.127258}
+    - - {x: 11.560524, y: -2.5692134}
+      - {x: 14.278941, y: -2.5692134}
+      - {x: 14.278941, y: -1.2892133}
+      - {x: 11.560524, y: -1.2892133}
+    - - {x: -5.0455537, y: -2.828147}
+      - {x: -5.3515553, y: -2.7381468}
+      - {x: -5.9550586, y: -2.5581467}
+      - {x: -6.014559, y: -2.5381467}
+      - {x: -6.1041536, y: -2.5381467}
+      - {x: -6.1041536, y: -2.533203}
+      - {x: -6.1126533, y: -2.523203}
+      - {x: -6.384655, y: -2.443203}
+      - {x: -7.0901585, y: -2.233203}
+      - {x: -7.1411586, y: -2.213203}
+      - {x: -7.1800537, y: -2.213203}
+      - {x: -7.1800537, y: -2.2082589}
+      - {x: -7.188554, y: -2.1982589}
+      - {x: -7.2820535, y: -2.1682591}
+      - {x: -7.3500543, y: -2.148259}
+      - {x: -7.4265547, y: -2.128259}
+      - {x: -7.5625553, y: -2.088259}
+      - {x: -8.098058, y: -1.9282588}
+      - {x: -8.157558, y: -1.908259}
+      - {x: -8.233054, y: -1.908259}
+      - {x: -8.233054, y: -1.8933151}
+      - {x: -8.250053, y: -1.883315}
+      - {x: -8.522055, y: -1.803315}
+      - {x: -9.159557, y: -1.613315}
+      - {x: -9.219058, y: -1.593315}
+      - {x: -9.321058, y: -1.593315}
+      - {x: -9.321058, y: -2.8733149}
+      - {x: -8.233054, y: -2.8733149}
+      - {x: -8.233054, y: -2.868259}
+      - {x: -7.1921587, y: -2.868259}
+      - {x: -7.1921587, y: -2.8732028}
+      - {x: -6.1173587, y: -2.8732028}
+      - {x: -6.1173587, y: -4.13615}
+      - {x: -5.029353, y: -4.13615}
+      - {x: -5.029353, y: -4.127258}
+      - {x: -2.9665587, y: -4.127258}
+      - {x: -2.9665587, y: -4.1394935}
+      - {x: -2.2603154, y: -4.1394935}
+      - {x: -2.2603154, y: -2.8594937}
+      - {x: -2.886253, y: -2.8594937}
+      - {x: -2.886253, y: -2.847258}
+      - {x: -5.0293097, y: -2.847258}
+  m_VertexDistance: 0.0005
+--- !u!50 &775337753
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775337750}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &813169888
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,7 +4624,7 @@ GameObject:
   - component: {fileID: 893545779}
   - component: {fileID: 893545781}
   - component: {fileID: 893545780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4202,7 +4655,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -4273,7 +4726,7 @@ GameObject:
   - component: {fileID: 904260307}
   - component: {fileID: 904260309}
   - component: {fileID: 904260308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_19 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,7 +4757,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -4379,7 +4832,7 @@ GameObject:
   - component: {fileID: 944413475}
   - component: {fileID: 944413477}
   - component: {fileID: 944413476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4410,7 +4863,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -4634,7 +5087,7 @@ GameObject:
   - component: {fileID: 995701442}
   - component: {fileID: 995701444}
   - component: {fileID: 995701443}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +5118,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -5162,7 +5615,7 @@ GameObject:
   - component: {fileID: 1159761527}
   - component: {fileID: 1159761529}
   - component: {fileID: 1159761528}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5193,7 +5646,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -5264,7 +5717,7 @@ GameObject:
   - component: {fileID: 1160843309}
   - component: {fileID: 1160843311}
   - component: {fileID: 1160843310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_26 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5295,7 +5748,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -5366,7 +5819,7 @@ GameObject:
   - component: {fileID: 1168382144}
   - component: {fileID: 1168382146}
   - component: {fileID: 1168382145}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5397,7 +5850,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -5475,7 +5928,7 @@ GameObject:
   - component: {fileID: 1185341899}
   - component: {fileID: 1185341901}
   - component: {fileID: 1185341900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5506,7 +5959,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -5723,7 +6176,7 @@ GameObject:
   - component: {fileID: 1226053585}
   - component: {fileID: 1226053587}
   - component: {fileID: 1226053586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5754,7 +6207,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -6453,7 +6906,7 @@ GameObject:
   - component: {fileID: 1301278854}
   - component: {fileID: 1301278856}
   - component: {fileID: 1301278855}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_31 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6484,7 +6937,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -7145,7 +7598,7 @@ GameObject:
   - component: {fileID: 1504912989}
   - component: {fileID: 1504912991}
   - component: {fileID: 1504912990}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7176,7 +7629,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -8221,7 +8674,7 @@ GameObject:
   - component: {fileID: 1608131871}
   - component: {fileID: 1608131873}
   - component: {fileID: 1608131872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_26 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8252,7 +8705,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -8654,7 +9107,7 @@ GameObject:
   - component: {fileID: 1659888830}
   - component: {fileID: 1659888832}
   - component: {fileID: 1659888831}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8685,7 +9138,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -9876,7 +10329,7 @@ GameObject:
   - component: {fileID: 1844440901}
   - component: {fileID: 1844440903}
   - component: {fileID: 1844440902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: desert_tile_28 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9907,7 +10360,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}

@@ -17,10 +17,10 @@ namespace TankMania
         {
             if (other.tag == "Shell")
             {
-                var shellBehavior = other.gameObject.GetComponent<ShellBehavior>();
+                //var shellBehavior = other.gameObject.GetComponent<ShellBehavior>();
 
                 var p = _tilemap.WorldToCell(other.gameObject.transform.position);
-                DestructCellBlocks(new Vector2Int(p.x, p.y), shellBehavior.BlockDestructionRadius);
+                DestructCellBlocks(new Vector2Int(p.x, p.y), 3 /*shellBehavior.BlockDestructionRadius*/);
             }
         }
 
