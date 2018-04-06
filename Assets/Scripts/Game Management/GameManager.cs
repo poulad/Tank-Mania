@@ -3,19 +3,19 @@ using UnityEngine.SceneManagement;
 
 namespace TankMania
 {
-    public class GameManager : MonoBehaviour
+    public sealed class GameManager : MonoBehaviour
     {
         public static GameManager Current;
 
-        public int CurrentLevel { get; set; }
+        public int CurrentLevel { get; private set; }
 
         public Player[] Players { get; set; }
 
-        private GameManager()
-        {
-        }
+#if UNITY_EDITOR
+        public static string ReturnToScene;
+#endif
 
-        public void Start()
+        public void Awake()
         {
             DontDestroyOnLoad(this);
             Current = this;
@@ -42,6 +42,12 @@ namespace TankMania
         public void SwitchToScene(string scene)
         {
             SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        }
+
+        public void SwitchToLevelScene(int level)
+        {
+            CurrentLevel = 1;
+            SwitchToScene("Level " + CurrentLevel);
         }
     }
 }

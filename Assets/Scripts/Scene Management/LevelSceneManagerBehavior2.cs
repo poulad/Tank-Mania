@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,7 +8,7 @@ namespace TankMania
 {
     public partial class LevelSceneManagerBehavior
     {
-        private Player[] AllPlayers
+        protected Player[] AllPlayers
         {
             get { return GameManager.Current.Players; }
         }
@@ -31,7 +30,7 @@ namespace TankMania
 
         private readonly IList<string> _losers = new List<string>();
 
-        private void AssignTurnToPlayer(Player player)
+        protected void AssignTurnToPlayer(Player player)
         {
             _currentPlayer = player;
             _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;

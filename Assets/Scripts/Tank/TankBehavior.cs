@@ -10,6 +10,10 @@ namespace TankMania
     {
         public Rigidbody2D ShellPrefab;
 
+        public float MaxMuzzleAngle;
+
+        public float MinMuzzleAngle;
+
         [HideInInspector]
         public bool HasCurrentTurn { get; private set; }
 
@@ -28,6 +32,7 @@ namespace TankMania
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _audioSource = GetComponent<AudioSource>();
+            _animator = GetComponent<Animator>();
             _muzzle = GetComponentsInChildren<Transform>()
                 .Single(t => t.gameObject.name == "Muzzle")
                 .gameObject;
@@ -65,6 +70,7 @@ namespace TankMania
         public void StopTurn()
         {
             HasCurrentTurn = false;
+            StopDriving();
         }
 
         public void Fire(float charge)
