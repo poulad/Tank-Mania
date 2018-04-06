@@ -11,6 +11,10 @@ namespace TankMania
 
         public Player[] Players { get; set; }
 
+#if UNITY_EDITOR
+        public static string ReturnToScene;
+#endif
+
         public void Awake()
         {
             DontDestroyOnLoad(this);

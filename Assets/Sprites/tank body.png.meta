@@ -4,10 +4,10 @@ timeCreated: 1522191091
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: left1
+    21300000: left 1
     21300002: left 2
     21300004: left 3
-    21300006: left4
+    21300006: left 4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -134,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: left1
+      name: left 1
       rect:
         serializedVersion: 2
         x: 9
@@ -142,7 +142,7 @@ TextureImporter:
         width: 401
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,7 +156,7 @@ TextureImporter:
         width: 401
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,13 +170,13 @@ TextureImporter:
         width: 401
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: left4
+      name: left 4
       rect:
         serializedVersion: 2
         x: 1239
@@ -184,7 +184,7 @@ TextureImporter:
         width: 401
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

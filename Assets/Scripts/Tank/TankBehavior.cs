@@ -10,6 +10,10 @@ namespace TankMania
     {
         public Rigidbody2D ShellPrefab;
 
+        public float MaxMuzzleAngle;
+
+        public float MinMuzzleAngle;
+
         [HideInInspector]
         public bool HasCurrentTurn { get; private set; }
 

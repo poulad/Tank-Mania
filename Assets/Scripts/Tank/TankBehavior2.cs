@@ -6,10 +6,6 @@ namespace TankMania
 {
     public partial class TankBehavior
     {
-        private const float MaxMuzzleAngle = 45;
-
-        private const float MinMuzzleAngle = -12;
-
         private GameObject _muzzle;
 
         private GameObject _launchPoint;

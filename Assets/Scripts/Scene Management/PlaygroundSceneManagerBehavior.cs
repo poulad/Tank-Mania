@@ -9,16 +9,17 @@ namespace TankMania
 #if UNITY_EDITOR
         public new void Awake()
         {
-            var player1 = new Player("Player 1")
-            {
-                TankPrefab = TankPrefab
-            };
-            var player2 = new Player("Player 2")
-            {
-                TankPrefab = TankPrefab
-            };
+            //var player1 = new Player("Player 1")
+            //{
+            //    TankPrefab = TankPrefab
+            //};
+            //var player2 = new Player("Player 2")
+            //{
+            //    TankPrefab = TankPrefab
+            //};
 
-            GameManager.Current.Players = new[] { player1, player2 };
+            //GameManager.Current.Players = new[] { player1, player2 };
+            GameManager.ReturnToScene = Constants.Scenes.Playground;
 
             base.Awake();
         }

@@ -6,26 +6,34 @@ using UnityEngine;
 
 public class MainMenuBehavior : MonoBehaviour
 {
-    public GameObject TankPrefab;
+    public GameObject[] TankPrefabs;
 
     public void Play()
     {
         GameManager.Current.Players[0] = new Player("First Player")
         {
-            TankPrefab = TankPrefab,
+            TankPrefab = TankPrefabs[0],
         };
         GameManager.Current.Players[1] = new Player("Guy 2")
         {
-            TankPrefab = TankPrefab,
+            TankPrefab = TankPrefabs[1],
         };
         GameManager.Current.Players[2] = new Player("Third")
         {
-            TankPrefab = TankPrefab,
+            TankPrefab = TankPrefabs[2],
         };
         GameManager.Current.Players[3] = new Player("Last Man")
         {
-            TankPrefab = TankPrefab,
+            TankPrefab = TankPrefabs[3],
         };
+
+#if UNITY_EDITOR
+        if (GameManager.ReturnToScene != null)
+        {
+            GameManager.Current.SwitchToScene(GameManager.ReturnToScene);
+            return;
+        }
+#endif
         GameManager.Current.SwitchToLevelScene(1);
     }
 
