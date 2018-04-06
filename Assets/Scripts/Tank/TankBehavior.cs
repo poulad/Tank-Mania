@@ -10,10 +10,15 @@ namespace TankMania
     {
         public Rigidbody2D ShellPrefab;
 
-        public KeyCode FireKey = KeyCode.Space;
-
         [HideInInspector]
         public bool HasCurrentTurn { get; private set; }
+
+        [HideInInspector]
+        public bool IsPaused
+        {
+            get { return _isPaused; }
+            set { Pause(value); }
+        }
 
         public event EventHandler<EventArgs> Fired;
 
@@ -32,8 +37,11 @@ namespace TankMania
             _slider = GetComponentInChildren<Slider>();
         }
 
-        public void FixedUpdate()
+        public void Update()
         {
+            if (IsPaused)
+                return;
+
             _audioSource.pitch = Random.Range(.9f, 1.1f);
             if (HasCurrentTurn)
             {
@@ -42,7 +50,7 @@ namespace TankMania
 
             { // Prevent the health bar from mirroring when tank turns
                 _slider.transform.localScale = new Vector3(
-                    Math.Abs(_slider.transform.localScale.x) * Math.Sign(this.transform.localScale.x),
+                    Math.Abs(_slider.transform.localScale.x) * Math.Sign(transform.localScale.x),
                     _slider.transform.localScale.y,
                     _slider.transform.localScale.z
                 );
@@ -52,12 +60,26 @@ namespace TankMania
         public void TakeCurrentTurn()
         {
             HasCurrentTurn = true;
-            _alreadyFired = false;
         }
 
         public void StopTurn()
         {
             HasCurrentTurn = false;
+        }
+
+        public void Fire(float charge)
+        {
+            var shell = Instantiate(ShellPrefab, _launchPoint.transform.position, Quaternion.identity);
+            shell.transform.localScale = new Vector3(
+                shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
+                shell.transform.localScale.y
+            );
+
+            var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
+            shell.velocity = (5 + charge * 3) * launchDirection;
+
+            if (Fired != null)
+                Fired(this, EventArgs.Empty);
         }
 
         public void TakeDamage(float damage)

@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tank
-  - SceneManager
   - Shell
+  - Scene Manager
+  - World Boundary
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
+  - 
+  - 
   - Destructible
-  - 
-  - 
   - 
   - 
   - 

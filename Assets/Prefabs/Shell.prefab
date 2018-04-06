@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50993383169730988}
   - component: {fileID: 70032422224237860}
   - component: {fileID: 114528277908908172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shell
   m_TagString: Shell
   m_Icon: {fileID: 0}
@@ -92,10 +92,6 @@ MonoBehaviour:
   ExplosionRadius: 0.5
   ExplosionForce: 500
   MaxDamage: 100
-  DestructibleLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  BlockDestructionRadius: 3
 --- !u!212 &212055628381663596
 SpriteRenderer:
   m_ObjectHideFlags: 1
