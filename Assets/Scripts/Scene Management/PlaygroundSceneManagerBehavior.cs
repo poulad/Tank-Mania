@@ -7,6 +7,8 @@ namespace TankMania
     {
         public new void Start()
         {
+            AssignComponents();
+
             TurnTimeout = 30;
             GameManager.Current.Players = GameManager.Current.Players.Take(2).ToArray();
 

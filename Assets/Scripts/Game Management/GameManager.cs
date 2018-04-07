@@ -46,7 +46,7 @@ namespace TankMania
 
         public void SwitchToLevelScene(int level)
         {
-            CurrentLevel = 1;
+            CurrentLevel = level;
             SwitchToScene("Level " + CurrentLevel);
         }
     }

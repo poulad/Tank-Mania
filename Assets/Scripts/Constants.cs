@@ -12,7 +12,9 @@
 
             public const string Scores = "Score Sheet";
 
-            public const string Level3 = "Level3";
+            public const string Level3 = "Level 3";
+
+            public const string GameOver = "Game Over";
         }
 
         public static class Tags
@@ -33,6 +35,8 @@
         public static class Layers
         {
             public const int Destructible = 10;
+
+            public const string Water = "Water";
         }
     }
 }

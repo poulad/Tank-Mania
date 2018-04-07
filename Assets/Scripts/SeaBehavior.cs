@@ -6,10 +6,15 @@ namespace TankMania
     {
         public void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == Constants.Tags.Tank)
+            if (other.CompareTag(Constants.Tags.Tank))
             {
-                var tankBehavior = other.gameObject.GetComponent<TankBehavior>();
+                var tankBehavior = other.GetComponent<TankBehavior>();
                 tankBehavior.TakeDamage(100);
+            }
+            else if (other.CompareTag(Constants.Tags.Shell))
+            {
+                // ToDo Play water drop sound
+                Destroy(other.gameObject);
             }
         }
     }

@@ -37,7 +37,7 @@ namespace TankMania
 
         public void ContinueToNextLevel()
         {
-            GameManager.Current.SwitchToScene(Constants.Scenes.Playground);
+            GameManager.Current.SwitchToLevelScene(GameManager.Current.CurrentLevel + 1);
         }
     }
 }
