@@ -22,6 +22,8 @@ namespace TankMania
 
         private Slider _chargeMeterSlider;
 
+        private RawImage _highlightBg;
+
         private bool _isWaitingForPlayerMove;
 
         private bool _isPaused;
@@ -47,6 +49,9 @@ namespace TankMania
 
             _chargeMeterSlider = ScreenCanvas.GetComponentsInChildren<Slider>()
                 .Single(c => c.name == "ChargeMeterSlider");
+
+            _highlightBg = ScreenCanvas.GetComponentsInChildren<RawImage>()
+               .Single(c => c.name == "Tank Highlight BG");
         }
 
         protected void AssignTurnToPlayer(Player player)
@@ -157,6 +162,7 @@ namespace TankMania
         private void SetPlayerTurnActive(bool isActive)
         {
             _isWaitingForPlayerMove = !isActive;
+            _highlightBg.enabled = !isActive;
         }
 
         private void UpdateTimer()
@@ -199,11 +205,7 @@ namespace TankMania
             if (_currentPlayer == null)
                 return;
 
-            if (
-                Mathf.Abs(_currentPlayer.Tank.transform.position.x) <= 1.5f &&
-                Input.GetKey(KeyCode.LeftControl) &&
-                Input.GetKeyDown(KeyCode.K)
-            )
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.K))
             {
                 ActivePlayers[Random.Range(0, ActivePlayers.Length)]
                     .TankBehavior
