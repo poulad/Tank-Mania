@@ -1,7 +1,6 @@
 ﻿using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
-
 #if UNITY_EDITOR
 using UnityEngine.SceneManagement;
 #endif
@@ -12,15 +11,11 @@ namespace TankMania
     {
         public CinemachineVirtualCamera VirtualCamera;
 
-        public Text TimeoutText;
-
-        public Text CurrentPlayerText;
-
-        public Slider ChargeMeterSlider;
-
-        public Image PauseMenuPanel;
+        public Canvas ScreenCanvas;
 
         public KeyCode FireKey = KeyCode.Space;
+
+        protected Image PauseMenuPanel;
 
         protected Player[] AllPlayers
         {
@@ -45,6 +40,8 @@ namespace TankMania
 
         public void Start()
         {
+            AssignComponents();
+
             GameManager.Current.InstantiateTanks(transform);
             foreach (var player in AllPlayers)
             {
@@ -56,9 +53,8 @@ namespace TankMania
             AllPlayers[2].Tank.transform.position = new Vector3(3, 2, 0);
             AllPlayers[3].Tank.transform.position = new Vector3(6, 2, 0);
 
-            AssignTurnToPlayer(AllPlayers[Random.Range(0, AllPlayers.Length)]);
-
             PauseMenuPanel.gameObject.SetActive(false);
+            AssignTurnToPlayer(AllPlayers[Random.Range(0, AllPlayers.Length)]);
         }
 
         public void Update()
@@ -69,9 +65,16 @@ namespace TankMania
             if (_isPaused)
                 return;
 
-            UpdateTimer();
-            CheckFireCharge();
-            CheckForRandomDestroy();
+            if (_isWaitingForPlayerMove)
+            {
+                CheckForPlayerMove();
+            }
+            else
+            {
+                UpdateTimer();
+                CheckFireCharge();
+                CheckForRandomDestroy();
+            }
         }
 
         public void Pause()

@@ -7088,7 +7088,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642420845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.213809, y: 2.2318597, z: -10}
+  m_LocalPosition: {x: -0.05477178, y: 1.0294659, z: -10}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7219,12 +7219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VirtualCamera: {fileID: 1059466378}
-  TimeoutText: {fileID: 845634108}
-  CurrentPlayerText: {fileID: 1973644155}
-  ChargeMeterSlider: {fileID: 1656098386}
-  PauseMenuPanel: {fileID: 589284203}
+  ScreenCanvas: {fileID: 1936094334}
   FireKey: 32
-  TankPrefab: {fileID: 1205826301374182, guid: a69cb0741ae31b14eb0f70ea28eb4240, type: 2}
 --- !u!1 &1672772760
 GameObject:
   m_ObjectHideFlags: 3

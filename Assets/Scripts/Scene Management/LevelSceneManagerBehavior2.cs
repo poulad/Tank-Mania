@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace TankMania
@@ -15,6 +16,14 @@ namespace TankMania
 
         private Player _currentPlayer;
 
+        private Text _timeoutText;
+
+        private Text _currentPlayerText;
+
+        private Slider _chargeMeterSlider;
+
+        private bool _isWaitingForPlayerMove;
+
         private bool _isPaused;
 
         private float _timeout;
@@ -25,26 +34,45 @@ namespace TankMania
 
         private readonly IList<string> _losers = new List<string>();
 
+        protected void AssignComponents()
+        {
+            PauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
+                .Single(c => c.name == "PauseMenu");
+
+            _timeoutText = ScreenCanvas.GetComponentsInChildren<Text>()
+                .Single(c => c.name == "TimeoutText");
+
+            _currentPlayerText = ScreenCanvas.GetComponentsInChildren<Text>()
+                .Single(c => c.name == "CurrentPlayerText");
+
+            _chargeMeterSlider = ScreenCanvas.GetComponentsInChildren<Slider>()
+                .Single(c => c.name == "ChargeMeterSlider");
+        }
+
         protected void AssignTurnToPlayer(Player player)
         {
             _currentPlayer = player;
             _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
             _currentPlayer.TankBehavior.TakeCurrentTurn();
 
-            TimeoutText.enabled = true;
-            CurrentPlayerText.enabled = true;
-            ChargeMeterSlider.enabled = true;
+            _timeoutText.enabled = true;
+            _currentPlayerText.enabled = true;
+            _chargeMeterSlider.enabled = true;
 
             _timeout = TurnTimeout;
-            CurrentPlayerText.text = _currentPlayer.Name;
+            _timeoutText.text = TurnTimeout + "";
+            _currentPlayerText.text = _currentPlayer.Name;
+
             VirtualCamera.Follow = _currentPlayer.Tank.transform;
+
+            SetPlayerTurnActive(false);
         }
 
         private void OnCurrentTankFired(object sender, EventArgs eventArgs)
         {
-            TimeoutText.enabled = false;
-            CurrentPlayerText.enabled = false;
-            ChargeMeterSlider.enabled = false;
+            _timeoutText.enabled = false;
+            _chargeMeterSlider.enabled = false;
+
             _fireCharge = 0;
             Invoke("ChangeTanksTurn", 2);
         }
@@ -96,6 +124,13 @@ namespace TankMania
 
         private void ChangeTanksTurn()
         {
+            RemoveTurnFromCurrentTank();
+            _currentPlayerText.enabled = false;
+            Invoke("AssignTurnToNextPlayer", 2f);
+        }
+
+        protected void AssignTurnToNextPlayer()
+        {
             Player[] players = ActivePlayers;
             int currentPlayerIndex = -1;
             for (int i = 0; i < players.Length; i++)
@@ -104,8 +139,24 @@ namespace TankMania
 
             int nextPlayerIndex = (currentPlayerIndex + 1) % players.Length;
 
-            RemoveTurnFromCurrentTank();
             AssignTurnToPlayer(players[nextPlayerIndex]);
+        }
+
+        private void CheckForPlayerMove()
+        {
+            if (
+                0 < Mathf.Abs(Input.GetAxis("Horizontal")) ||
+                0 < Mathf.Abs(Input.GetAxis("Vertical")) ||
+                Input.GetKey(FireKey)
+            )
+            {
+                SetPlayerTurnActive(true);
+            }
+        }
+
+        private void SetPlayerTurnActive(bool isActive)
+        {
+            _isWaitingForPlayerMove = !isActive;
         }
 
         private void UpdateTimer()
@@ -118,13 +169,13 @@ namespace TankMania
             else
             {
                 var secsLeft = (int)Math.Round(_timeout);
-                TimeoutText.text = secsLeft + "";
+                _timeoutText.text = secsLeft + "";
             }
         }
 
         private void CheckFireCharge()
         {
-            if (!ChargeMeterSlider.enabled)
+            if (!_chargeMeterSlider.enabled)
                 return;
 
             bool holdingFireKey = Input.GetKey(FireKey);
@@ -140,7 +191,7 @@ namespace TankMania
                 }
             }
 
-            ChargeMeterSlider.value = _fireCharge / MaxFireCharge;
+            _chargeMeterSlider.value = _fireCharge / MaxFireCharge;
         }
 
         private void CheckForRandomDestroy()
