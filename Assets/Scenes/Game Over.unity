@@ -254,7 +254,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To Level x
+  m_Text: Main Menu
 --- !u!222 &175406077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 518908855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3151e8d491da284989e4cbd3ac65ab9, type: 3}
+  m_Script: {fileID: 11500000, guid: d0e28ed5a7379014fa0ad1a5f215c354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player1NameText: {fileID: 1366289299}
@@ -388,7 +388,6 @@ MonoBehaviour:
   Player2ScoreText: {fileID: 1684937364}
   Player3NameText: {fileID: 1151828428}
   Player3ScoreText: {fileID: 1356109408}
-  NextButton: {fileID: 1504830957}
 --- !u!1 &711974007
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,8 +556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 173}
-  m_SizeDelta: {x: 252, y: 45.3}
+  m_AnchoredPosition: {x: -11, y: 173}
+  m_SizeDelta: {x: 350.2, y: 45.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283348315
 MonoBehaviour:
@@ -586,13 +585,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score Sheet
+  m_Text: GAME OVER
 --- !u!222 &1283348316
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -759,7 +758,7 @@ GameObject:
   - component: {fileID: 1504830958}
   - component: {fileID: 1504830957}
   m_Layer: 5
-  m_Name: ButtonNext
+  m_Name: ButtonMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 206, y: -164}
+  m_AnchoredPosition: {x: -247, y: -164}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504830957
@@ -824,7 +823,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 518908857}
-        m_MethodName: ContinueToNextLevel
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -958,8 +957,8 @@ RectTransform:
   - {fileID: 1366289298}
   - {fileID: 18417627}
   - {fileID: 1151828427}
-  - {fileID: 1684937363}
   - {fileID: 2015340421}
+  - {fileID: 1684937363}
   - {fileID: 1356109407}
   - {fileID: 1504830956}
   m_Father: {fileID: 0}
@@ -998,7 +997,7 @@ RectTransform:
   m_LocalScale: {x: 1.0002, y: 1.0002, z: 1.0002}
   m_Children: []
   m_Father: {fileID: 1680591271}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1072,7 +1071,7 @@ RectTransform:
   m_LocalScale: {x: 1.0002, y: 1.0002, z: 1.0002}
   m_Children: []
   m_Father: {fileID: 1680591271}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

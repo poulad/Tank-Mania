@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace TankMania
 {
-    public class ScoresSceneManagerBehavior : MonoBehaviour
+    public class GameOverManagerBehavior : MonoBehaviour
     {
         public Text Player1NameText;
 
@@ -17,8 +17,6 @@ namespace TankMania
         public Text Player3NameText;
 
         public Text Player3ScoreText;
-
-        public Button NextButton;
 
         public void Start()
         {
@@ -35,13 +33,11 @@ namespace TankMania
 
             Player3NameText.text = highScorePlayers[2].Name;
             Player3ScoreText.text = highScorePlayers[2].Score + "";
-
-            NextButton.GetComponentInChildren<Text>().text = "To Level " + (GameManager.Current.CurrentLevel + 1);
         }
 
-        public void ContinueToNextLevel()
+        public void GoToMainMenu()
         {
-            GameManager.Current.SwitchToLevelScene(GameManager.Current.CurrentLevel + 1);
+            GameManager.Current.SwitchToScene(Constants.Scenes.MainMenu);
         }
     }
 }
