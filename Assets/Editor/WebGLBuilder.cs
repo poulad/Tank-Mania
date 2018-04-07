@@ -7,6 +7,7 @@ public class WebGLBuilder
         string[] scenes = {
             "Assets/Scenes/Main Menu.unity",
             "Assets/Scenes/Level 1.unity",
+            "Assets/Scenes/Level 2.unity",
             "Assets/Scenes/Score Sheet.unity",
             "Assets/Scenes/Playground.unity",
         };

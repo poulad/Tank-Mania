@@ -18,6 +18,14 @@ namespace TankMania
 
         public Text Player3ScoreText;
 
+        public void Awake()
+        {
+            if (GameManager.Current.CurrentLevel == 3)
+            {
+                GameManager.Current.SwitchToScene(Constants.Scenes.GameOver);
+            }
+        }
+
         public void Start()
         {
             Player[] highScorePlayers = GameManager.Current.Players
@@ -37,7 +45,7 @@ namespace TankMania
 
         public void ContinueToNextLevel()
         {
-            GameManager.Current.SwitchToScene(Constants.Scenes.Playground);
+            GameManager.Current.SwitchToLevelScene(GameManager.Current.CurrentLevel + 1);
         }
     }
 }

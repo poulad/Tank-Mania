@@ -149,7 +149,7 @@ namespace TankMania
                 return;
 
             if (
-                Mathf.Abs(_currentPlayer.Tank.transform.position.x) <= 1.5f &&
+                //Mathf.Abs(_currentPlayer.Tank.transform.position.x) <= 1.5f &&
                 Input.GetKey(KeyCode.LeftControl) &&
                 Input.GetKeyDown(KeyCode.K)
             )

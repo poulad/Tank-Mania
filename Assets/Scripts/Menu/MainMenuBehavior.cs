@@ -30,7 +30,9 @@ public class MainMenuBehavior : MonoBehaviour
 #if UNITY_EDITOR
         if (GameManager.ReturnToScene != null)
         {
-            GameManager.Current.SwitchToScene(GameManager.ReturnToScene);
+            string scene = GameManager.ReturnToScene;
+            GameManager.ReturnToScene = null;
+            GameManager.Current.SwitchToScene(scene);
             return;
         }
 #endif
