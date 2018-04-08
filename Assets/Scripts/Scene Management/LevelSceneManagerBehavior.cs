@@ -23,9 +23,9 @@ namespace TankMania
             // This allows running game directly from a Level scene using Unity Editor.
             if (!GameManager.Current)
             {
-                //gameObject.SetActive(false);
-                //GameManager.ReturnToScene = SceneManager.GetActiveScene().name;
+                GameManager.ReturnToScene = SceneManager.GetActiveScene().name;
                 SceneManager.LoadScene(Constants.Scenes.MainMenu);
+                gameObject.SetActive(false);
             }
         }
 #endif
@@ -42,10 +42,11 @@ namespace TankMania
                 player.TankBehavior.Destroyed += OnTankDestroyed;
             }
 
-            _allPlayers[0].Tank.transform.position = new Vector3(-8, -1, 0);
-            _allPlayers[1].Tank.transform.position = new Vector3(-4, -1, 0);
-            _allPlayers[2].Tank.transform.position = new Vector3(3, -1, 0);
-            _allPlayers[3].Tank.transform.position = new Vector3(7, -1, 0);
+            const float y = -.5f;
+            _allPlayers[0].Tank.transform.position = new Vector3(-8, y, 0);
+            _allPlayers[1].Tank.transform.position = new Vector3(-4, y, 0);
+            _allPlayers[2].Tank.transform.position = new Vector3(3, y, 0);
+            _allPlayers[3].Tank.transform.position = new Vector3(7, y, 0);
 
             _pauseMenuPanel.gameObject.SetActive(false);
             AssignTurnToPlayer(Random.Range(0, _allPlayers.Length));
