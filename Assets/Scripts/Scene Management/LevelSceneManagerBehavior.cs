@@ -41,10 +41,10 @@ namespace TankMania
                 player.TankBehavior.Destroyed += OnTankDestroyed;
             }
 
-            AllPlayers[0].Tank.transform.position = new Vector3(-4, 2, 0);
-            AllPlayers[1].Tank.transform.position = new Vector3(0, 2, 0);
-            AllPlayers[2].Tank.transform.position = new Vector3(3, 2, 0);
-            AllPlayers[3].Tank.transform.position = new Vector3(6, 2, 0);
+            AllPlayers[0].Tank.transform.position = new Vector3(-8, -1, 0);
+            AllPlayers[1].Tank.transform.position = new Vector3(-4, -1, 0);
+            AllPlayers[2].Tank.transform.position = new Vector3(3, -1, 0);
+            AllPlayers[3].Tank.transform.position = new Vector3(7, -1, 0);
 
             _pauseMenuPanel.gameObject.SetActive(false);
             AssignTurnToPlayer(AllPlayers[Random.Range(0, AllPlayers.Length)]);
