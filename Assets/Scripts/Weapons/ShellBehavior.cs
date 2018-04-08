@@ -8,19 +8,22 @@ namespace TankMania
     {
         public float ExplosionRadius = .5f;
 
-        public float ExplosionForce = 500f;
+        public float ExplosionForce;
 
-        public float MaxDamage = 100f;
+        public float Damage;
+
+        private Rigidbody2D _rigidbody;
 
         public void Start()
         {
-            Destroy(gameObject, 3);
+            _rigidbody = GetComponent<Rigidbody2D>();
+            Destroy(gameObject, 8);
         }
 
         public void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag(Constants.Tags.WorldBoundary))
-                Destroy(gameObject);
+                ExplodeImmediately();
 
             if (other.gameObject.layer != gameObject.layer)
                 return;
@@ -31,26 +34,44 @@ namespace TankMania
                 .Distinct()
                 .Except(new[] { gameObject })
                 .Where(gObj => gObj.layer == gameObject.layer)
-                .Select(gObj => new
-                {
-                    GameObject = gObj,
-                    Rigidbody2D = gObj.GetComponent<Rigidbody2D>()
-                })
-                .Where(gObj => gObj.Rigidbody2D)
                 .ToArray();
 
             foreach (var target in targets)
             {
-                target.Rigidbody2D.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, mode: ForceMode2D.Impulse);
-                if (target.GameObject.tag == Constants.Tags.Tank)
+                if (target.CompareTag(Constants.Tags.Tank))
                 {
-                    var tankBehavior = target.GameObject.GetComponent<TankBehavior>();
-                    tankBehavior.TakeDamage(20);
+                    var rbody = target.GetComponent<Rigidbody2D>();
+                    var tankBehavior = target.GetComponent<TankBehavior>();
+
+                    rbody.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, mode: ForceMode2D.Impulse);
+                    tankBehavior.TakeDamage(Damage);
                 }
             }
 
             if (targets.Any())
-                Destroy(gameObject);
+            {
+                ExplodeWithAnimations();
+            }
+        }
+
+        private void ExplodeImmediately()
+        {
+            RaiseExplodedEvent();
+        }
+
+        private void ExplodeWithAnimations()
+        {
+            _rigidbody.gravityScale = 0;
+            _rigidbody.velocity = Vector2.zero;
+
+            // ToDo Play Explosion Animation + Sound
+
+            Invoke("RaiseExplodedEvent", 5);
+        }
+
+        private void RaiseExplodedEvent()
+        {
+            RaiseExploded(this);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace TankMania
 {
@@ -7,5 +8,15 @@ namespace TankMania
         public Sprite WeaponImage;
 
         public float Scale = 1;
+
+        public event EventHandler<EventArgs> Exploded;
+
+        protected void RaiseExploded(object sender)
+        {
+            if (Exploded != null)
+            {
+                Exploded(sender, EventArgs.Empty);
+            }
+        }
     }
 }

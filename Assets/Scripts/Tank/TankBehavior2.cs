@@ -24,6 +24,12 @@ namespace TankMania
 
         private bool _isPaused;
 
+        private void OnExplosionFinished(object sender, EventArgs eventArgs)
+        {
+            if (Destroyed != null)
+                Destroyed(this, EventArgs.Empty);
+        }
+
         private void ControlMovement()
         {
             float moveH = Input.GetAxis("Horizontal");

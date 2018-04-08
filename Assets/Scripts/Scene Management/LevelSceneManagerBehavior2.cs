@@ -11,15 +11,13 @@ namespace TankMania
     {
         private Player[] ActivePlayers
         {
-            get { return AllPlayers.Where(p => p.Tank && p.TankBehavior.enabled).ToArray(); }
+            get { return AllPlayers.Where(p => p.Tank).ToArray(); }
         }
 
         private Player[] AllPlayers
         {
             get { return GameManager.Current.Players; }
         }
-
-        private WeaponBehaviorBase[] _weapons;
 
         private Player _currentPlayer;
 
@@ -39,7 +37,9 @@ namespace TankMania
 
         private bool _isPaused;
 
-        private float TurnTimeout = 12f;
+        private bool _hasCurrentTankFired;
+
+        private float TurnTimeout = 5f;
 
         private float _timeout;
 
@@ -49,7 +49,7 @@ namespace TankMania
 
         private readonly IList<string> _losers = new List<string>();
 
-        protected void AssignComponents()
+        private void AssignComponents()
         {
             _pauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
                 .Single(c => c.name == "PauseMenu");
@@ -69,38 +69,11 @@ namespace TankMania
             _weaponSpriteRenderer = ScreenCanvas.GetComponentsInChildren<Image>()
                 .Single(c => c.name == "Weapon Circle")
                 .GetComponentInChildren<SpriteRenderer>();
-
-            _weapons = WeaponPrefabs
-                .Select(prefab => prefab.GetComponent<WeaponBehaviorBase>())
-                .ToArray();
         }
 
-        protected void AssignTurnToPlayer(Player player)
-        {
-            _currentPlayer = player;
-            _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
+        #region Event Handlers
 
-            int weaponIndex = Random.Range(0, _weapons.Length);
-            var weapon = _weapons[weaponIndex];
-            _weaponSpriteRenderer.sprite = weapon.WeaponImage;
-            _weaponSpriteRenderer.transform.localScale = new Vector3(weapon.Scale, weapon.Scale, 1);
-
-            _currentPlayer.TankBehavior.TakeCurrentTurn(WeaponPrefabs[weaponIndex]);
-
-            _timeoutText.enabled = true;
-            _currentPlayerText.enabled = true;
-            _chargeMeterSlider.enabled = true;
-
-            _timeout = TurnTimeout;
-            _timeoutText.text = TurnTimeout + "";
-            _currentPlayerText.text = _currentPlayer.Name;
-
-            VirtualCamera.Follow = _currentPlayer.Tank.transform;
-
-            SetPlayerTurnActive(false);
-        }
-
-        protected void OnTankDestroying(object sender, EventArgs eventArgs)
+        private void OnTankDestroying(object sender, EventArgs eventArgs)
         {
             var tankBehavior = (TankBehavior)sender;
             var ripPlayer = ActivePlayers
@@ -108,15 +81,13 @@ namespace TankMania
 
             if (ripPlayer == _currentPlayer)
             {
-                _timeoutText.enabled = false;
-                _chargeMeterSlider.enabled = false;
-                _chargeMeterSlider.value = 0;
-                _fireCharge = 0;
-                ChangeTanksTurn();
+                SetHudVisible(false);
+                if (ActivePlayers.Length > 2)
+                    ChangeTanksTurn();
             }
         }
 
-        protected void OnTankDestroyed(object sender, EventArgs eventArgs)
+        private void OnTankDestroyed(object sender, EventArgs eventArgs)
         {
             var tankBehavior = (TankBehavior)sender;
             var ripPlayer = ActivePlayers
@@ -124,21 +95,212 @@ namespace TankMania
 
             _losers.Add(ripPlayer.Name);
 
-            Destroy(ripPlayer.Tank);
-
-            if (ActivePlayers.Length == 1)
+            if (ActivePlayers.Length == 2)
             {
                 GameOver();
             }
+
+            Destroy(ripPlayer.Tank);
         }
 
-        private void OnCurrentTankFired(object sender, EventArgs eventArgs)
+        private void OnCurrentTankFired(object sender, FiredEventArgs eventArgs)
         {
-            _timeoutText.enabled = false;
-            _chargeMeterSlider.enabled = false;
-            _fireCharge = 0;
+            _hasCurrentTankFired = true;
+            SetHudVisible(false);
+            Invoke("StopCurrentTurn", 2);
 
-            Invoke("ChangeTanksTurn", 2);
+            eventArgs.Weapon.Exploded += OnCurrentWeaponExploded;
+            VirtualCamera.Follow = eventArgs.Weapon.transform;
+        }
+
+        private void OnCurrentWeaponExploded(object sender, EventArgs eventArgs)
+        {
+            VirtualCamera.Follow = _currentPlayer.Tank.transform;
+            ChangeTanksTurn();
+
+            var weapon = (WeaponBehaviorBase)sender;
+            Destroy(weapon.gameObject);
+        }
+
+        #endregion
+
+        #region Tank Turn Control
+
+        private void AssignTurnToPlayer(Player player)
+        {
+            _currentPlayer = player;
+            _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
+
+            var currentWeaponPrefab = SelectRandomWeapon();
+            _currentPlayer.TankBehavior.TakeCurrentTurn(currentWeaponPrefab);
+
+            SetHudVisible(true);
+            _hasCurrentTankFired = false;
+
+            VirtualCamera.Follow = _currentPlayer.Tank.transform;
+            SetPlayerTurnActive(false);
+        }
+
+        private void ChangeTanksTurn()
+        {
+            StopCurrentTurn();
+            Invoke("AssignTurnToNextPlayer", 4f);
+        }
+
+        private void StopCurrentTurn()
+        {
+            SetHudVisible(false);
+            _currentPlayer.TankBehavior.StopTurn();
+            _currentPlayer.TankBehavior.Fired -= OnCurrentTankFired;
+        }
+
+        private void AssignTurnToNextPlayer()
+        {
+            Player[] players = ActivePlayers;
+            int currentPlayerIndex = -1;
+            for (int i = 0; i < players.Length; i++)
+            {
+                if (players[i] == _currentPlayer)
+                {
+                    currentPlayerIndex = i;
+                    break;
+                }
+            }
+
+            int nextPlayerIndex = (currentPlayerIndex + 1) % players.Length;
+
+            AssignTurnToPlayer(players[nextPlayerIndex]);
+        }
+
+        private void SetPlayerTurnActive(bool isActive)
+        {
+            _isWaitingForPlayerMove = !isActive;
+            _highlightBg.enabled = !isActive;
+        }
+
+        #endregion
+
+        #region Weapon Control
+
+        private GameObject SelectRandomWeapon()
+        {
+            var prefab = WeaponPrefabs[Random.Range(0, WeaponPrefabs.Length)];
+            var weaponBehavior = prefab.GetComponent<WeaponBehaviorBase>();
+
+            _weaponSpriteRenderer.sprite = weaponBehavior.WeaponImage;
+            _weaponSpriteRenderer.transform.localScale =
+                new Vector3(weaponBehavior.Scale, weaponBehavior.Scale, 1);
+
+            return prefab;
+        }
+
+        private bool FireWeaponIfCharged()
+        {
+            if (_hasCurrentTankFired)
+                return false;
+
+            bool fired = false;
+            if (Mathf.Epsilon < _fireCharge)
+            {
+                _currentPlayer.TankBehavior.Fire(_fireCharge);
+                _fireCharge = 0;
+                fired = true;
+            }
+
+            return fired;
+        }
+
+        #endregion
+
+        #region Frame Update Checks
+
+        private void CheckForPlayerMove()
+        {
+            if (
+                0 < Mathf.Abs(Input.GetAxis("Horizontal")) ||
+                0 < Mathf.Abs(Input.GetAxis("Vertical")) ||
+                Input.GetKey(FireKey)
+            )
+            {
+                SetPlayerTurnActive(true);
+            }
+        }
+
+        private void UpdateTimer()
+        {
+            if (_timeout < 0)
+                return;
+
+            _timeout -= Time.deltaTime;
+            if (_timeout <= 0)
+            {
+                bool fired = FireWeaponIfCharged();
+                if (!fired)
+                {
+                    ChangeTanksTurn();
+                }
+            }
+            else
+            {
+                var secsLeft = (int)Math.Round(_timeout);
+                _timeoutText.text = secsLeft + "";
+            }
+        }
+
+        private void CheckFireCharge()
+        {
+            if (_hasCurrentTankFired)
+                return;
+
+            bool holdingFireKey = Input.GetKey(FireKey);
+            if (holdingFireKey)
+            {
+                _fireCharge += Time.deltaTime;
+                if (_fireCharge > MaxFireCharge)
+                {
+                    _fireCharge = MaxFireCharge;
+                    _currentPlayer.TankBehavior.Fire(_fireCharge);
+                }
+            }
+            else
+            {
+                FireWeaponIfCharged();
+            }
+
+            _chargeMeterSlider.value = _fireCharge / MaxFireCharge;
+        }
+
+        private void CheckForRandomDestroy()
+        {
+            if (_currentPlayer == null)
+                return;
+
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.K))
+            {
+                ActivePlayers[Random.Range(0, ActivePlayers.Length)]
+                    .TankBehavior
+                    .TakeDamage(float.MaxValue);
+            }
+        }
+
+        #endregion
+
+        private void SetHudVisible(bool active)
+        {
+            _timeout = active
+                ? TurnTimeout
+                : -1;
+
+            _timeoutText.text = _timeout + "";
+            _timeoutText.enabled = active;
+
+            _currentPlayerText.enabled = active;
+            _chargeMeterSlider.enabled = active;
+
+            _currentPlayerText.text = _currentPlayer.Name;
+
+            _fireCharge = 0;
+            _chargeMeterSlider.value = 0;
         }
 
         private void GameOver()
@@ -162,98 +324,6 @@ namespace TankMania
                 ? Constants.Scenes.Scores
                 : Constants.Scenes.GameOver;
             GameManager.Current.SwitchToScene(nextScene);
-        }
-
-        private void RemoveTurnFromCurrentTank()
-        {
-            _currentPlayer.TankBehavior.Fired -= OnCurrentTankFired;
-            _currentPlayer.TankBehavior.StopTurn();
-        }
-
-        private void ChangeTanksTurn()
-        {
-            RemoveTurnFromCurrentTank();
-            _currentPlayerText.enabled = false;
-            Invoke("AssignTurnToNextPlayer", 2f);
-        }
-
-        protected void AssignTurnToNextPlayer()
-        {
-            Player[] players = ActivePlayers;
-            int currentPlayerIndex = -1;
-            for (int i = 0; i < players.Length; i++)
-                if (players[i] == _currentPlayer)
-                    currentPlayerIndex = i;
-
-            int nextPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-
-            AssignTurnToPlayer(players[nextPlayerIndex]);
-        }
-
-        private void CheckForPlayerMove()
-        {
-            if (
-                0 < Mathf.Abs(Input.GetAxis("Horizontal")) ||
-                0 < Mathf.Abs(Input.GetAxis("Vertical")) ||
-                Input.GetKey(FireKey)
-            )
-            {
-                SetPlayerTurnActive(true);
-            }
-        }
-
-        private void SetPlayerTurnActive(bool isActive)
-        {
-            _isWaitingForPlayerMove = !isActive;
-            _highlightBg.enabled = !isActive;
-        }
-
-        private void UpdateTimer()
-        {
-            _timeout -= Time.deltaTime;
-            if (_timeout <= 0)
-            {
-                ChangeTanksTurn();
-            }
-            else
-            {
-                var secsLeft = (int)Math.Round(_timeout);
-                _timeoutText.text = secsLeft + "";
-            }
-        }
-
-        private void CheckFireCharge()
-        {
-            if (!_chargeMeterSlider.enabled)
-                return;
-
-            bool holdingFireKey = Input.GetKey(FireKey);
-            if (_fireCharge > 0 && !holdingFireKey)
-                _currentPlayer.TankBehavior.Fire(_fireCharge);
-            else if (holdingFireKey)
-            {
-                _fireCharge += Time.deltaTime;
-                if (_fireCharge > MaxFireCharge)
-                {
-                    _fireCharge = MaxFireCharge;
-                    _currentPlayer.TankBehavior.Fire(_fireCharge);
-                }
-            }
-
-            _chargeMeterSlider.value = _fireCharge / MaxFireCharge;
-        }
-
-        private void CheckForRandomDestroy()
-        {
-            if (_currentPlayer == null)
-                return;
-
-            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.K))
-            {
-                ActivePlayers[Random.Range(0, ActivePlayers.Length)]
-                    .TankBehavior
-                    .TakeDamage(float.MaxValue);
-            }
         }
     }
 }

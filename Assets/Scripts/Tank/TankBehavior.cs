@@ -26,7 +26,7 @@ namespace TankMania
             set { Pause(value); }
         }
 
-        public event EventHandler<EventArgs> Fired;
+        public event EventHandler<FiredEventArgs> Fired;
 
         public event EventHandler<EventArgs> Destroying;
 
@@ -90,8 +90,10 @@ namespace TankMania
             var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
             shell.velocity = (5 + charge * 3) * launchDirection;
 
+            var weaponBehavior = shell.GetComponent<WeaponBehaviorBase>();
+
             if (Fired != null)
-                Fired(this, EventArgs.Empty);
+                Fired(this, new FiredEventArgs(weaponBehavior));
         }
 
         public void TakeDamage(float damage)
@@ -103,10 +105,7 @@ namespace TankMania
 
                 var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
                 explosion.GetComponentInChildren<TankExplosionBehavior>()
-                    .Finished += (_, __) =>
-                {
-                    if (Destroyed != null) Destroyed(this, EventArgs.Empty);
-                };
+                    .Finished += OnExplosionFinished;
             }
         }
     }

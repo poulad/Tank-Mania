@@ -20,11 +20,11 @@ namespace TankMania
         public void Awake()
         {
             // Switch to Main Menu if game state is not initialized yet.
-            // This allows running game from a Level scene.
+            // This allows running game directly from a Level scene using Unity Editor.
             if (!GameManager.Current)
             {
-                gameObject.SetActive(false);
-                GameManager.ReturnToScene = SceneManager.GetActiveScene().name;
+                //gameObject.SetActive(false);
+                //GameManager.ReturnToScene = SceneManager.GetActiveScene().name;
                 SceneManager.LoadScene(Constants.Scenes.MainMenu);
             }
         }
@@ -74,7 +74,7 @@ namespace TankMania
         {
             _isPaused = !_isPaused;
 
-            foreach (var player in AllPlayers)
+            foreach (var player in ActivePlayers)
                 player.TankBehavior.IsPaused = _isPaused;
 
             _pauseMenuPanel.gameObject.SetActive(_isPaused);
