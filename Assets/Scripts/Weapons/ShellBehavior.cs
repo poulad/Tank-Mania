@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TankMania
 {
-    public class ShellBehavior : MonoBehaviour
+    public class ShellBehavior : WeaponBehaviorBase
     {
         public float ExplosionRadius = .5f;
 

@@ -14,7 +14,16 @@ namespace TankMania
             get { return AllPlayers.Where(p => p.Tank && p.TankBehavior.enabled).ToArray(); }
         }
 
+        private Player[] AllPlayers
+        {
+            get { return GameManager.Current.Players; }
+        }
+
+        private WeaponBehaviorBase[] _weapons;
+
         private Player _currentPlayer;
+
+        private Image _pauseMenuPanel;
 
         private Text _timeoutText;
 
@@ -24,9 +33,13 @@ namespace TankMania
 
         private RawImage _highlightBg;
 
+        private SpriteRenderer _weaponSpriteRenderer;
+
         private bool _isWaitingForPlayerMove;
 
         private bool _isPaused;
+
+        private float TurnTimeout = 12f;
 
         private float _timeout;
 
@@ -38,7 +51,7 @@ namespace TankMania
 
         protected void AssignComponents()
         {
-            PauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
+            _pauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
                 .Single(c => c.name == "PauseMenu");
 
             _timeoutText = ScreenCanvas.GetComponentsInChildren<Text>()
@@ -52,13 +65,27 @@ namespace TankMania
 
             _highlightBg = ScreenCanvas.GetComponentsInChildren<RawImage>()
                .Single(c => c.name == "Tank Highlight BG");
+
+            _weaponSpriteRenderer = ScreenCanvas.GetComponentsInChildren<Image>()
+                .Single(c => c.name == "Weapon Circle")
+                .GetComponentInChildren<SpriteRenderer>();
+
+            _weapons = WeaponPrefabs
+                .Select(prefab => prefab.GetComponent<WeaponBehaviorBase>())
+                .ToArray();
         }
 
         protected void AssignTurnToPlayer(Player player)
         {
             _currentPlayer = player;
             _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
-            _currentPlayer.TankBehavior.TakeCurrentTurn();
+
+            int weaponIndex = Random.Range(0, _weapons.Length);
+            var weapon = _weapons[weaponIndex];
+            _weaponSpriteRenderer.sprite = weapon.WeaponImage;
+            _weaponSpriteRenderer.transform.localScale = new Vector3(weapon.Scale, weapon.Scale, 1);
+
+            _currentPlayer.TankBehavior.TakeCurrentTurn(WeaponPrefabs[weaponIndex]);
 
             _timeoutText.enabled = true;
             _currentPlayerText.enabled = true;
@@ -73,16 +100,7 @@ namespace TankMania
             SetPlayerTurnActive(false);
         }
 
-        private void OnCurrentTankFired(object sender, EventArgs eventArgs)
-        {
-            _timeoutText.enabled = false;
-            _chargeMeterSlider.enabled = false;
-            _fireCharge = 0;
-
-            Invoke("ChangeTanksTurn", 2);
-        }
-
-        private void OnTankDestroying(object sender, EventArgs eventArgs)
+        protected void OnTankDestroying(object sender, EventArgs eventArgs)
         {
             var tankBehavior = (TankBehavior)sender;
             var ripPlayer = ActivePlayers
@@ -96,14 +114,31 @@ namespace TankMania
                 _fireCharge = 0;
                 ChangeTanksTurn();
             }
+        }
+
+        protected void OnTankDestroyed(object sender, EventArgs eventArgs)
+        {
+            var tankBehavior = (TankBehavior)sender;
+            var ripPlayer = ActivePlayers
+                .Single(p => p.TankBehavior == tankBehavior);
 
             _losers.Add(ripPlayer.Name);
+
             Destroy(ripPlayer.Tank);
 
             if (ActivePlayers.Length == 1)
             {
                 GameOver();
             }
+        }
+
+        private void OnCurrentTankFired(object sender, EventArgs eventArgs)
+        {
+            _timeoutText.enabled = false;
+            _chargeMeterSlider.enabled = false;
+            _fireCharge = 0;
+
+            Invoke("ChangeTanksTurn", 2);
         }
 
         private void GameOver()

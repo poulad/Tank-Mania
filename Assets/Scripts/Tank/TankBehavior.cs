@@ -10,6 +10,8 @@ namespace TankMania
     {
         public Rigidbody2D ShellPrefab;
 
+        public GameObject ExplosionPrefab;
+
         public float MaxMuzzleAngle;
 
         public float MinMuzzleAngle;
@@ -27,6 +29,8 @@ namespace TankMania
         public event EventHandler<EventArgs> Fired;
 
         public event EventHandler<EventArgs> Destroying;
+
+        public event EventHandler<EventArgs> Destroyed;
 
         public void Start()
         {
@@ -62,8 +66,9 @@ namespace TankMania
             }
         }
 
-        public void TakeCurrentTurn()
+        public void TakeCurrentTurn(GameObject weapon)
         {
+            _weapon = weapon;
             HasCurrentTurn = true;
         }
 
@@ -75,7 +80,8 @@ namespace TankMania
 
         public void Fire(float charge)
         {
-            var shell = Instantiate(ShellPrefab, _launchPoint.transform.position, Quaternion.identity);
+            var shell = Instantiate(_weapon, _launchPoint.transform.position, Quaternion.identity)
+                .GetComponent<Rigidbody2D>();
             shell.transform.localScale = new Vector3(
                 shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
                 shell.transform.localScale.y
@@ -94,6 +100,13 @@ namespace TankMania
             if (_slider.value <= 0)
             {
                 if (Destroying != null) Destroying(this, EventArgs.Empty);
+
+                var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
+                explosion.GetComponentInChildren<TankExplosionBehavior>()
+                    .Finished += (_, __) =>
+                {
+                    if (Destroyed != null) Destroyed(this, EventArgs.Empty);
+                };
             }
         }
     }
