@@ -11,13 +11,10 @@ namespace TankMania
     {
         private Player[] ActivePlayers
         {
-            get { return AllPlayers.Where(p => p.Tank).ToArray(); }
+            get { return _allPlayers.Where(p => p.Tank).ToArray(); }
         }
 
-        private Player[] AllPlayers
-        {
-            get { return GameManager.Current.Players; }
-        }
+        private Player[] _allPlayers;
 
         private Player _currentPlayer;
 
@@ -37,9 +34,7 @@ namespace TankMania
 
         private bool _isPaused;
 
-        private bool _hasCurrentTankFired;
-
-        private float TurnTimeout = 5f;
+        private float TurnTimeout = 12f;
 
         private float _timeout;
 
@@ -49,7 +44,7 @@ namespace TankMania
 
         private readonly IList<string> _losers = new List<string>();
 
-        private void AssignComponents()
+        private void GetComponentsOnScene()
         {
             _pauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
                 .Single(c => c.name == "PauseMenu");
@@ -69,6 +64,21 @@ namespace TankMania
             _weaponSpriteRenderer = ScreenCanvas.GetComponentsInChildren<Image>()
                 .Single(c => c.name == "Weapon Circle")
                 .GetComponentInChildren<SpriteRenderer>();
+        }
+
+        private void RandomizePlayersOrder()
+        {
+            int length = GameManager.Current.Players.Length;
+            var players = GameManager.Current.Players.ToList();
+            for (int i = 0; i < length - 1; i++)
+            {
+                int index = Random.Range(0, length - 1);
+                var p = players[index];
+                players.RemoveAt(index);
+                players.Add(p);
+            }
+
+            _allPlayers = players.ToArray();
         }
 
         #region Event Handlers
@@ -126,56 +136,41 @@ namespace TankMania
 
         #region Tank Turn Control
 
-        private void AssignTurnToPlayer(Player player)
+        private int _lastPlayerIndex;
+
+        private void AssignTurnToNextPlayer()
         {
-            _currentPlayer = player;
-            _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
+            int nextPlayerIndex = _lastPlayerIndex;
+            do
+            {
+                nextPlayerIndex = (nextPlayerIndex + 1) % _allPlayers.Length;
+            } while (!_allPlayers[nextPlayerIndex].Tank);
 
-            var currentWeaponPrefab = SelectRandomWeapon();
-            _currentPlayer.TankBehavior.TakeCurrentTurn(currentWeaponPrefab);
+            AssignTurnToPlayer(nextPlayerIndex);
+        }
 
-            SetHudVisible(true);
-            _hasCurrentTankFired = false;
-
-            VirtualCamera.Follow = _currentPlayer.Tank.transform;
-            SetPlayerTurnActive(false);
+        private void AssignTurnToPlayer(int i)
+        {
+            _lastPlayerIndex = i;
+            _currentPlayer = _allPlayers[i];
+            ResetCurrentTurn();
         }
 
         private void ChangeTanksTurn()
         {
             StopCurrentTurn();
-            Invoke("AssignTurnToNextPlayer", 4f);
+            Invoke("AssignTurnToNextPlayer", 2f);
         }
 
         private void StopCurrentTurn()
         {
             SetHudVisible(false);
-            _currentPlayer.TankBehavior.StopTurn();
-            _currentPlayer.TankBehavior.Fired -= OnCurrentTankFired;
-        }
-
-        private void AssignTurnToNextPlayer()
-        {
-            Player[] players = ActivePlayers;
-            int currentPlayerIndex = -1;
-            for (int i = 0; i < players.Length; i++)
+            if (_currentPlayer != null && _currentPlayer.TankBehavior)
             {
-                if (players[i] == _currentPlayer)
-                {
-                    currentPlayerIndex = i;
-                    break;
-                }
+                // Current tank might have got himself destroyed at this point
+                _currentPlayer.TankBehavior.StopTurn();
+                _currentPlayer.TankBehavior.Fired -= OnCurrentTankFired;
             }
-
-            int nextPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-
-            AssignTurnToPlayer(players[nextPlayerIndex]);
-        }
-
-        private void SetPlayerTurnActive(bool isActive)
-        {
-            _isWaitingForPlayerMove = !isActive;
-            _highlightBg.enabled = !isActive;
         }
 
         #endregion
@@ -212,6 +207,32 @@ namespace TankMania
 
         #endregion
 
+        #region Scene Elements Control
+
+        private bool _hasCurrentTankFired;
+
+        private void ResetCurrentTurn()
+        {
+            _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
+
+            var currentWeaponPrefab = SelectRandomWeapon();
+            _currentPlayer.TankBehavior.TakeCurrentTurn(currentWeaponPrefab);
+
+            SetHudVisible(true);
+            _hasCurrentTankFired = false;
+
+            VirtualCamera.Follow = _currentPlayer.Tank.transform;
+            SetCurrentTurnActive(false);
+        }
+
+        private void SetCurrentTurnActive(bool isActive)
+        {
+            _isWaitingForPlayerMove = !isActive;
+            _highlightBg.enabled = !isActive;
+        }
+
+        #endregion
+
         #region Frame Update Checks
 
         private void CheckForPlayerMove()
@@ -222,7 +243,7 @@ namespace TankMania
                 Input.GetKey(FireKey)
             )
             {
-                SetPlayerTurnActive(true);
+                SetCurrentTurnActive(true);
             }
         }
 
@@ -308,15 +329,15 @@ namespace TankMania
             if (_losers.Count != 3)
                 throw new InvalidOperationException();
 
-            AllPlayers
+            _allPlayers
                 .Single(p => !_losers.Contains(p.Name))
                 .Score += 3;
 
-            AllPlayers
+            _allPlayers
                 .Single(p => p.Name == _losers[2])
                 .Score += 2;
 
-            AllPlayers
+            _allPlayers
                 .Single(p => p.Name == _losers[1])
                 .Score += 1;
 

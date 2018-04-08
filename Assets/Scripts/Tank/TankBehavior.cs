@@ -17,9 +17,6 @@ namespace TankMania
         public float MinMuzzleAngle;
 
         [HideInInspector]
-        public bool HasCurrentTurn { get; private set; }
-
-        [HideInInspector]
         public bool IsPaused
         {
             get { return _isPaused; }
@@ -52,7 +49,7 @@ namespace TankMania
                 return;
 
             _audioSource.pitch = Random.Range(.9f, 1.1f);
-            if (HasCurrentTurn)
+            if (_hasCurrentTurn)
             {
                 ControlMovement();
             }
@@ -69,12 +66,12 @@ namespace TankMania
         public void TakeCurrentTurn(GameObject weapon)
         {
             _weapon = weapon;
-            HasCurrentTurn = true;
+            _hasCurrentTurn = true;
         }
 
         public void StopTurn()
         {
-            HasCurrentTurn = false;
+            _hasCurrentTurn = false;
             StopDriving();
         }
 

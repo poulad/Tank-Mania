@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using TankMania.Helpers;
 using UnityEngine;
 
@@ -6,11 +7,15 @@ namespace TankMania
 {
     public class ShellBehavior : WeaponBehaviorBase
     {
-        public float ExplosionRadius = .5f;
+        public float ExplosionRadius;
 
         public float ExplosionForce;
 
-        public float Damage;
+        public float MaxDamage;
+
+        public GameObject ExplosionPrefab;
+
+        public float ExplosionScale = 1;
 
         private Rigidbody2D _rigidbody;
 
@@ -44,7 +49,7 @@ namespace TankMania
                     var tankBehavior = target.GetComponent<TankBehavior>();
 
                     rbody.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, mode: ForceMode2D.Impulse);
-                    tankBehavior.TakeDamage(Damage);
+                    tankBehavior.TakeDamage(MaxDamage);
                 }
             }
 
@@ -64,9 +69,15 @@ namespace TankMania
             _rigidbody.gravityScale = 0;
             _rigidbody.velocity = Vector2.zero;
 
-            // ToDo Play Explosion Animation + Sound
+            var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
+            explosion.transform.localScale *= ExplosionScale;
+            explosion.GetComponentInChildren<TankExplosionBehavior>()
+                .Finished += OnExplosionFinished;
+        }
 
-            Invoke("RaiseExplodedEvent", 5);
+        private void OnExplosionFinished(object sender, EventArgs e)
+        {
+            RaiseExplodedEvent();
         }
 
         private void RaiseExplodedEvent()

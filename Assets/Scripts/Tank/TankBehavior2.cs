@@ -20,9 +20,11 @@ namespace TankMania
 
         private Slider _slider;
 
-        private bool _isDriving;
+        private bool _hasCurrentTurn;
 
         private bool _isPaused;
+
+        private bool _isDriving;
 
         private void OnExplosionFinished(object sender, EventArgs eventArgs)
         {

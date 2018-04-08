@@ -109,9 +109,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponImage: {fileID: 21300002, guid: c111feb4663263d4ebd3eb564027eaf0, type: 3}
   Scale: 80
-  ExplosionRadius: 1
-  ExplosionForce: 1000
-  Damage: 35
+  ExplosionRadius: 0.5
+  ExplosionForce: 1200
+  MaxDamage: 35
+  ExplosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  ExplosionScale: 0.4
 --- !u!212 &212384319198530206
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -32,22 +32,23 @@ namespace TankMania
 
         public void Start()
         {
-            AssignComponents();
+            RandomizePlayersOrder();
+            GetComponentsOnScene();
 
             GameManager.Current.InstantiateTanks(transform);
-            foreach (var player in AllPlayers)
+            foreach (var player in _allPlayers)
             {
                 player.TankBehavior.Destroying += OnTankDestroying;
                 player.TankBehavior.Destroyed += OnTankDestroyed;
             }
 
-            AllPlayers[0].Tank.transform.position = new Vector3(-8, -1, 0);
-            AllPlayers[1].Tank.transform.position = new Vector3(-4, -1, 0);
-            AllPlayers[2].Tank.transform.position = new Vector3(3, -1, 0);
-            AllPlayers[3].Tank.transform.position = new Vector3(7, -1, 0);
+            _allPlayers[0].Tank.transform.position = new Vector3(-8, -1, 0);
+            _allPlayers[1].Tank.transform.position = new Vector3(-4, -1, 0);
+            _allPlayers[2].Tank.transform.position = new Vector3(3, -1, 0);
+            _allPlayers[3].Tank.transform.position = new Vector3(7, -1, 0);
 
             _pauseMenuPanel.gameObject.SetActive(false);
-            AssignTurnToPlayer(AllPlayers[Random.Range(0, AllPlayers.Length)]);
+            AssignTurnToPlayer(Random.Range(0, _allPlayers.Length));
         }
 
         public void Update()
