@@ -1,6 +1,5 @@
 ﻿using Cinemachine;
 using UnityEngine;
-using UnityEngine.UI;
 #if UNITY_EDITOR
 using UnityEngine.SceneManagement;
 #endif
@@ -14,6 +13,8 @@ namespace TankMania
         public Canvas ScreenCanvas;
 
         public KeyCode FireKey = KeyCode.Space;
+
+        public GameObject[] WeaponPrefabs;
 
 #if UNITY_EDITOR
         public void Awake()
@@ -45,7 +46,7 @@ namespace TankMania
             AllPlayers[2].Tank.transform.position = new Vector3(3, 2, 0);
             AllPlayers[3].Tank.transform.position = new Vector3(6, 2, 0);
 
-            PauseMenuPanel.gameObject.SetActive(false);
+            _pauseMenuPanel.gameObject.SetActive(false);
             AssignTurnToPlayer(AllPlayers[Random.Range(0, AllPlayers.Length)]);
         }
 
@@ -76,7 +77,7 @@ namespace TankMania
             foreach (var player in AllPlayers)
                 player.TankBehavior.IsPaused = _isPaused;
 
-            PauseMenuPanel.gameObject.SetActive(_isPaused);
+            _pauseMenuPanel.gameObject.SetActive(_isPaused);
         }
 
         public void Quit()

@@ -10,6 +10,8 @@ namespace TankMania
 
         private GameObject _launchPoint;
 
+        private GameObject _weapon;
+
         private Rigidbody2D _rigidbody;
 
         private AudioSource _audioSource;

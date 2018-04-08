@@ -19,9 +19,11 @@ namespace TankMania
             get { return GameManager.Current.Players; }
         }
 
+        private WeaponBehaviorBase[] _weapons;
+
         private Player _currentPlayer;
 
-        private Image PauseMenuPanel;
+        private Image _pauseMenuPanel;
 
         private Text _timeoutText;
 
@@ -30,6 +32,8 @@ namespace TankMania
         private Slider _chargeMeterSlider;
 
         private RawImage _highlightBg;
+
+        private SpriteRenderer _weaponSpriteRenderer;
 
         private bool _isWaitingForPlayerMove;
 
@@ -47,7 +51,7 @@ namespace TankMania
 
         protected void AssignComponents()
         {
-            PauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
+            _pauseMenuPanel = ScreenCanvas.GetComponentsInChildren<Image>()
                 .Single(c => c.name == "PauseMenu");
 
             _timeoutText = ScreenCanvas.GetComponentsInChildren<Text>()
@@ -61,13 +65,27 @@ namespace TankMania
 
             _highlightBg = ScreenCanvas.GetComponentsInChildren<RawImage>()
                .Single(c => c.name == "Tank Highlight BG");
+
+            _weaponSpriteRenderer = ScreenCanvas.GetComponentsInChildren<Image>()
+                .Single(c => c.name == "Weapon Circle")
+                .GetComponentInChildren<SpriteRenderer>();
+
+            _weapons = WeaponPrefabs
+                .Select(prefab => prefab.GetComponent<WeaponBehaviorBase>())
+                .ToArray();
         }
 
         protected void AssignTurnToPlayer(Player player)
         {
             _currentPlayer = player;
             _currentPlayer.TankBehavior.Fired += OnCurrentTankFired;
-            _currentPlayer.TankBehavior.TakeCurrentTurn();
+
+            int weaponIndex = Random.Range(0, _weapons.Length);
+            var weapon = _weapons[weaponIndex];
+            _weaponSpriteRenderer.sprite = weapon.WeaponImage;
+            _weaponSpriteRenderer.transform.localScale = new Vector3(weapon.Scale, weapon.Scale, 1);
+
+            _currentPlayer.TankBehavior.TakeCurrentTurn(WeaponPrefabs[weaponIndex]);
 
             _timeoutText.enabled = true;
             _currentPlayerText.enabled = true;
