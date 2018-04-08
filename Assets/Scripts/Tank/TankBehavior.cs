@@ -10,6 +10,8 @@ namespace TankMania
     {
         public Rigidbody2D ShellPrefab;
 
+        public GameObject ExplosionPrefab;
+
         public float MaxMuzzleAngle;
 
         public float MinMuzzleAngle;
@@ -27,6 +29,8 @@ namespace TankMania
         public event EventHandler<EventArgs> Fired;
 
         public event EventHandler<EventArgs> Destroying;
+
+        public event EventHandler<EventArgs> Destroyed;
 
         public void Start()
         {
@@ -94,6 +98,13 @@ namespace TankMania
             if (_slider.value <= 0)
             {
                 if (Destroying != null) Destroying(this, EventArgs.Empty);
+
+                var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
+                explosion.GetComponentInChildren<TankExplosionBehavior>()
+                    .Finished += (_, __) =>
+                {
+                    if (Destroyed != null) Destroyed(this, EventArgs.Empty);
+                };
             }
         }
     }

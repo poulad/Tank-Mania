@@ -14,7 +14,14 @@ namespace TankMania
             get { return AllPlayers.Where(p => p.Tank && p.TankBehavior.enabled).ToArray(); }
         }
 
+        private Player[] AllPlayers
+        {
+            get { return GameManager.Current.Players; }
+        }
+
         private Player _currentPlayer;
+
+        private Image PauseMenuPanel;
 
         private Text _timeoutText;
 
@@ -27,6 +34,8 @@ namespace TankMania
         private bool _isWaitingForPlayerMove;
 
         private bool _isPaused;
+
+        private float TurnTimeout = 12f;
 
         private float _timeout;
 
@@ -73,16 +82,7 @@ namespace TankMania
             SetPlayerTurnActive(false);
         }
 
-        private void OnCurrentTankFired(object sender, EventArgs eventArgs)
-        {
-            _timeoutText.enabled = false;
-            _chargeMeterSlider.enabled = false;
-            _fireCharge = 0;
-
-            Invoke("ChangeTanksTurn", 2);
-        }
-
-        private void OnTankDestroying(object sender, EventArgs eventArgs)
+        protected void OnTankDestroying(object sender, EventArgs eventArgs)
         {
             var tankBehavior = (TankBehavior)sender;
             var ripPlayer = ActivePlayers
@@ -96,14 +96,31 @@ namespace TankMania
                 _fireCharge = 0;
                 ChangeTanksTurn();
             }
+        }
+
+        protected void OnTankDestroyed(object sender, EventArgs eventArgs)
+        {
+            var tankBehavior = (TankBehavior)sender;
+            var ripPlayer = ActivePlayers
+                .Single(p => p.TankBehavior == tankBehavior);
 
             _losers.Add(ripPlayer.Name);
+
             Destroy(ripPlayer.Tank);
 
             if (ActivePlayers.Length == 1)
             {
                 GameOver();
             }
+        }
+
+        private void OnCurrentTankFired(object sender, EventArgs eventArgs)
+        {
+            _timeoutText.enabled = false;
+            _chargeMeterSlider.enabled = false;
+            _fireCharge = 0;
+
+            Invoke("ChangeTanksTurn", 2);
         }
 
         private void GameOver()

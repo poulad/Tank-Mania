@@ -15,15 +15,6 @@ namespace TankMania
 
         public KeyCode FireKey = KeyCode.Space;
 
-        protected Image PauseMenuPanel;
-
-        protected Player[] AllPlayers
-        {
-            get { return GameManager.Current.Players; }
-        }
-
-        protected float TurnTimeout = 12f;
-
 #if UNITY_EDITOR
         public void Awake()
         {
@@ -46,6 +37,7 @@ namespace TankMania
             foreach (var player in AllPlayers)
             {
                 player.TankBehavior.Destroying += OnTankDestroying;
+                player.TankBehavior.Destroyed += OnTankDestroyed;
             }
 
             AllPlayers[0].Tank.transform.position = new Vector3(-4, 2, 0);
