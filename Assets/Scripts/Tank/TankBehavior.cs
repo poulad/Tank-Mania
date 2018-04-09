@@ -31,16 +31,7 @@ namespace TankMania
 
         public void Start()
         {
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _audioSource = GetComponent<AudioSource>();
-            _animator = GetComponent<Animator>();
-            _muzzle = GetComponentsInChildren<Transform>()
-                .Single(t => t.gameObject.name == "Muzzle")
-                .gameObject;
-            _launchPoint = GetComponentsInChildren<Transform>()
-                .Single(t => t.gameObject.name == "Launch Point")
-                .gameObject;
-            _slider = GetComponentInChildren<Slider>();
+            GetComponentsOnScene();
         }
 
         public void Update()
@@ -89,15 +80,7 @@ namespace TankMania
 
         public void TakeDamage(float damage)
         {
-            _slider.value -= damage;
-            if (_slider.value <= 0)
-            {
-                if (Destroying != null) Destroying(this, EventArgs.Empty);
-
-                var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
-                explosion.GetComponentInChildren<TankExplosionBehavior>()
-                    .Finished += OnExplosionFinished;
-            }
+            UpdateHealth(_slider.value - damage);
         }
     }
 }

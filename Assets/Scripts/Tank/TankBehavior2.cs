@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,11 +21,34 @@ namespace TankMania
 
         private Slider _slider;
 
+        private Image _healthFillImage;
+
         private bool _hasCurrentTurn;
 
         private bool _isPaused;
 
         private bool _isDriving;
+
+        private void GetComponentsOnScene()
+        {
+            _rigidbody = GetComponent<Rigidbody2D>();
+
+            _audioSource = GetComponent<AudioSource>();
+
+            _animator = GetComponent<Animator>();
+
+            _muzzle = GetComponentsInChildren<Transform>()
+                .Single(t => t.gameObject.name == "Muzzle")
+                .gameObject;
+
+            _launchPoint = GetComponentsInChildren<Transform>()
+                .Single(t => t.gameObject.name == "Launch Point")
+                .gameObject;
+
+            _slider = GetComponentInChildren<Slider>();
+
+            _healthFillImage = _slider.GetComponentsInChildren<Image>().Last();
+        }
 
         private void OnExplosionFinished(object sender, EventArgs eventArgs)
         {
@@ -131,6 +155,22 @@ namespace TankMania
 
             if (Fired != null)
                 Fired(this, new FiredEventArgs(weaponBehavior));
+        }
+
+        private void UpdateHealth(float health)
+        {
+            health = Mathf.Max(0, health);
+            _slider.value = health;
+            if (Mathf.Approximately(health, 0))
+            {
+                if (Destroying != null) Destroying(this, EventArgs.Empty);
+
+                var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
+                explosion.GetComponentInChildren<TankExplosionBehavior>()
+                    .Finished += OnExplosionFinished;
+            }
+
+            _healthFillImage.color = Color.Lerp(Color.red, Color.green, health / 100);
         }
     }
 }
