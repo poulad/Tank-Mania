@@ -194,8 +194,8 @@ GameObject:
   - component: {fileID: 159509578}
   - component: {fileID: 159509580}
   - component: {fileID: 159509581}
-  m_Layer: 0
-  m_Name: Sea
+  m_Layer: 4
+  m_Name: Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -526,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 794235487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 400, y: 400, z: 1}
+  m_LocalScale: {x: 80, y: 80, z: 1}
   m_Children: []
   m_Father: {fileID: 1568869969}
   m_RootOrder: 0
@@ -565,7 +565,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 101
-  m_Sprite: {fileID: 21300000, guid: f9e7cd73d7237af4299a6ddfee9512a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a52de57d2e9d580448dd70e82e400e70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1618,6 +1618,7 @@ MonoBehaviour:
   WeaponPrefabs:
   - {fileID: 1719286411936754, guid: 9e6dabb6ee4180046a97b28b1996294a, type: 2}
   - {fileID: 1597620951826912, guid: c3f5a32b0b093bf4ebcc8ea061494a1b, type: 2}
+  - {fileID: 1737609521847518, guid: a4dadf393a7460b4cae070901ce44332, type: 2}
 --- !u!1 &1713132178
 GameObject:
   m_ObjectHideFlags: 0

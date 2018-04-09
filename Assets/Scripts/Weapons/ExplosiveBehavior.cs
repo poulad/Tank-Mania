@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TankMania
 {
-    public class ShellBehavior : WeaponBehaviorBase
+    public class ExplosiveBehavior : WeaponBehaviorBase
     {
         public float ExplosionRadius;
 
@@ -19,20 +19,43 @@ namespace TankMania
 
         private Rigidbody2D _rigidbody;
 
+        private bool _landed;
+
         public void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            Destroy(gameObject, 8);
+            Invoke("RaiseExplodedEvent", 8);
         }
 
         public void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag(Constants.Tags.WorldBoundary))
-                ExplodeImmediately();
-
-            if (other.gameObject.layer != gameObject.layer)
+            if (_landed)
                 return;
 
+            if (other.CompareTag(Constants.Tags.WorldBoundary))
+            {
+                RaiseExplodedEvent();
+            }
+            else if (other.gameObject.layer == gameObject.layer)
+            {
+                _landed = true;
+                StartExplosionTimer();
+            }
+            else if (other.gameObject.layer == LayerMask.NameToLayer("Water"))
+            {
+                RaiseExplodedEvent();
+            }
+        }
+
+        private void StartExplosionTimer()
+        {
+            _rigidbody.velocity = Vector2.zero;
+            Invoke("Explode", 3);
+        }
+
+        // ReSharper disable once UnusedMember.Local
+        private void Explode()
+        {
             var targets = Physics2D
                 .OverlapCircleAll(transform.position, ExplosionRadius)
                 .Select(c => c.gameObject)
@@ -52,22 +75,6 @@ namespace TankMania
                     tankBehavior.TakeDamage(MaxDamage);
                 }
             }
-
-            if (targets.Any())
-            {
-                ExplodeWithAnimations();
-            }
-        }
-
-        private void ExplodeImmediately()
-        {
-            RaiseExplodedEvent();
-        }
-
-        private void ExplodeWithAnimations()
-        {
-            _rigidbody.gravityScale = 0;
-            _rigidbody.velocity = Vector2.zero;
 
             var explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity, transform);
             explosion.transform.localScale *= ExplosionScale;

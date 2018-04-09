@@ -40,6 +40,7 @@ namespace TankMania
             {
                 player.TankBehavior.Destroying += OnTankDestroying;
                 player.TankBehavior.Destroyed += OnTankDestroyed;
+                player.Tank.name = "Tank - " + player.Name;
             }
 
             const float y = -.5f;

@@ -95,5 +95,42 @@ namespace TankMania
             _isDriving = false;
             _animator.SetBool("IsDriving", false);
         }
+
+        private void LaunchMissile(float charge)
+        {
+            var shell = Instantiate(_weapon, _launchPoint.transform.position, Quaternion.identity)
+                .GetComponent<Rigidbody2D>();
+            shell.transform.localScale = new Vector3(
+                shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
+                shell.transform.localScale.y
+            );
+
+            var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
+            shell.velocity = (5 + charge * 3) * launchDirection;
+
+            var weaponBehavior = shell.GetComponent<WeaponBehaviorBase>();
+
+            if (Fired != null)
+                Fired(this, new FiredEventArgs(weaponBehavior));
+        }
+
+        private void DropExplosive()
+        {
+            var dropPoint = new Vector3(
+                _launchPoint.transform.position.x,
+                _muzzle.transform.position.y,
+                _launchPoint.transform.position.z
+            );
+            var explosive = Instantiate(_weapon, dropPoint, Quaternion.identity)
+                .GetComponent<Rigidbody2D>();
+
+            var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
+            explosive.velocity = launchDirection * .5f;
+
+            var weaponBehavior = explosive.GetComponent<WeaponBehaviorBase>();
+
+            if (Fired != null)
+                Fired(this, new FiredEventArgs(weaponBehavior));
+        }
     }
 }

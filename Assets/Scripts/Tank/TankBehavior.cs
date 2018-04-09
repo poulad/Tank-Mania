@@ -77,20 +77,14 @@ namespace TankMania
 
         public void Fire(float charge)
         {
-            var shell = Instantiate(_weapon, _launchPoint.transform.position, Quaternion.identity)
-                .GetComponent<Rigidbody2D>();
-            shell.transform.localScale = new Vector3(
-                shell.transform.localScale.x * Mathf.Sign(transform.localScale.x),
-                shell.transform.localScale.y
-            );
-
-            var launchDirection = (_launchPoint.transform.position - _muzzle.transform.position).normalized;
-            shell.velocity = (5 + charge * 3) * launchDirection;
-
-            var weaponBehavior = shell.GetComponent<WeaponBehaviorBase>();
-
-            if (Fired != null)
-                Fired(this, new FiredEventArgs(weaponBehavior));
+            if (_weapon.tag == Constants.Tags.LandMine)
+            {
+                DropExplosive();
+            }
+            else
+            {
+                LaunchMissile(charge);
+            }
         }
 
         public void TakeDamage(float damage)

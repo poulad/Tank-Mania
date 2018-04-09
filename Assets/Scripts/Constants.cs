@@ -27,6 +27,8 @@
 
             public const string Shell = "Shell";
 
+            public const string LandMine = "Land Mine";
+
             public const string WorldBoundary = "World Boundary";
 
             public const string CameraBoundary = "Camera Boundary";
