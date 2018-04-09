@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace TankMania
 {
@@ -39,7 +36,8 @@ namespace TankMania
             if (IsPaused)
                 return;
 
-            _audioSource.pitch = Random.Range(.9f, 1.1f);
+            ControlSounds();
+
             if (_hasCurrentTurn)
             {
                 ControlMovement();

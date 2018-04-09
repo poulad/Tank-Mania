@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace TankMania
 {
@@ -15,7 +16,9 @@ namespace TankMania
 
         private Rigidbody2D _rigidbody;
 
-        private AudioSource _audioSource;
+        private AudioSource _engineAudioSource;
+
+        private AudioSource _wheelsAudioSource;
 
         private Animator _animator;
 
@@ -33,7 +36,9 @@ namespace TankMania
         {
             _rigidbody = GetComponent<Rigidbody2D>();
 
-            _audioSource = GetComponent<AudioSource>();
+            var audioSources = GetComponents<AudioSource>();
+            _engineAudioSource = audioSources[0];
+            _wheelsAudioSource = audioSources[1];
 
             _animator = GetComponent<Animator>();
 
@@ -93,18 +98,30 @@ namespace TankMania
             }
         }
 
+        private void ControlSounds()
+        {
+            _engineAudioSource.pitch = _hasCurrentTurn
+                ? Random.Range(.9f, 1.1f)
+                : Random.Range(.65f, .85f);
+
+            if (_isDriving && !_wheelsAudioSource.isPlaying)
+                _wheelsAudioSource.Play();
+            else if (!_isDriving && _wheelsAudioSource.isPlaying)
+                _wheelsAudioSource.Pause();
+        }
+
         private void Pause(bool pause)
         {
             _isPaused = pause;
 
             if (pause)
             {
-                _audioSource.Pause();
+                _engineAudioSource.Pause();
                 StopDriving();
             }
             else
             {
-                _audioSource.UnPause();
+                _engineAudioSource.UnPause();
             }
         }
 
