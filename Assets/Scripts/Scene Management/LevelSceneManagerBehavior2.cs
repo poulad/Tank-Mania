@@ -35,7 +35,7 @@ namespace TankMania
         private bool _isPaused;
 
         private KeyCode _fireKey = KeyCode.Space;
-        
+
         private float _timeout;
 
         private const float MaxFireCharge = 1.25f;
@@ -79,6 +79,19 @@ namespace TankMania
             }
 
             _allPlayers = players.ToArray();
+        }
+
+        private void InitializeTanks()
+        {
+            GameManager.Current.InstantiateTanks(transform);
+            for (int i = 0; i < _allPlayers.Length; i++)
+            {
+                var player = _allPlayers[i];
+                player.TankBehavior.Destroying += OnTankDestroying;
+                player.TankBehavior.Destroyed += OnTankDestroyed;
+                player.Tank.name = "Tank - " + player.Name;
+                player.Tank.transform.position = InitialPositions[i];
+            }
         }
 
         #region Event Handlers

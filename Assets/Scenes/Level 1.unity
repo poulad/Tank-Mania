@@ -5497,6 +5497,11 @@ MonoBehaviour:
   VirtualCamera: {fileID: 357619398}
   ScreenCanvas: {fileID: 175777433}
   TurnTimeout: 15
+  InitialPositions:
+  - {x: -8, y: -0.5, z: 0}
+  - {x: -4, y: -0.5, z: 0}
+  - {x: 3, y: -0.5, z: 0}
+  - {x: 7, y: -0.5, z: 0}
   WeaponPrefabs:
   - {fileID: 1719286411936754, guid: 9e6dabb6ee4180046a97b28b1996294a, type: 2}
   - {fileID: 1597620951826912, guid: c3f5a32b0b093bf4ebcc8ea061494a1b, type: 2}

@@ -14,6 +14,8 @@ namespace TankMania
 
         public float TurnTimeout;
 
+        public Vector3[] InitialPositions;
+
         public GameObject[] WeaponPrefabs;
 
 #if UNITY_EDITOR
@@ -32,22 +34,9 @@ namespace TankMania
 
         public void Start()
         {
-            RandomizePlayersOrder();
             GetComponentsOnScene();
-
-            GameManager.Current.InstantiateTanks(transform);
-            foreach (var player in _allPlayers)
-            {
-                player.TankBehavior.Destroying += OnTankDestroying;
-                player.TankBehavior.Destroyed += OnTankDestroyed;
-                player.Tank.name = "Tank - " + player.Name;
-            }
-
-            const float y = -.5f;
-            _allPlayers[0].Tank.transform.position = new Vector3(-8, y, 0);
-            _allPlayers[1].Tank.transform.position = new Vector3(-4, y, 0);
-            _allPlayers[2].Tank.transform.position = new Vector3(3, y, 0);
-            _allPlayers[3].Tank.transform.position = new Vector3(7, y, 0);
+            RandomizePlayersOrder();
+            InitializeTanks();
 
             _pauseMenuPanel.gameObject.SetActive(false);
             AssignTurnToPlayer(Random.Range(0, _allPlayers.Length));
