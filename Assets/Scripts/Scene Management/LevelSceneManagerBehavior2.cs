@@ -34,8 +34,8 @@ namespace TankMania
 
         private bool _isPaused;
 
-        private float TurnTimeout = 12f;
-
+        private KeyCode _fireKey = KeyCode.Space;
+        
         private float _timeout;
 
         private const float MaxFireCharge = 1.25f;
@@ -240,7 +240,7 @@ namespace TankMania
             if (
                 0 < Mathf.Abs(Input.GetAxis("Horizontal")) ||
                 0 < Mathf.Abs(Input.GetAxis("Vertical")) ||
-                Input.GetKey(FireKey)
+                Input.GetKey(_fireKey)
             )
             {
                 SetCurrentTurnActive(true);
@@ -273,7 +273,7 @@ namespace TankMania
             if (_hasCurrentTankFired)
                 return;
 
-            bool holdingFireKey = Input.GetKey(FireKey);
+            bool holdingFireKey = Input.GetKey(_fireKey);
             if (holdingFireKey)
             {
                 _fireCharge += Time.deltaTime;

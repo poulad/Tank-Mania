@@ -3935,7 +3935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VirtualCamera: {fileID: 357619398}
   ScreenCanvas: {fileID: 1542769394}
-  FireKey: 32
+  TurnTimeout: 12
   WeaponPrefabs:
   - {fileID: 1719286411936754, guid: 9e6dabb6ee4180046a97b28b1996294a, type: 2}
   - {fileID: 1597620951826912, guid: c3f5a32b0b093bf4ebcc8ea061494a1b, type: 2}

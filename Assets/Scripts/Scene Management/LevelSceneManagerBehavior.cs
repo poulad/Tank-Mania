@@ -12,7 +12,7 @@ namespace TankMania
 
         public Canvas ScreenCanvas;
 
-        public KeyCode FireKey = KeyCode.Space;
+        public float TurnTimeout;
 
         public GameObject[] WeaponPrefabs;
 
