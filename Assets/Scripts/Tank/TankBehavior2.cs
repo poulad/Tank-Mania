@@ -101,8 +101,8 @@ namespace TankMania
         private void ControlSounds()
         {
             _engineAudioSource.pitch = _hasCurrentTurn
-                ? Random.Range(.9f, 1.1f)
-                : Random.Range(.65f, .85f);
+                ? Random.Range(.8f, 1)
+                : Random.Range(.5f, .6f);
 
             if (_isDriving && !_wheelsAudioSource.isPlaying)
                 _wheelsAudioSource.Play();
