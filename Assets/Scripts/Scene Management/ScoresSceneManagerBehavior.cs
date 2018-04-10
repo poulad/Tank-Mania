@@ -6,35 +6,40 @@ namespace TankMania
 {
     public class ScoresSceneManagerBehavior : MonoBehaviour
     {
-        public Text Player1NameText;
+        public GameObject[] Tanks;
 
-        public Text Player1ScoreText;
+        public Text[] TankNames;
 
-        public Text Player2NameText;
-
-        public Text Player2ScoreText;
-
-        public Text Player3NameText;
-
-        public Text Player3ScoreText;
+        public Text[] Scores;
 
         public Button NextButton;
 
+        public Camera Camera;
+
         public void Start()
         {
-            Player[] highScorePlayers = GameManager.Current.Players
+            Player[] players = GameManager.Current.Players
                 .OrderByDescending(p => p.Score)
-                .Take(3)
                 .ToArray();
 
-            Player1NameText.text = highScorePlayers[0].Name;
-            Player1ScoreText.text = highScorePlayers[0].Score + "";
+            for (int i = 0; i < players.Length; i++)
+            {
+                var player = players[i];
+                var nameText = TankNames[i];
+                var scoreText = Scores[i];
+                var tank = Tanks.Single(t =>
+                    t.name == player.TankPrefab.GetComponent<TankBehavior>().name
+                );
 
-            Player2NameText.text = highScorePlayers[1].Name;
-            Player2ScoreText.text = highScorePlayers[1].Score + "";
+                float y = 3.5f - (2f * i);
 
-            Player3NameText.text = highScorePlayers[2].Name;
-            Player3ScoreText.text = highScorePlayers[2].Score + "";
+                nameText.text = player.TankPrefab.GetComponent<TankBehavior>().Name;
+                scoreText.text = player.Score + "";
+
+                tank.transform.position = new Vector3(-6, y);
+                nameText.GetComponent<Transform>().position = new Vector3(-4, y);
+                scoreText.GetComponent<Transform>().position = new Vector3(4.5f, y);
+            }
 
             NextButton.GetComponentInChildren<Text>().text = "To Level " + (GameManager.Current.CurrentLevel + 1);
         }

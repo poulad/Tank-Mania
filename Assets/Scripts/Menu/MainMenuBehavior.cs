@@ -24,7 +24,7 @@ public class MainMenuBehavior : MonoBehaviour
             return;
         }
 #endif
-        GameManager.Current.SwitchToLevelScene(1);
+        GameManager.Current.SwitchToScene(Constants.Scenes.Scores);
     }
 
     public void Quit()

@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453a6763808293747a71e9ed9e14734f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: The Stinger
+  Name: Stinger
   ShellPrefab: {fileID: 50993383169730988, guid: 9e6dabb6ee4180046a97b28b1996294a,
     type: 2}
   ExplosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
