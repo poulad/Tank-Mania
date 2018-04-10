@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Driving
+  m_Name: Driving G
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsDriving
@@ -141,32 +141,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 736f3e00644ea9d4ab36521da63e2538, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &1102809333032270772
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Driving B
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1d91da7aaed5bdd4599ff2d1e456feea, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3b1f97ae4eb4034478c310825e2c666c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -186,9 +161,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102227828675450584}
     m_Position: {x: 396, y: 144, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1102809333032270772}
-    m_Position: {x: 431, y: 209, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1101963898994267974}

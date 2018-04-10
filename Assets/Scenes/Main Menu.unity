@@ -709,10 +709,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TankPrefabs:
-  - {fileID: 1106830218505468, guid: c06e738121c32cf4eadb727c62a42967, type: 2}
-  - {fileID: 1106830218505468, guid: c06e738121c32cf4eadb727c62a42967, type: 2}
-  - {fileID: 1106830218505468, guid: c06e738121c32cf4eadb727c62a42967, type: 2}
-  - {fileID: 1106830218505468, guid: c06e738121c32cf4eadb727c62a42967, type: 2}
+  - {fileID: 1848448306312234, guid: 51faf3aa606469d42a9792aecefecaed, type: 2}
+  - {fileID: 1848448306312234, guid: 60c785e1c5cf2f84085855660d7ec93e, type: 2}
+  - {fileID: 1848448306312234, guid: 819d2a1d1f1d11c45a5d40858b5405ec, type: 2}
+  - {fileID: 1848448306312234, guid: f5d07f732c0a41b498afc60241eb1ae4, type: 2}
 --- !u!82 &731811232
 AudioSource:
   m_ObjectHideFlags: 0

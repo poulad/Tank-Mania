@@ -26,17 +26,9 @@ namespace TankMania
         {
             foreach (var player in Players)
             {
+                player.Name = player.TankPrefab.GetComponent<TankBehavior>().Name;
                 player.Tank = Instantiate(player.TankPrefab, parent);
             }
-
-            foreach (var sr in Players[1].Tank.GetComponentsInChildren<SpriteRenderer>())
-                sr.color = Color.red;
-
-            foreach (var sr in Players[2].Tank.GetComponentsInChildren<SpriteRenderer>())
-                sr.color = Color.blue;
-
-            foreach (var sr in Players[3].Tank.GetComponentsInChildren<SpriteRenderer>())
-                sr.color = Color.gray;
         }
 
         public void SwitchToScene(string scene)

@@ -5,6 +5,8 @@ namespace TankMania
 {
     public partial class TankBehavior : MonoBehaviour
     {
+        public string Name;
+
         public Rigidbody2D ShellPrefab;
 
         public GameObject ExplosionPrefab;
