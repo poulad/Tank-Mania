@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Level 3.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.044194174"
+     inkscape:cx="1752.7928"
+     inkscape:cy="1216.3821"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1858"
+     inkscape:window-height="1057"
+     inkscape:window-x="54"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       inkscape:connector-curvature="0"
+       id="path10"
+       d="m -1334.3003,19.765979 -1.9814,-168.661159 c 0,0 65.2006,38.8439 269.6901,23.6843 49.9063,0.51978 187.73542,32.30483 245.63611,30.62466 21.5947,21.41553 67.38906,32.463968 94.81231,49.599298 27.42323,17.13534 37.18846,32.297208 37.43103,32.399527 0.27714,0.116896 91.57202,59.934423 140.08456,46.432171 42.46103,-11.817948 86.49016,60.004045 86.49016,60.004045 0,0 89.69086,78.422699 127.2089,45.212189 l 64.76152,-5.56978 80.43333,-35.983329 c 0,0 64.31524,-12.275193 64.86058,-12.275193 0,0 135.741602,-55.219951 132.0898367,-19.074573 v 0 L 3.3175682,221.62021 C -104.7009,223.83436 -217.20949,218.56496 -325.22796,220.7791 l -1009.47614,1.1647 c 1.9412,-88.32547 0.688,-113.83505 0.4038,-202.177821 z"
+       style="fill:#114487;stroke-width:0.27614465"
+       sodipodi:nodetypes="ccccscscscsccccccc"
+       inkscape:export-xdpi="18.9"
+       inkscape:export-ydpi="18.9"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\lvl 3 lava\terrain-left.png" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path10-7"
+       d="m 157.59569,142.15647 c 0,-63.68354 0.0925,-79.721772 0.46035,-79.726641 0.25319,-0.0035 5.10072,-0.970066 10.77226,-2.148255 5.67155,-1.178188 13.49573,-2.792778 17.38705,-3.587977 l 7.07515,-1.445822 37.30279,-3.891634 c 20.51653,-2.140397 37.41524,-3.891633 37.55268,-3.891633 0.13739,0 10.04494,3.025663 22.01667,6.723689 21.11143,6.52125 21.81356,6.723889 23.32027,6.730399 0.8544,0.0035 28.0913,0.144856 60.52643,0.313706 56.88776,0.296141 59.00434,0.31611 59.8601,0.564805 0.48787,0.141791 26.46302,8.245545 57.72249,18.008342 31.25948,9.762802 57.06174,17.798243 57.33832,17.856538 0.31583,0.0666 33.2054,-4.443403 88.50439,-12.136265 48.40101,-6.733236 88.30313,-12.242363 88.67158,-12.2425 0.36844,-1.32e-4 48.90585,4.265405 107.86104,9.478982 l 107.19123,9.479234 54.70799,2.421952 c 30.08942,1.33207 55.21662,2.421946 55.83822,2.421946 0.7144,0 19.7096,-3.113935 51.6494,-8.467071 27.7856,-4.656898 50.7942,-8.498953 51.1305,-8.53791 0.3774,-0.04376 22.7755,4.503219 58.5817,11.892485 l 57.9705,11.96331 12.1836,1.48289 c 6.7011,0.81559 12.4946,1.48289 12.8745,1.48289 0.3798,0 27.102,-5.51079 59.3826,-12.24621 l 58.692,-12.246209 66.4284,-3.684577 66.4281,-3.684574 40.6526,-6.067903 c 22.3588,-3.337344 41.0254,-6.154571 41.481,-6.260494 l 0.8287,-0.192591 v 79.678818 79.67882 H 893.79199 157.59569 Z"
+       style="fill:#114487;stroke-width:0.22254059"
+       inkscape:export-filename="D:\workspace\school\COMP305\Tank-Mania\Assets\Sprites\lvl 3 lava\terrain-right.png"
+       inkscape:export-xdpi="17.184547"
+       inkscape:export-ydpi="17.184547" />
+  </g>
+</svg>
