@@ -8,6 +8,7 @@ TextureImporter:
     21300002: button_play
     21300004: button_quit
     21300006: button_back
+    21300008: arrow_down
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -143,6 +144,20 @@ TextureImporter:
         y: 182
         width: 69
         height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arrow_down
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 241
+        width: 55
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
