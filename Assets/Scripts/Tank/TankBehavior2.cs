@@ -129,6 +129,7 @@ namespace TankMania
         {
             _isDriving = true;
             _animator.SetBool("IsDriving", true);
+            TurnIndicator.SetActive(false);
         }
 
         private void StopDriving()
