@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 
 namespace TankMania
 {
+    [Obsolete]
     [RequireComponent(typeof(TilemapCollider2D))]
     public class TerrainBehavior : MonoBehaviour
     {

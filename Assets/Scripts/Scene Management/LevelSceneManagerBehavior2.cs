@@ -159,6 +159,11 @@ namespace TankMania
                 nextPlayerIndex = (nextPlayerIndex + 1) % _allPlayers.Length;
             } while (!_allPlayers[nextPlayerIndex].Tank);
 
+            if (Lava)
+            {
+                RaiseLavaLevel();
+            }
+
             AssignTurnToPlayer(nextPlayerIndex);
         }
 
@@ -184,6 +189,12 @@ namespace TankMania
                 _currentPlayer.TankBehavior.StopTurn();
                 _currentPlayer.TankBehavior.Fired -= OnCurrentTankFired;
             }
+        }
+
+        private void RaiseLavaLevel()
+        {
+            var lavaBehavior = Lava.GetComponent<LavaBehavior>();
+            lavaBehavior.RaiseLevelBy(.04f);
         }
 
         #endregion

@@ -821,6 +821,7 @@ GameObject:
   - component: {fileID: 159509578}
   - component: {fileID: 159509580}
   - component: {fileID: 159509581}
+  - component: {fileID: 159509582}
   m_Layer: 4
   m_Name: Lava
   m_TagString: Untagged
@@ -879,8 +880,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 159509577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.691, y: -3.298, z: 0}
-  m_LocalScale: {x: 4.293621, y: 1.3519834, z: 1}
+  m_LocalPosition: {x: -3.562, y: -9.91, z: 0}
+  m_LocalScale: {x: 2.7507625, y: 1.35, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -900,16 +901,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -10.025705, y: 0.84827566}
-  - {x: -8.696658, y: -1.0340819}
-  - {x: -9.1532755, y: -1.866478}
-  - {x: -8.565435, y: -1.8978751}
-  - {x: -4.668329, y: -1.8101786}
-  - {x: -2.50158, y: -1.8799639}
-  - {x: 5.2050447, y: -1.8977002}
-  - {x: 8.272788, y: -1.947209}
-  - {x: 9.883624, y: -1.8611833}
-  - {x: 11.5336685, y: 2.1552272}
+  - {x: -10.393943, y: 6.065629}
+  - {x: -9.752666, y: 3.155398}
+  - {x: 1.7090329, y: 3.1538403}
+  - {x: 9.926458, y: 3.1607368}
+  - {x: 10.52352, y: 4.475052}
+  - {x: 11.124442, y: 5.887657}
 --- !u!114 &159509581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,6 +916,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15e2b980541d7c04d836310e428acb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &159509582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159509577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e43ea83f255081429a989d121b878c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &160908041
@@ -7589,6 +7597,7 @@ MonoBehaviour:
   VirtualCamera: {fileID: 682022150}
   ScreenCanvas: {fileID: 1752106849}
   TurnTimeout: 15
+  Lava: {fileID: 159509577}
   InitialPositions:
   - {x: -19, y: -2, z: 0}
   - {x: -5, y: -0.5, z: 0}

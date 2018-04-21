@@ -14,6 +14,8 @@ namespace TankMania
 
         public float TurnTimeout;
 
+        public GameObject Lava;
+
         public Vector3[] InitialPositions;
 
         public GameObject[] WeaponPrefabs;
