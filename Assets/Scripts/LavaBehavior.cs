@@ -4,11 +4,6 @@ namespace TankMania
 {
     public class LavaBehavior : MonoBehaviour
     {
-        public void Update()
-        {
-
-        }
-
         public void RaiseLevelBy(float value)
         {
             transform.localScale = new Vector3(

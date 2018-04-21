@@ -58,6 +58,12 @@ namespace TankMania
                     rbody.AddExplosionForce(ExplosionForce, transform.position, ExplosionRadius, mode: ForceMode2D.Impulse);
                     tankBehavior.TakeDamage(MaxDamage);
                 }
+
+                var destructibleBehavior = target.GetComponent<DestructibleBehavior>();
+                if (destructibleBehavior)
+                {
+                    destructibleBehavior.Destruct();
+                }
             }
 
             if (targets.Any())
