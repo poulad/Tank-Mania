@@ -7588,7 +7588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VirtualCamera: {fileID: 682022150}
   ScreenCanvas: {fileID: 1752106849}
-  TurnTimeout: 99
+  TurnTimeout: 15
   InitialPositions:
   - {x: -19, y: -2, z: 0}
   - {x: -5, y: -0.5, z: 0}
