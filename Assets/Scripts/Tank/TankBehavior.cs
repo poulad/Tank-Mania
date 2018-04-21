@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace TankMania
@@ -8,6 +9,8 @@ namespace TankMania
         public string Name;
 
         public Rigidbody2D ShellPrefab;
+
+        public GameObject TurnIndicator;
 
         public GameObject ExplosionPrefab;
 
@@ -58,11 +61,13 @@ namespace TankMania
         {
             _weapon = weapon;
             _hasCurrentTurn = true;
+            TurnIndicator.SetActive(true);
         }
 
         public void StopTurn()
         {
             _hasCurrentTurn = false;
+            TurnIndicator.SetActive(false);
             StopDriving();
         }
 
