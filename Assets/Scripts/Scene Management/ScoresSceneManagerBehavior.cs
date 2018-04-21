@@ -14,7 +14,11 @@ namespace TankMania
 
         public Button NextButton;
 
+        public Text GameOverText;
+
         public Camera Camera;
+
+        private bool _isGameOver;
 
         public void Start()
         {
@@ -41,12 +45,23 @@ namespace TankMania
                 scoreText.GetComponent<Transform>().position = new Vector3(4.5f, y);
             }
 
-            NextButton.GetComponentInChildren<Text>().text = "To Level " + (GameManager.Current.CurrentLevel + 1);
+            _isGameOver = GameManager.Current.CurrentLevel > 2;
+            GameOverText.enabled = _isGameOver;
+            NextButton.GetComponentInChildren<Text>().text = _isGameOver
+                ? "To Main Menu"
+                : "To Level " + (GameManager.Current.CurrentLevel + 1);
         }
 
         public void ContinueToNextLevel()
         {
-            GameManager.Current.SwitchToLevelScene(GameManager.Current.CurrentLevel + 1);
+            if (_isGameOver)
+            {
+                GameManager.Current.SwitchToScene(Constants.Scenes.MainMenu);
+            }
+            else
+            {
+                GameManager.Current.SwitchToLevelScene(GameManager.Current.CurrentLevel + 1);
+            }
         }
     }
 }

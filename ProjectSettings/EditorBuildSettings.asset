@@ -20,6 +20,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Score Sheet.unity
     guid: d4ec8aac3be8e404a9f20a72ad5fc322
-  - enabled: 1
-    path: Assets/Scenes/Game Over.unity
-    guid: 35a10d2cd21f6dc4db61e45bd3283be5

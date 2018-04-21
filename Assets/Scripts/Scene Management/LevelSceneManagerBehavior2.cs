@@ -365,10 +365,7 @@ namespace TankMania
                 .Single(p => p.Name == _losers[1])
                 .Score += 1;
 
-            string nextScene = GameManager.Current.CurrentLevel < 3
-                ? Constants.Scenes.Scores
-                : Constants.Scenes.GameOver;
-            GameManager.Current.SwitchToScene(nextScene);
+            GameManager.Current.SwitchToScene(Constants.Scenes.Scores);
         }
     }
 }

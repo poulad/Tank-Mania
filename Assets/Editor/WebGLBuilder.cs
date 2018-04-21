@@ -10,7 +10,6 @@ public class WebGLBuilder
             "Assets/Scenes/Level 2.unity",
             "Assets/Scenes/Level 3.unity",
             "Assets/Scenes/Score Sheet.unity",
-            "Assets/Scenes/Game Over.unity",
         };
 
         string outputPath = "Build";
